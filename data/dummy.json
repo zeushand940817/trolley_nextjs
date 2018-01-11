@@ -1,0 +1,30 @@
+{
+  "scenes":[ 
+  {
+    "title": "Vista General Trolley",
+    "image": "mz_view_01.jpg",
+    "hotspots": {
+      "title": "Escenario",
+      "position": {
+        "yaw": "1.2",
+        "pitch": "2"
+      },
+      "info": "Escenario principal del Trolley",
+      "link": "http://apie.cl"
+    }
+  },
+  {
+      "title": "Entrada Trolley",
+      "image": "mz_view_02.jpg",
+      "hotspots": {
+        "title": "Persona",
+        "position": {
+            "yaw": "1.34",
+            "pitch": "3" 
+        }
+      },
+      "info": "Entrada exterior del Trolley",
+      "link": "http://google.com"
+      }
+  ]
+}
