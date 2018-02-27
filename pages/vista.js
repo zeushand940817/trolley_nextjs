@@ -10,6 +10,8 @@ const Vista = props => (
     </div>
     <style jsx>{`
       .panoWrapper {
+        position:relative;
+        height:1000px;
       }
     `}</style>
   </Layout>
