@@ -36,7 +36,7 @@ class Panorama extends React.Component {
 
     //Create hotspots
     let hotspots = this.props.hotspots;
-
+    console.log(hotspots);
 
     // Display scene.
     scene.switchTo();
