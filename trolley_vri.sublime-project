@@ -4,5 +4,8 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"using_babel_js": true
+	}
 }

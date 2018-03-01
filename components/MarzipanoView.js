@@ -1,24 +1,20 @@
-////import Marzipano from 'marzipano'
 import Hotspot from '../components/Hotspot.js';
 import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
-import data from '../data/dummy.json';
 
 class Panorama extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {ref: 'divPanorama'};
   }
 
-  componentDidMount() {
-
+  startMarzipano() {
     let panoElement = this.divContainer;
 
     // Create viewer.
     let viewer = new Marzipano.Viewer(panoElement);
 
     // Create source.
-    let source = Marzipano.ImageUrlSource.fromString('./static/tiles/{f}.jpg');
+    let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
 
     // Create geometry.
     let geometry = new Marzipano.CubeGeometry([{ tileSize: 2000, size: 2000}]);
@@ -28,7 +24,7 @@ class Panorama extends React.Component {
       4096,
       100 * Math.PI / 180,
     );
-    let view = new Marzipano.RectilinearView({yaw: Math.PI}, limiter);
+    let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180}, limiter);
 
     // Create scene.
     let scene = viewer.createScene({
@@ -38,31 +34,51 @@ class Panorama extends React.Component {
         pinFirstLevel: true
     });
 
+    //Create hotspots
+    let hotspots = this.props.hotspots;
+
+
     // Display scene.
     scene.switchTo();
   }
 
-  componentWillUnmount() {}
+
+  componentDidMount() {
+    if(typeof window !== 'undefined') {
+      //window.Marzipano = require('marzipano');
+      this.startMarzipano();
+    }
+    
+  }
+
+  handleClick() { 
+    //console.log(this);
+  }
+
+  componentWillUnmount() {
+    //Destroy marzipano
+  }
 
   render() {
     return (
       <div>
+        <script type="text/javascript" src="./static/marzipano.js"></script>
         <div
           id="panorama"
           ref={container => {
             this.divContainer = container;
           }}
+          onClick={this.handleClick.bind(this)}
         />
-        <style jsx>
-          {`
-            #panorama {
+        <style jsx>{
+          `#panorama {
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
-              height: 100%;
-            }
-          `}
+              height: 100%
+            }`
+          }
         </style>
       </div>
     );

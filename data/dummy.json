@@ -1,4 +1,13 @@
 {
+  "tilesurl": "./static/tiles/{f}.png",
+  "hotspots": [
+    {
+      "title": "Hotspot 1"
+    },
+    {
+      "title": "Hotspot 2"
+    }
+  ],
   "scenes": [
     {
       "title": "Vista General Trolley",

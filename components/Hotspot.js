@@ -1,3 +1,5 @@
+import data from '../data/dummy.json';
+
 class Hotspot extends React.Component {
   constructor(props) {
     super(props)
@@ -7,12 +9,12 @@ class Hotspot extends React.Component {
     //Create hotspot function
   }
 
-  componentWillUnmount() {} 
+  componentWillUnmount() {}
 
   render() {
     return(
       <div className="mz-hotspot">
-          
+          {this.props.title}         
       </div>  
     )
   }
