@@ -2,10 +2,20 @@
   "tilesurl": "./static/tiles/{f}.png",
   "hotspots": [
     {
-      "title": "Hotspot 1"
+      "title": "Hotspot 1",
+      "id": 1,
+      "position": {
+          "yaw": "1.2",
+          "pitch": "2"
+        }
     },
     {
-      "title": "Hotspot 2"
+      "title": "Hotspot 2",
+      "id": 2,
+      "position": {
+          "yaw": "1.34",
+          "pitch": "3"
+        }
     }
   ],
   "scenes": [

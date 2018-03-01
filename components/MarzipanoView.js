@@ -36,7 +36,8 @@ class Panorama extends React.Component {
 
     //Create hotspots
     let hotspots = this.props.hotspots;
-    console.log(hotspots);
+    
+    this.createHotspots(hotspots, scene);
 
     // Display scene.
     scene.switchTo();
@@ -48,6 +49,10 @@ class Panorama extends React.Component {
       //window.Marzipano = require('marzipano');
       this.startMarzipano();
     }
+    
+  }
+
+  createHotspots(hotspots, scene) {
     
   }
 
@@ -70,6 +75,9 @@ class Panorama extends React.Component {
           }}
           onClick={this.handleClick.bind(this)}
         />
+        {this.props.hotspots.map((hotspot) => (
+          <div key={hotspot.id} id={"hotspot-" + hotspot.id}>{hotspot.title}</div>
+          ))}
         <style jsx>{
           `#panorama {
               position: absolute;
