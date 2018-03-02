@@ -5,6 +5,9 @@ import config from '../config.js';
 class Panorama extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      scene: null
+    }
   }
 
   startMarzipano() {
@@ -41,6 +44,9 @@ class Panorama extends React.Component {
 
     // Display scene.
     scene.switchTo();
+
+    this.setState({scene: scene});
+    
   }
 
 
@@ -52,8 +58,19 @@ class Panorama extends React.Component {
     
   }
 
-  createHotspots(hotspots, scene) {
-    
+  componentDidUpdate() {
+    this.createHotspots();
+  }
+
+  createHotspots() {
+    if(this.state.scene !== null) {
+      let children = this.hpDiv.children;
+      for(let i = 0; i < children.length; i++) {
+        let position = this.props.hotspots[i].position;
+        console.log(position);
+        this.state.scene.hotspotContainer().createHotspot(children[i], position);
+      }
+    }
   }
 
   handleClick() { 
@@ -75,9 +92,13 @@ class Panorama extends React.Component {
           }}
           onClick={this.handleClick.bind(this)}
         />
+        <div ref={hpDiv => {
+          this.hpDiv = hpDiv;
+        }}>
         {this.props.hotspots.map((hotspot) => (
           <div key={hotspot.id} id={"hotspot-" + hotspot.id}>{hotspot.title}</div>
           ))}
+        </div>
         <style jsx>{
           `#panorama {
               position: absolute;
