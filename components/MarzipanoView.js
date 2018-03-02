@@ -1,4 +1,3 @@
-import Hotspot from '../components/Hotspot.js';
 import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
 
@@ -7,7 +6,8 @@ class Panorama extends React.Component {
     super(props);
     this.state = {
       loaded: false,
-      scene: false
+      scene: false,
+      view: false
     }
   }
 
@@ -52,7 +52,8 @@ class Panorama extends React.Component {
 
       this.setState({
         loaded: true,
-        scene: scene
+        scene: scene,
+        view: view
       });
 
       //this.setState({scene: scene});
@@ -85,8 +86,17 @@ class Panorama extends React.Component {
       scene.hotspotContainer().createHotspot(element, position);
     }
 
-  handleClick() { 
-    //console.log(this);
+  getCursorPosition(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+    return {x: x, y: y};
+  }
+
+  handleClick(e) { 
+    let position = this.getCursorPosition(this.divContainer, e);
+    let coords = this.state.view.screenToCoordinates(position);
+    console.log(coords);
   }
 
   componentWillUnmount() {
