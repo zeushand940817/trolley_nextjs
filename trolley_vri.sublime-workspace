@@ -3,10 +3,77 @@
 	{
 		"selected_items":
 		[
+			[
+				"createHo",
+				"createHotspots"
+			],
+			[
+				"Marzipano",
+				"MarzipanoView"
+			],
+			[
+				"div",
+				"divContainer"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"contents": "import Hotspot from '../components/Hotspot.js';\nimport fetch from 'isomorphic-unfetch';\nimport config from '../config.js';\n\nclass Panorama extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      loaded: false,\n      scene: false\n    }\n  }\n\n  startMarzipano() {\n    const script = document.createElement('script');\n    script.src = \"./static/marzipano.js\";\n\n    script.onload = () => {\n\n      let panoElement = this.divContainer;\n\n      // Create viewer.\n      let viewer = new Marzipano.Viewer(panoElement);\n\n      // Create source.\n      let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);\n\n      // Create geometry.\n      let geometry = new Marzipano.CubeGeometry([{ tileSize: 2000, size: 2000}]);\n\n      // Create view.\n      let limiter = Marzipano.RectilinearView.limit.traditional(\n        4096,\n        100 * Math.PI / 180,\n      );\n      let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180}, limiter);\n\n      // Create scene.\n      let scene = viewer.createScene({\n          source: source,\n          geometry: geometry,\n          view: view,\n          pinFirstLevel: true\n      });\n\n      //Create hotspots\n      let hotspots = this.props.hotspots;\n      \n\n      // Display scene.\n      scene.switchTo();\n\n      this.setState({\n        loaded: true,\n        scene: scene\n      });\n\n      //this.setState({scene: scene});\n    }\n\n    document.body.appendChild(script);\n    \n  }\n\n\n  componentDidMount() {\n      //window.Marzipano = require('marzipano');\n      this.startMarzipano();\n  }\n\n  componentDidUpdate() {\n    let children = this.hpDiv.children;\n    for(let i = 0; i < children.length; i++) {\n      let position = this.props.hotspots[i].position;\n      this.createHotspot(children[i], position);\n    }\n  }\n\n  createHotspot(element, position) {\n      let scene = this.state.scene;    \n      scene.hotspotContainer().createHotspot(element, position);\n    }\n\n  handleClick() { \n    //console.log(this);\n  }\n\n  componentWillUnmount() {\n    //Destroy marzipano\n  }\n\n  render() {\n\n    return (\n      <div>\n        <div\n          id=\"panorama\"\n          ref={container => {\n            this.divContainer = container;\n          }}\n          onClick={this.handleClick.bind(this)}\n        />\n        <div key ref={hpDiv => {\n          this.hpDiv = hpDiv;\n        }}>\n        {this.props.hotspots.map((hpidx) => (\n          <div key={\"hotspot-\" + hpidx.id} className=\"hotpostElement\" id={\"hotspot-\" + hpidx.id}>{hpidx.title}</div>\n          ))}\n        </div>\n        <style jsx>{\n          `#panorama {\n              position: absolute;\n              top: 0;\n              left: 0;\n              width: 100%;\n              height: 100%\n            }`\n          }\n        </style>\n      </div>\n    );\n  }\n}\n\nexport default Panorama;\n",
+			"file": "components/MarzipanoView.js",
+			"file_size": 2859,
+			"file_write_time": 131644912878387499,
+			"settings":
+			{
+				"buffer_size": 2803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/vista.js",
+			"settings":
+			{
+				"buffer_size": 495,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "next.config.js",
+			"settings":
+			{
+				"buffer_size": 136,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Hotspot.js",
+			"settings":
+			{
+				"buffer_size": 362,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/dummy.json",
+			"settings":
+			{
+				"buffer_size": 951,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils/mz_utils.js",
+			"settings":
+			{
+				"buffer_size": 816,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -15,10 +82,34 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 113.0,
-		"last_filter": "install",
+		"height": 302.0,
+		"last_filter": "com",
 		"selected_items":
 		[
+			[
+				"com",
+				"Toggle Block Comment"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comm",
+				"Toggle Block Comment"
+			],
+			[
+				"to",
+				"Toggle Comment"
+			],
+			[
+				"emm",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"commen",
+				"Toggle Block Comment"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -49,13 +140,15 @@
 	"expanded_folders":
 	[
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/data",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/static"
 	],
 	"file_history":
 	[
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/MarzipanoLoader.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Panorama.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/node_modules/.bin/webpack",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/next.config.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages/vista.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Head.js",
@@ -98,8 +191,187 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "components/MarzipanoView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1787,
+								1787
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 576.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pages/vista.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "next.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2,
+								2
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "components/Hotspot.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "data/dummy.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "utils/mz_utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -151,6 +423,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"web",
+				"node_modules/.bin/webpack"
+			]
 		],
 		"width": 0.0
 	},

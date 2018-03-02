@@ -6,72 +6,84 @@ class Panorama extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scene: null
+      loaded: false,
+      scene: false
     }
   }
 
   startMarzipano() {
-    let panoElement = this.divContainer;
+    const script = document.createElement('script');
+    script.src = "./static/marzipano.js";
 
-    // Create viewer.
-    let viewer = new Marzipano.Viewer(panoElement);
+    script.onload = () => {
 
-    // Create source.
-    let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
+      let panoElement = this.divContainer;
 
-    // Create geometry.
-    let geometry = new Marzipano.CubeGeometry([{ tileSize: 2000, size: 2000}]);
+      // Create viewer.
+      let viewer = new Marzipano.Viewer(panoElement);
 
-    // Create view.
-    let limiter = Marzipano.RectilinearView.limit.traditional(
-      4096,
-      100 * Math.PI / 180,
-    );
-    let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180}, limiter);
+      // Create source.
+      let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
 
-    // Create scene.
-    let scene = viewer.createScene({
-        source: source,
-        geometry: geometry,
-        view: view,
-        pinFirstLevel: true
-    });
+      // Create geometry.
+      let geometry = new Marzipano.CubeGeometry([{ tileSize: 2000, size: 2000}]);
 
-    //Create hotspots
-    let hotspots = this.props.hotspots;
-    
-    this.createHotspots(hotspots, scene);
+      // Create view.
+      let limiter = Marzipano.RectilinearView.limit.traditional(
+        4096,
+        100 * Math.PI / 180,
+      );
+      let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180}, limiter);
 
-    // Display scene.
-    scene.switchTo();
+      // Create scene.
+      let scene = viewer.createScene({
+          source: source,
+          geometry: geometry,
+          view: view,
+          pinFirstLevel: true
+      });
 
-    this.setState({scene: scene});
+      //Create hotspots
+      let hotspots = this.props.hotspots;
+      
+
+      // Display scene.
+      scene.switchTo();
+
+      this.setState({
+        loaded: true,
+        scene: scene
+      });
+
+      //this.setState({scene: scene});
+    }
+
+    document.body.appendChild(script);
     
   }
 
 
   componentDidMount() {
-    if(typeof window !== 'undefined') {
       //window.Marzipano = require('marzipano');
       this.startMarzipano();
-    }
-    
   }
 
   componentDidUpdate() {
-    this.createHotspots();
-  }
-
-  createHotspots() {
-    if(this.state.scene !== null) {
-      let children = this.hpDiv.children;
-      for(let i = 0; i < children.length; i++) {
-        let position = this.props.hotspots[i].position;
-        console.log(position);
-        this.state.scene.hotspotContainer().createHotspot(children[i], position);
-      }
+    for(let i = 0; i < this.props.hotspots.length; i++) {
+      let position = this.props.hotspots[i].position;
+      let hp = document.createElement('div');
+      let content = document.createTextNode(this.props.hotspots[i].title);
+      hp.appendChild(content);
+      this.hpDiv.appendChild(hp);
+      this.createHotspot(hp, position);
+      console.log(hp);
     }
   }
+
+  createHotspot(element, position) {
+      let scene = this.state.scene;    
+      scene.hotspotContainer().createHotspot(element, position);
+    }
 
   handleClick() { 
     //console.log(this);
@@ -82,9 +94,9 @@ class Panorama extends React.Component {
   }
 
   render() {
+
     return (
       <div>
-        <script type="text/javascript" src="./static/marzipano.js"></script>
         <div
           id="panorama"
           ref={container => {
@@ -92,12 +104,9 @@ class Panorama extends React.Component {
           }}
           onClick={this.handleClick.bind(this)}
         />
-        <div ref={hpDiv => {
+        <div key ref={hpDiv => {
           this.hpDiv = hpDiv;
         }}>
-        {this.props.hotspots.map((hotspot) => (
-          <div key={hotspot.id} id={"hotspot-" + hotspot.id}>{hotspot.title}</div>
-          ))}
         </div>
         <style jsx>{
           `#panorama {
