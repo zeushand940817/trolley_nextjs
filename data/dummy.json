@@ -1,5 +1,5 @@
 {
-  "tilesurl": "./static/tiles/{f}.png",
+  "tilesurl": "./static/tiles/rtrolley_{f}.png",
   "hotspots": [
     {
       "title": "Escenario NUEVO",
