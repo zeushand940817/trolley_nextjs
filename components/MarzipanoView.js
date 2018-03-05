@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
+import Hotspot from '../components/Hotspot.js';
 
 class Panorama extends React.Component {
   constructor(props) {
@@ -70,21 +71,7 @@ class Panorama extends React.Component {
   }
 
   componentDidUpdate() {
-    for(let i = 0; i < this.props.hotspots.length; i++) {
-      let position = this.props.hotspots[i].position;
-      let hp = document.createElement('div');
-      let content = document.createTextNode(this.props.hotspots[i].title);
-      hp.appendChild(content);
-      this.hpDiv.appendChild(hp);
-      this.createHotspot(hp, position);
-      console.log(hp);
-    }
   }
-
-  createHotspot(element, position) {
-      let scene = this.state.scene;    
-      scene.hotspotContainer().createHotspot(element, position);
-    }
 
   getCursorPosition(canvas, event) {
     var rect = canvas.getBoundingClientRect();
@@ -104,7 +91,7 @@ class Panorama extends React.Component {
   }
 
   render() {
-
+    if(this.state.loaded == true) {
     return (
       <div>
         <div
@@ -112,12 +99,10 @@ class Panorama extends React.Component {
           ref={container => {
             this.divContainer = container;
           }}
-          onClick={this.handleClick.bind(this)}
         />
-        <div key ref={hpDiv => {
-          this.hpDiv = hpDiv;
-        }}>
-        </div>
+        {this.props.hotspots.map((hotspot) => (
+          <Hotspot loaded={this.state.loaded} scene={this.state.scene} key={"hotspot-" + hotspot.id} title={hotspot.title} position={hotspot.position}/>  
+          ))}
         <style jsx>{
           `#panorama {
               position: absolute;
@@ -130,6 +115,30 @@ class Panorama extends React.Component {
         </style>
       </div>
     );
+  } else {
+    return (
+    <div> 
+      <div
+          id="panorama"
+          ref={container => {
+            this.divContainer = container;
+          }}
+          onClick={this.handleClick.bind(this)}
+        />
+      <div>Cargando...</div>
+      <style jsx>{
+          `#panorama {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%
+            }`
+          }
+        </style>
+        </div>
+      );
+  }
   }
 }
 
