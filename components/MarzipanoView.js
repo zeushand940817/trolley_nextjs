@@ -48,7 +48,7 @@ class Panorama extends React.Component {
         4096,
         100 * Math.PI / 180,
       );
-      let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180}, limiter);
+      let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180, pitch: 0, fov: 1.2}, limiter);
 
       // Create scene.
       let scene = viewer.createScene({
