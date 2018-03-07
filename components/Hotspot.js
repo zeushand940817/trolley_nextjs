@@ -25,17 +25,32 @@ class Hotspot extends React.Component {
     return(
       <div>
       <div onClick={this.hpClick.bind(this)} ref={hpDiv => {this.hpDiv = hpDiv}} className="mz-hotspot">
-          {this.props.title}         
+        <span className="tick"></span>
+        <div className="content">{this.props.title}</div>         
       </div>
       <style jsx>
        {
         `.mz-hotspot {
             font-weight:bold;
             color:white;
-            background-color:#ccc;
             padding:12px;
             border-radius:5px;
-        }`
+        }
+        .content {
+          display:none;
+          background-color:#ccc;
+        }
+        .tick {
+          display:block;
+          width:12px;
+          height:12px;
+          border-radius:6px;
+          background-color:red;
+        }
+        .tick:hover {
+          background-color:blue;
+        }
+        `
        }
       </style>
       </div>

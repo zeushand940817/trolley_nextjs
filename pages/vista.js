@@ -3,20 +3,44 @@ import Link from 'next/link';
 import Panorama from '../components/MarzipanoView.js';
 import data from '../data/dummy.json';
 
-const Vista = props => (
-  <Layout>
-    <h1>Vista 360</h1>
-    <div className="panoWrapper">
-      <Panorama tilesurl={data.tilesurl} hotspots={data.hotspots}/>
+class Vista extends React.Component {
+constructor(props) {
+  super(props);
+  this.state = { width: '0', height: '0' };
+  this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+}
 
-    </div>
-    <style jsx>{`
+componentDidMount() {
+  this.updateWindowDimensions();
+  window.addEventListener('resize', this.updateWindowDimensions);
+}
+
+componentWillUnmount() {
+  window.removeEventListener('resize', this.updateWindowDimensions);
+}
+
+updateWindowDimensions() {
+  this.setState({ width: window.innerWidth, height: window.innerHeight });
+}
+
+  render() {
+    return(
+     <Layout>
+     <div className="panoWrapper">
+     <Panorama tilesurl={data.tilesurl} hotspots={data.hotspots}/>
+
+     </div>
+     <style jsx>{`
       .panoWrapper {
         position:relative;
-        height:600px;
+        height:${this.state.height}px;
+        margin-top:20px;
+        overflow:hidden;
       }
-    `}</style>
-  </Layout>
-);
+      `}</style>
+      </Layout>
+      )
+  }
+}
 
 export default Vista;

@@ -1,9 +1,9 @@
 import Header from './Header'
 
 const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+  height: "100%",
+  minHeight: "100%",
+  overflow: "hidden"
 }
 
 const Layout = (props) => (

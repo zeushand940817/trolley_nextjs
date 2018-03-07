@@ -23,6 +23,20 @@ class Panorama extends React.Component {
       // Create viewer.
       let viewer = new Marzipano.Viewer(panoElement);
 
+      let autorotate = Marzipano.autorotate({
+        yawSpeed: 0.1,         // Yaw rotation speed
+        targetPitch: 0,        // Pitch value to converge to
+        targetFov: Math.PI/2   // Fov value to converge to
+      });
+
+      // Autorotate will start after 1s of idle time
+      viewer.setIdleMovement(1000, autorotate);  
+      // Disable idle movement
+      //viewer.setIdleMovement(Infinity);
+
+      // Start autorotation immediately
+      viewer.startMovement(autorotate); 
+
       // Create source.
       let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
 
@@ -71,6 +85,7 @@ class Panorama extends React.Component {
   }
 
   componentDidUpdate() {
+    //console.log(this.state.view.size())
   }
 
   getCursorPosition(canvas, event) {
@@ -91,10 +106,19 @@ class Panorama extends React.Component {
   }
 
   render() {
+    const panoStyle = {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              overflow: "hidden"
+            }
+    
     if(this.state.loaded == true) {
     return (
       <div>
-        <div
+        <div style={panoStyle}
           id="panorama"
           ref={container => {
             this.divContainer = container;
@@ -103,22 +127,19 @@ class Panorama extends React.Component {
         {this.props.hotspots.map((hotspot) => (
           <Hotspot loaded={this.state.loaded} scene={this.state.scene} key={"hotspot-" + hotspot.id} title={hotspot.title} position={hotspot.position}/>  
           ))}
-        <style jsx>{
-          `#panorama {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%
-            }`
+        <style global jsx>{`
+          .panoWrapper {
+            height: ${this.state.innerHeight}px !important;
           }
-        </style>
+        `}</style>
       </div>
+      
     );
   } else {
     return (
     <div> 
       <div
+          style={panoStyle}
           id="panorama"
           ref={container => {
             this.divContainer = container;
@@ -126,16 +147,6 @@ class Panorama extends React.Component {
           onClick={this.handleClick.bind(this)}
         />
       <div>Cargando...</div>
-      <style jsx>{
-          `#panorama {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%
-            }`
-          }
-        </style>
         </div>
       );
   }
