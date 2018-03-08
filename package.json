@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js",
+    "start": "next start -p $PORT",
     "export": "next export"
   },
   "dependencies": {
