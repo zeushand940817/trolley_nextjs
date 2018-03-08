@@ -32,7 +32,7 @@ class Panorama extends React.Component {
       // Autorotate will start after 1s of idle time
       viewer.setIdleMovement(1000, autorotate);  
       // Disable idle movement
-      viewer.setIdleMovement(Infinity);
+      //viewer.setIdleMovement(Infinity);
 
       // Start autorotation immediately
       viewer.startMovement(autorotate); 
@@ -96,9 +96,11 @@ class Panorama extends React.Component {
   }
 
   handleClick(e) { 
-    let position = this.getCursorPosition(this.divContainer, e);
-    let coords = this.state.view.screenToCoordinates(position);
-    console.log(coords);
+    if(process.env.NODE_ENV !== 'production') {
+      let position = this.getCursorPosition(this.divContainer, e);
+      let coords = this.state.view.screenToCoordinates(position);
+      console.log(coords);
+    }
   }
 
   componentWillUnmount() {
