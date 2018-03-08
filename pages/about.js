@@ -1,17 +1,19 @@
-import Layout from '../components/MyLayout.js'
-import Link from 'next/link'
-
-const PostLink = (props) => (
-    <li>
-      <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-        <a>{props.title}</a>
-      </Link>
-    </li>
-    )
+import Layout from '../components/MyLayout.js';
+import Link from 'next/link';
+import data from '../data/dummy.json';
 
 export default () => (
     <Layout>
-      <h1>...</h1>
-      
+      <div className="textContent">
+          <p>{data.pages.about}</p>
+      </div>
+      <style jsx>{`
+        .textContent {
+          font-size:16px;
+          max-width:800px;
+          padding:12px;
+          color:#f0f0f0;
+        }
+        `}</style>
     </Layout>
   )

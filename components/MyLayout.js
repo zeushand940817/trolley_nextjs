@@ -3,7 +3,8 @@ import Header from './Header'
 const layoutStyle = {
   height: "100%",
   minHeight: "100%",
-  overflow: "hidden"
+  overflow: "hidden",
+  color: "white"
 }
 
 const Layout = (props) => (

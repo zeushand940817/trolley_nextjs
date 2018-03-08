@@ -2,11 +2,7 @@ import Link from 'next/link'
 import Head from './Head.js'
 
 const headStyle = {
-  background: "#000",
-  position: "absolute",
-  top: 0,
-  left: 0,
-  "z-index":10
+  padding: 6
 }
 
 const linkStyle = {
@@ -28,16 +24,21 @@ const logoStyle = {
 
 const Header = () => (
 <div>
-  <Head style={headStyle}/>
-      <img style={logoStyle} width="100" height="47" src="./static/imgs/eltrolley.png" title="El Trolley"/>
-      <nav style={navStyle}>
-      <Link href="/about">
-        <a style={linkStyle}>Acerca de</a>
-      </Link>
-      <Link href="vista">
-        <a style={linkStyle}>VRI</a>
-      </Link>
-      </nav>
+  <Head/>
+      <div style={headStyle}>
+        <img style={logoStyle} width="100" height="47" src="./static/imgs/eltrolley.png" title="El Trolley"/>
+        <nav style={navStyle}>
+        <Link href="/">
+          <a style={linkStyle}>Inicio</a>
+        </Link>
+        <Link href="/about">
+          <a style={linkStyle}>Acerca de</a>
+        </Link>
+        <Link href="vista">
+          <a style={linkStyle}>VRI</a>
+        </Link>
+        </nav>
+      </div>
     </div>
     )
 
