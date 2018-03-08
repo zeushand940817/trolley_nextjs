@@ -32,7 +32,7 @@ class Panorama extends React.Component {
       // Autorotate will start after 1s of idle time
       viewer.setIdleMovement(1000, autorotate);  
       // Disable idle movement
-      //viewer.setIdleMovement(Infinity);
+      viewer.setIdleMovement(Infinity);
 
       // Start autorotation immediately
       viewer.startMovement(autorotate); 
@@ -123,9 +123,10 @@ class Panorama extends React.Component {
           ref={container => {
             this.divContainer = container;
           }}
+          onClick={this.handleClick.bind(this)}
         />
         {this.props.hotspots.map((hotspot) => (
-          <Hotspot loaded={this.state.loaded} scene={this.state.scene} key={"hotspot-" + hotspot.id} title={hotspot.title} position={hotspot.position}/>  
+          <Hotspot loaded={this.state.loaded} scene={this.state.scene} key={"hotspot-" + hotspot.id} title={hotspot.title} content={hotspot.content} position={hotspot.position}/>  
           ))}
         <style global jsx>{`
           .panoWrapper {
@@ -144,7 +145,6 @@ class Panorama extends React.Component {
           ref={container => {
             this.divContainer = container;
           }}
-          onClick={this.handleClick.bind(this)}
         />
       <div>Cargando...</div>
         </div>

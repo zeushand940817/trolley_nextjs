@@ -2,29 +2,71 @@
   "tilesurl": "./static/tiles/rtrolley_{f}.png",
   "hotspots": [
     {
-      "title": "Escenario NUEVO",
+      "title": " Escenario / Obras",
       "id": 1,
+      "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
       "position": {
-          "yaw": -0.018323469674399462,
-          "pitch": -0.11348123666542875
+          "pitch": -0.1833731575070061,
+          "yaw": -0.19213234443906124
         }
     },
     {
-      "title": "Puerta Derecha",
+      "title": "Participantes",
       "id": 2,
       "position": {
-          "yaw": 0.39971627640939467,
-          "pitch": 0.08876564168822298
+          "pitch": 0.4317066448356943,
+          "yaw": 0.334982661843263
         }
     },
     {
-      "title": "Camarin",
-      "id": 3,
+      "title": "Caja Boletería Recepción",
+      "id": 4,
       "position": {
-          "yaw": 1.8,
-          "pitch": 20
+          "pitch": 0.08021686724895538,
+          "yaw": 2.6967840991547067
         }
+    },
+    {
+      "title": "Escalera al altillo",
+      "id": 5,
+      "position": {
+          "pitch": -0.02197501326752338,
+          "yaw": -2.6999674119240904
+        }
+    },
+    {
+      "title": "Historias del Trolley",
+      "id": 6,
+      "position": {
+          "pitch": 0.23353624877265133,
+          "yaw": -1.9640503636375026
+        }
+    },
+    {
+      "title": "Bambalinas",
+      "id": 7,
+      "position": {
+          "pitch": 0.055153182733935324,
+          "yaw": -0.3981602943236453
+        }
+    },
+    {
+      "title": "Gráfica del Trolley",
+      "id": 8,
+      "position": {
+          "pitch": 0.0477167644995955,
+          "yaw": 1.2337197524706873
+        }
+    },
+    {
+      "title": "Entrada Salida",
+      "id": 9,
+      "position": {
+        "pitch": -0.20892931548385718,
+        "yaw": 3.0131884543852365
+      }
     }
+
   ],
   "pages": {
     "about": "Sed porta laoreet ligula euismod condimentum. Suspendisse porta hendrerit turpis tempus mattis. Nullam non dictum libero. Ut placerat dignissim efficitur. Ut felis ex, gravida in maximus vitae, sagittis sed nibh. Vestibulum vel finibus velit. Vestibulum in turpis dolor. Nullam fringilla sed ligula eu ullamcorper. Quisque efficitur, erat eget imperdiet imperdiet, felis velit porta lacus, consequat congue libero nibh id augue. Pellentesque accumsan ornare commodo. Sed ut augue at ipsum ultrices viverra vel non enim. In at tortor sed arcu consectetur pellentesque ut non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae bibendum nisi, sit amet sodales risus. Proin pulvinar purus et tristique imperdiet. Phasellus rhoncus est nulla, at varius turpis pellentesque quis. "
