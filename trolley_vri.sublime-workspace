@@ -24,28 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "pages/vista.js",
+			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 1081,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoView.js",
-			"settings":
-			{
-				"buffer_size": 3771,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pages/about.js",
-			"settings":
-			{
-				"buffer_size": 431,
+				"buffer_size": 773,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -54,46 +36,73 @@
 			"file": "data/dummy.json",
 			"settings":
 			{
-				"buffer_size": 1404,
+				"buffer_size": 2433,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "components/MyLayout.js",
+			"file": "components/MarzipanoView.js",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 3857,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "next.config.js",
+			"settings":
+			{
+				"buffer_size": 279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "robots.txt",
+			"settings":
+			{
+				"buffer_size": 25,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "User-agent: *"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 534,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/robots.txt",
+			"settings":
+			{
+				"buffer_size": 25,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "User-agent: *"
 			}
 		},
 		{
 			"file": "components/Head.js",
 			"settings":
 			{
-				"buffer_size": 556,
+				"buffer_size": 640,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "components/Header.js",
+			"file": "app.json",
 			"settings":
 			{
-				"buffer_size": 851,
+				"buffer_size": 295,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/base.css",
-			"settings":
-			{
-				"buffer_size": 138,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "body {"
 			}
 		}
 	],
@@ -105,9 +114,13 @@
 	"command_palette":
 	{
 		"height": 352.0,
-		"last_filter": "rein",
+		"last_filter": "inst",
 		"selected_items":
 		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"rein",
 				"Indentation: Reindent Lines"
@@ -164,31 +177,36 @@
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/data",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/static"
 	],
 	"file_history":
 	[
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages/vista.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/static/base.css",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Header.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Head.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/MyLayout.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/data/dummy.json",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages/about.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/package.json",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Hotspots.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/next.config.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/out/_next/c42780dd-9887-45d7-b48a-81639c0cd794/page/vista.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages/vista.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/package.json",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/dploy.yaml",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/out/vista/index.html",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/out/_next/db9baba2471459ad77de533e81f74542/app.js",
+		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Hotspots.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/utils/mz_utils.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/MarzipanoLoader.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Panorama.js",
 		"/home/pabloselin/Documentos/code/js/trolley_nextjs/node_modules/.bin/webpack",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Head.js",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/pages/about.js",
-		"/home/pabloselin/Documentos/code/js/trolley_nextjs/components/Header.js",
 		"/home/pabloselin/Documentos/code/containers/csd/csd_adm/docker-compose.yml",
 		"/etc/hosts"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -202,6 +220,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"static",
+			"marzipano.js",
+			"prototype",
+			"marzipano",
+			"\"pitch\"",
+			"pitch",
 			"800px",
 			"document",
 			"csd_web"
@@ -222,24 +246,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/vista.js",
+					"file": "server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1081,
+						"buffer_size": 773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								717,
-								717
+								152,
+								152
 							]
 						],
 						"settings":
@@ -252,29 +276,29 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "components/MarzipanoView.js",
+					"file": "data/dummy.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3771,
+						"buffer_size": 2433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1493,
-								1493
+								622,
+								622
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -287,19 +311,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "pages/about.js",
+					"file": "components/MarzipanoView.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 431,
+						"buffer_size": 3857,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								383,
-								383
+								2180,
+								2180
 							]
 						],
 						"settings":
@@ -309,114 +333,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "data/dummy.json",
-					"semi_transient": false,
+					"file": "next.config.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1404,
+						"buffer_size": 279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1108,
-								1108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "components/MyLayout.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								225,
-								225
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "components/Head.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 556,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28,
-								28
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "components/Header.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 851,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								589,
-								589
+								0,
+								0
 							]
 						],
 						"settings":
@@ -433,32 +370,149 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "static/base.css",
+					"buffer": 4,
+					"file": "robots.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 138,
+						"buffer_size": 25,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								25,
+								25
 							]
 						],
 						"settings":
 						{
-							"auto_name": "body {",
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"auto_name": "User-agent: *",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								533,
+								533
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "static/robots.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"auto_name": "User-agent: *",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "components/Head.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								292,
+								292
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -512,6 +566,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"dpl",
+				"dploy.yaml"
+			],
+			[
+				"pag",
+				"package.json"
+			],
+			[
+				"packa",
+				"package.json"
+			],
 			[
 				"dumm",
 				"data/dummy.json"
