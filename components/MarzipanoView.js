@@ -128,7 +128,7 @@ class Panorama extends React.Component {
           onClick={this.handleClick.bind(this)}
         />
         {this.props.hotspots.map((hotspot) => (
-          <Hotspot loaded={this.state.loaded} scene={this.state.scene} key={"hotspot-" + hotspot.id} title={hotspot.title} content={hotspot.content} position={hotspot.position}/>  
+          <Hotspot scene={this.state.scene} key={hotspot.id} title={hotspot.title} content={hotspot.content} position={hotspot.position}/>  
           ))}
         <style global jsx>{`
           .panoWrapper {
