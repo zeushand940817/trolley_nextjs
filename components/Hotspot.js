@@ -1,11 +1,15 @@
 import Modal from '../components/Modal.js';
 import CloseButton from '../components/CloseButton.js';
+import fetch from 'isomorphic-unfetch';
 
 class Hotspot extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: false
+      isActive: false,
+      isLoaded: false,
+      error:null,
+      items: []
     }
     this.modalClick = this.modalClick.bind(this);
   }
@@ -24,10 +28,25 @@ class Hotspot extends React.Component {
     this.setState({
       isActive: true
     });
+    fetch('https://api.tvmaze.com/search/shows?q=batman')
+      .then(res => res.json())
+      .then(
+          (result) => {
+            this.setState({
+              isLoaded: true,
+              items: result
+            })
+          },
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            })
+          }
+        )
   }
 
   modalClick(e) {
-    console.log('modalclick');
     this.setState({
       isActive: false
     })
