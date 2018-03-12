@@ -16,6 +16,8 @@ class Modal extends React.Component {
 				<div>
 					<div className="modal">
 						{this.props.title}
+						{this.props.close}
+						{this.props.children}
 					</div>
 					<style jsx>
 					{`

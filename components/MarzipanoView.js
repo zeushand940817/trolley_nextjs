@@ -32,7 +32,7 @@ class Panorama extends React.Component {
       // Autorotate will start after 1s of idle time
       viewer.setIdleMovement(10000, autorotate);  
       // Disable idle movement
-      //viewer.setIdleMovement(Infinity);
+      viewer.setIdleMovement(Infinity);
 
       // Start autorotation immediately
       viewer.startMovement(autorotate); 

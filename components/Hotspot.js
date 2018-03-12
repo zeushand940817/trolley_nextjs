@@ -1,9 +1,13 @@
+import Modal from '../components/Modal.js';
+import CloseButton from '../components/CloseButton.js';
+
 class Hotspot extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      visited: false
+      isActive: false
     }
+    this.modalClick = this.modalClick.bind(this);
   }
 
   componentDidMount() {
@@ -17,29 +21,46 @@ class Hotspot extends React.Component {
   }
 
   hpClick(e) {
+    this.setState({
+      isActive: true
+    });
+  }
+
+  modalClick(e) {
+    console.log('modalclick');
+    this.setState({
+      isActive: false
+    })
   }
 
   componentWillUnmount() {}
 
   render() {
+    
+    const activeModal = () => {
+      if(this.state.isActive === true) {
+        return (<div>
+                  <Modal title={this.props.title}> 
+                    {this.props.content} 
+                    <CloseButton onClick={this.modalClick.bind(this)}/> 
+                  </Modal>
+                </div>)
+      }
+    }
+
     return(
       <div>
-      <div onClick={this.hpClick.bind(this)} ref={hpDiv => {this.hpDiv = hpDiv}} className="mz-hotspot">
+      <div onClick={this.hpClick.bind(this)} ref={hpDiv => {this.hpDiv = hpDiv}} className="trHotspot">
         <div className="hpcontent">
             <h2 className="hptitle">{this.props.title}</h2>
-            <div className="hpdesc">{this.props.content}</div>
         </div>
       </div>
+      {activeModal()}
       <style jsx>
        {`
         .hpcontent {
             position: relative;
           }
-        
-        .hpcontent:hover .hpdesc {
-          opacity:1;
-          transform: rotate3d(0, 0, 1, 5deg);
-        }
 
         .hpcontent:hover .hptitle {
            border-left:6px solid #E34F35;
@@ -58,23 +79,6 @@ class Hotspot extends React.Component {
           top:0;
           left:0;
           z-index:2;
-        }
-        .hpdesc {
-          padding:20px 12px 12px 12px;
-          margin:60px 0 0 60px;
-          background-color:rgba(0,0,0, 0.5);
-          color:white;
-          position: absolute;
-          left:12px;
-          top:12px;
-          width:260px;
-          line-height:1.3em;
-          z-index:1;
-          transform: rotate3d(0, 0, 1, -25deg);
-          opacity:0;
-          pointer-events: none;
-          transition: opacity 0.5s, transform 0.5s;
-          border-top:1px solid white;
         }
         `
        }
