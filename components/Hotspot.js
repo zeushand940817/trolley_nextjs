@@ -1,4 +1,7 @@
+import config from '../config.js';
+import data_trolley from '../data/data_trolley.json'; 
 import Modal from '../components/Modal.js';
+import Gallery from '../components/Gallery.js';
 import CloseButton from '../components/CloseButton.js';
 import fetch from 'isomorphic-unfetch';
 
@@ -28,10 +31,17 @@ class Hotspot extends React.Component {
     this.setState({
       isActive: true
     });
-    fetch('https://api.tvmaze.com/search/shows?q=batman')
+    if(process.env.NODE_ENV !== 'production') {
+      this.setState({
+        isLoaded: true,
+        items: data_trolley
+      })
+    } else {
+       fetch(config.trolleydataurl)
       .then(res => res.json())
       .then(
           (result) => {
+            console.log(result);
             this.setState({
               isLoaded: true,
               items: result
@@ -44,6 +54,7 @@ class Hotspot extends React.Component {
             })
           }
         )
+    }
   }
 
   modalClick(e) {
@@ -60,7 +71,8 @@ class Hotspot extends React.Component {
       if(this.state.isActive === true) {
         return (<div>
                   <Modal title={this.props.title}> 
-                    {this.props.content} 
+                    {this.props.content}
+                    <Gallery keyword={this.props.keyword ? this.props.keyword : null } data={this.state.items} />
                     <CloseButton onClick={this.modalClick.bind(this)}/> 
                   </Modal>
                 </div>)

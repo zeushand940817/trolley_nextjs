@@ -4,6 +4,7 @@
     {
       "title": " Escenario / Obras",
       "id": 1,
+      "keyword": "escenario", 
       "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
       "position": {
           "pitch": -0.1833731575070061,
@@ -13,6 +14,7 @@
     {
       "title": "Participantes",
       "id": 2,
+      "keyword": "actores",
       "position": {
           "pitch": 0.4317066448356943,
           "yaw": 0.334982661843263
@@ -21,6 +23,7 @@
     {
       "title": "Caja Boletería Recepción",
       "id": 4,
+      "keyword": "espacio",
       "position": {
           "pitch": 0.08021686724895538,
           "yaw": 2.6967840991547067
@@ -53,6 +56,7 @@
     {
       "title": "Gráfica del Trolley",
       "id": 8,
+      "keyword": "gráfica",
       "position": {
           "pitch": 0.0477167644995955,
           "yaw": 1.2337197524706873

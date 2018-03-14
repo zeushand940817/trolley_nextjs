@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
 import Hotspot from '../components/Hotspot.js';
+import data_trolley from '../data/data_trolley.json'; 
 
 class Panorama extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Panorama extends React.Component {
     this.state = {
       loaded: false,
       scene: false,
-      view: false
+      view: false,
+      activeKey: 0
     }
   }
 
@@ -103,6 +105,10 @@ class Panorama extends React.Component {
     }
   }
 
+  hpClick(e) {
+    console.log('hpclick');
+  }
+
   componentWillUnmount() {
     //Destroy marzipano
   }
@@ -128,7 +134,7 @@ class Panorama extends React.Component {
           onClick={this.handleClick.bind(this)}
         />
         {this.props.hotspots.map((hotspot) => (
-          <Hotspot scene={this.state.scene} key={hotspot.id} title={hotspot.title} content={hotspot.content} position={hotspot.position}/>  
+          <Hotspot onclick={this.hpClick} scene={this.state.scene} key={hotspot.id} title={hotspot.title} content={hotspot.content} keyword={hotspot.keyword} position={hotspot.position}/>  
           ))}
         <style global jsx>{`
           .panoWrapper {

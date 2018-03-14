@@ -9,24 +9,30 @@ class Modal extends React.Component {
 				<div>
 					<div className="modal animated fadeInUp">
 						<div className="modalContent">
-							{this.props.title}
-							{this.props.close}
+							<h2>{this.props.title}</h2>
 							{this.props.children}
+							{this.props.close}
 						</div>
 					</div>
 					<style jsx>
 					{`
+						h2 {
+							font-family:'Barrio', sans-serif;
+          					font-size: 32px;
+						}
 						.modal {
 							position:absolute;
 							width:100%;
 							height:100%;
-							background-color:rgba(0,0,0,0.4);			
+							background-color:rgba(0,0,0,0.4);
+							overflow: scroll;			
+						}
+						.introModal {
+							margin-bottom:24px;
 						}
 						.modalContent {
-							padding:16px;
+							padding:32px 16px;
 							background-color:rgba(0,0,0,0.8);
-							height:100%;
-							width:100%;
 						}
 						`
 					}
