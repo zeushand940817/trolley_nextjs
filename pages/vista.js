@@ -33,7 +33,7 @@ updateWindowDimensions() {
      <style jsx>{`
       .panoWrapper {
         position:relative;
-        height:${this.state.height}px;
+        height:${this.state.height - 60}px;
         margin-top:20px;
         overflow:hidden;
       }

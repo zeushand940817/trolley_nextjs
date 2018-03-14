@@ -1,5 +1,4 @@
 import config from '../config.js';
-import data_trolley from '../data/data_trolley.json'; 
 import Modal from '../components/Modal.js';
 import Gallery from '../components/Gallery.js';
 import CloseButton from '../components/CloseButton.js';
@@ -14,7 +13,7 @@ class Hotspot extends React.Component {
       error:null,
       items: []
     }
-    this.modalClick = this.modalClick.bind(this);
+    //this.modalClick = this.modalClick.bind(this);
   }
 
   componentDidMount() {
@@ -23,57 +22,35 @@ class Hotspot extends React.Component {
     this.createHotspot(this.hpDiv, this.props.position);
   }
 
+  componentWillReceiveProps() {
+    this.setState({
+      isActive: this.props.active
+    })
+  }
+
   createHotspot(element, position) {
     this.props.scene.hotspotContainer().createHotspot(element, position);    
-  }
-
-  hpClick(e) {
-    this.setState({
-      isActive: true
-    });
-    if(process.env.NODE_ENV !== 'production') {
-      this.setState({
-        isLoaded: true,
-        items: data_trolley
-      })
-    } else {
-       fetch(config.trolleydataurl)
-      .then(res => res.json())
-      .then(
-          (result) => {
-            console.log(result);
-            this.setState({
-              isLoaded: true,
-              items: result
-            })
-          },
-          (error) => {
-            this.setState({
-              isLoaded: true,
-              error
-            })
-          }
-        )
-    }
-  }
-
-  modalClick(e) {
-    this.setState({
-      isActive: false
-    })
   }
 
   componentWillUnmount() {}
 
   render() {
+
+    const hotspotType = (type) => {
+      if(type === 'gallery') {
+        return(<Gallery keyword={this.props.keyword ? this.props.keyword : null } />)
+      } else if(type === 'video') {
+        return(
+          <iframe width="560" height="315" src={this.props.data.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>Cargando...</iframe>
+          )
+      }
+    }
     
     const activeModal = () => {
-      if(this.state.isActive === true) {
+      if(this.props.active === true) {
         return (<div>
-                  <Modal title={this.props.title}> 
+                  <Modal close={<CloseButton onClick={this.props.close}/>} title={this.props.title} content={hotspotType(this.props.type)}> 
                     {this.props.content}
-                    <Gallery keyword={this.props.keyword ? this.props.keyword : null } data={this.state.items} />
-                    <CloseButton onClick={this.modalClick.bind(this)}/> 
                   </Modal>
                 </div>)
       }
@@ -81,7 +58,7 @@ class Hotspot extends React.Component {
 
     return(
       <div>
-      <div onClick={this.hpClick.bind(this)} ref={hpDiv => {this.hpDiv = hpDiv}} className="trHotspot">
+      <div onClick={this.props.onClick} ref={hpDiv => {this.hpDiv = hpDiv}} className="trHotspot">
         <div className="hpcontent">
             <h2 className="hptitle">{this.props.title}</h2>
         </div>
@@ -99,7 +76,7 @@ class Hotspot extends React.Component {
 
         .hptitle {
           font-family:'Barrio', sans-serif;
-          font-size: 24px;
+          font-size: 18px;
           color:white;
           margin:0;
           transform: rotate3d(0, 0, 1,-25deg);

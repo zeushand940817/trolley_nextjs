@@ -7,13 +7,19 @@ class CloseButton extends React.Component {
 	render() {
 		return(
 		<div>
-			<button onClick={this.props.onClick} className="CloseButton">Cerrar</button>
+			<a onClick={this.props.onClick} className="CloseButton"><i className="fas fa-times"></i></a>
 			<style jsx>{`
-				button {
+				.CloseButton {
 					clear:both;
 					overflow:hidden;
-					margin:24px 0;
-					color: #333;
+					padding:6px;
+					font-size:32px;
+					color: white;
+					position:absolute;
+					top:0;
+					background-color:#E34F35;
+					left:0;
+					z-index:10;
 				}
 			
 			`}</style>

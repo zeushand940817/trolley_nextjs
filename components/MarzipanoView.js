@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
 import Hotspot from '../components/Hotspot.js';
-import data_trolley from '../data/data_trolley.json'; 
+import PointsList from '../components/PointsList.js';
 
 class Panorama extends React.Component {
   constructor(props) {
@@ -10,7 +10,11 @@ class Panorama extends React.Component {
       loaded: false,
       scene: false,
       view: false,
-      activeKey: 0
+      activeKey: 0,
+      goTo: {
+        yaw: 0,
+        pitch: 0
+      }
     }
   }
 
@@ -105,8 +109,33 @@ class Panorama extends React.Component {
     }
   }
 
-  hpClick(e) {
-    console.log('hpclick');
+  hpState(index, event) {
+    console.log('hpstate', index);
+    this.setState({
+      activeKey: index
+    })
+  }
+
+  close(index, event) {
+    this.setState({
+      activeKey: 0
+    })
+  }
+
+  setPos(position, hotspotid) {
+    this.setState({
+      goTo: {
+        yaw: position.yaw,
+        pitch: position.pitch
+      },
+      activeKey: hotspotid
+    })
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.goTo.yaw !== this.state.goTo.yaw) {
+      this.state.scene.lookTo(this.state.goTo);
+    }
   }
 
   componentWillUnmount() {
@@ -134,13 +163,24 @@ class Panorama extends React.Component {
           onClick={this.handleClick.bind(this)}
         />
         {this.props.hotspots.map((hotspot) => (
-          <Hotspot onclick={this.hpClick} scene={this.state.scene} key={hotspot.id} title={hotspot.title} content={hotspot.content} keyword={hotspot.keyword} position={hotspot.position}/>  
+          <Hotspot  
+                    type={hotspot.type}
+                    active={this.state.activeKey === hotspot.id? true : false}
+                    onClick={this.hpState.bind(this, hotspot.id)}
+                    close={this.close.bind(this, hotspot.id)} 
+                    scene={this.state.scene} 
+                    key={hotspot.id} 
+                    title={hotspot.title} 
+                    content={hotspot.content}
+                    data={hotspot.data} 
+                    keyword={hotspot.keyword} 
+                    position={hotspot.position}/>  
           ))}
-        <style global jsx>{`
-          .panoWrapper {
-            height: ${this.state.innerHeight}px !important;
-          }
-        `}</style>
+          <PointsList 
+                  activeKey={this.state.activeKey}
+                  hotspots={this.props.hotspots}
+                  setPos={this.setPos.bind(this)}
+          />
       </div>
       
     );

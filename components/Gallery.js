@@ -1,3 +1,4 @@
+import data_trolley from '../data/data_trolley.json'; 
 
 class Gallery extends React.Component {
 	constructor(props) {
@@ -9,7 +10,7 @@ class Gallery extends React.Component {
 
 	componentDidMount() {
 		this.setState({
-			images: this.props.data.filter(
+			images: data_trolley.filter(
 				image => image["PALABRAS CLAVES"] === this.props.keyword
 				)
 		})
@@ -19,8 +20,8 @@ class Gallery extends React.Component {
 		return(
 			<div>
 				<div className="Gallery">
-					{this.state.images.map((image) => (
-						<img src={'./static/material/' + image.ID.toUpperCase() + '.jpg'} title={image["TITULO"]}/>
+					{this.state.images.map((image, key) => (
+						<img key={key} src={'./static/material/' + image.ID.toUpperCase() + '.jpg'} title={image["TITULO"]}/>
 						))}
 				</div>
 				<style jsx>{
