@@ -3,6 +3,7 @@ import Modal from '../components/Modal.js';
 import Gallery from '../components/Gallery.js';
 import CloseButton from '../components/CloseButton.js';
 import fetch from 'isomorphic-unfetch';
+import Collage from '../components/Collage.js';
 
 class Hotspot extends React.Component {
   constructor(props) {
@@ -43,13 +44,17 @@ class Hotspot extends React.Component {
         return(
           <iframe width="560" height="315" src={this.props.data.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>Cargando...</iframe>
           )
+      } else if(type === 'collage') {
+        return(
+          <Collage data={this.props.data} />
+          )
       }
     }
     
     const activeModal = () => {
       if(this.props.active === true) {
         return (<div>
-                  <Modal close={<CloseButton onClick={this.props.close}/>} title={this.props.title} content={hotspotType(this.props.type)}> 
+                  <Modal close={<CloseButton onClick={this.props.close}/>} title={this.props.title} content={hotspotType(this.props.type)} type={this.props.type}> 
                     {this.props.content}
                   </Modal>
                 </div>)

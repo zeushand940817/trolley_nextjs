@@ -65,8 +65,16 @@
     {
       "title": "Gráfica del Trolley",
       "id": 8,
-      "type": "slider",
+      "type": "collage",
       "keyword": "gráfica",
+      "data": {
+        "cortes": [
+          "nombre_1.png",
+          "nombre_2.png",
+          "nombre_3.png",
+          "nombre_4.png"
+        ]
+      },
       "position": {
           "pitch": 0.0477167644995955,
           "yaw": 1.2337197524706873
