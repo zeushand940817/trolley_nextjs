@@ -1,38 +1,35 @@
-import Draggable from 'popmotion-draggable/lib/react';
+import {Image, Rect } from 'react-konva';
 
 class DraggableImage extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
+		this.state = {
+			selected: false,
+			image: null
+		}
 	}
 
 	componentDidMount() {
-		console.log(this.props);
+		console.log(this.props.image);
+		const image = new window.Image();
+		image.src = './static/collage/' + this.props.image;
+		image.onload = () => {
+			this.setState({
+				image: image
+			})
+		}
 	}
-
-	onDrag() {
-
+	
+	onClick() {
+		console.log('click draggable');
+		this.setState = {
+			selected: true
+		}
 	}
 
 	render() {
 		return(
-			<div>
-			<Draggable className="draggable" onDrag={this.onDrag}>
-				<div className="imgDrag"/>
-			</Draggable>
-			<style jsx>{
-				`
-				.imgDrag {
-					width:150px;
-					height:100px;
-					display:block;
-  					user-drag: none;
-  					background-size:contain;
-  					background-repeat:no-repeat;
-  					background-image:url(${ './static/collage/' + this.props.image})
-				}
-				`
-			}</style>
-			</div>
+			<Image image={this.state.image} scale={{x:0.4, y:0.4}} draggable={true}/>
 			)
 	}	
 }

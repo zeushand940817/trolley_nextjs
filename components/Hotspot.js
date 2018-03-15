@@ -64,7 +64,7 @@ class Hotspot extends React.Component {
     return(
       <div>
       <div onClick={this.props.onClick} ref={hpDiv => {this.hpDiv = hpDiv}} className="trHotspot">
-        <div className="hpcontent">
+        <div className={this.props.active === true ? 'hpcontent active' : 'hpcontent'}>
             <h2 className="hptitle">{this.props.title}</h2>
         </div>
       </div>
@@ -75,8 +75,11 @@ class Hotspot extends React.Component {
             position: relative;
           }
 
-        .hpcontent:hover .hptitle {
-           border-left:6px solid #E34F35;
+        .hpcontent:hover .hptitle,
+        .hpcontent.active .hptitle
+         {
+           background-color:#E34F35;
+           color:white;
         }
 
         .hptitle {

@@ -72,7 +72,8 @@ class PointsList extends React.Component {
 								border-right:5px solid white;
 							}
 							li.active, li:hover {
-								color:#E34F35;
+								color:white;
+								background-color:#E34F35;
 							}
 						`}
 						</style>
@@ -96,6 +97,7 @@ class PointsList extends React.Component {
 					color:black;
 					padding:6px;
 					z-index:10;
+					font-size:24px;
 				}
 				.button:hover {
 					background-color:black;
