@@ -2,6 +2,7 @@ import fetch from 'isomorphic-unfetch';
 import config from '../config.js';
 import Hotspot from '../components/Hotspot.js';
 import PointsList from '../components/PointsList.js';
+import MarzipanoUI from '../components/MarzipanoUI.js';
 
 class Panorama extends React.Component {
   constructor(props) {
@@ -11,6 +12,9 @@ class Panorama extends React.Component {
       scene: false,
       view: false,
       activeKey: 0,
+      isRotating: false,
+      autorotate: null,
+      viewer: null,
       goTo: {
         yaw: 0,
         pitch: 0
@@ -34,14 +38,6 @@ class Panorama extends React.Component {
         targetPitch: 0,        // Pitch value to converge to
         targetFov: Math.PI/2   // Fov value to converge to
       });
-
-      // Autorotate will start after 1s of idle time
-      viewer.setIdleMovement(10000, autorotate);  
-      // Disable idle movement
-      viewer.setIdleMovement(Infinity);
-
-      // Start autorotation immediately
-      viewer.startMovement(autorotate); 
 
       // Create source.
       let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
@@ -74,7 +70,9 @@ class Panorama extends React.Component {
       this.setState({
         loaded: true,
         scene: scene,
-        view: view
+        view: view,
+        viewer: viewer,
+        autorotate: autorotate
       });
 
       //this.setState({scene: scene});
@@ -82,6 +80,16 @@ class Panorama extends React.Component {
 
     document.body.appendChild(script);
     
+  }
+
+  toggleRotate() {
+     if(this.state.isRotating === true) {
+        this.setState({
+          isRotating: false
+        })
+     } else {
+      this.setState({isRotating: true})
+     }
   }
 
 
@@ -111,7 +119,8 @@ class Panorama extends React.Component {
 
   hpState(index, position, event) {
     this.setState({
-      activeKey: index
+      activeKey: index,
+      isRotating: false
     });
     console.log(position);
     this.setPos(position, index);
@@ -129,13 +138,22 @@ class Panorama extends React.Component {
         yaw: position.yaw,
         pitch: position.pitch
       },
-      activeKey: hotspotid
+      activeKey: hotspotid,
+      isRotating: false
     })
   }
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.goTo.yaw !== this.state.goTo.yaw) {
       this.state.scene.lookTo(this.state.goTo);
+    }
+    if(prevState.isRotating !== this.state.isRotating) {
+      if(this.state.isRotating === false) {
+        this.state.viewer.stopMovement();
+      }
+      if(this.state.isRotating === true) {
+       this.state.viewer.startMovement(this.state.autorotate);
+      }
     }
   }
 
@@ -182,6 +200,7 @@ class Panorama extends React.Component {
                   hotspots={this.props.hotspots}
                   setPos={this.setPos.bind(this)}
           />
+          <MarzipanoUI autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)}/>
       </div>
       
     );
