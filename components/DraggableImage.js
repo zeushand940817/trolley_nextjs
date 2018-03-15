@@ -19,7 +19,7 @@ class DraggableImage extends React.Component {
 			})
 		}
 	}
-	
+
 	onClick() {
 		console.log('click draggable');
 		this.setState = {
@@ -29,7 +29,7 @@ class DraggableImage extends React.Component {
 
 	render() {
 		return(
-			<Image image={this.state.image} scale={{x:0.4, y:0.4}} draggable={true}/>
+			<Image x={50} y={20} image={this.state.image} scale={{x:0.7, y:0.7}} draggable={true}/>
 			)
 	}	
 }

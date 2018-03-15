@@ -10,11 +10,17 @@ class Collage extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.refs.collage.getStage());
+		const testFolder = './static/collage/';
+
 	}
 
 	onDrag() {
 
+	}
+
+	genImage() {
+		let stage = this.refs.collage.getStage();
+		window.open(stage.toDataURL());
 	}
 
 	render() {
@@ -29,13 +35,17 @@ class Collage extends React.Component {
 			}
 			</Layer>
 			</Stage>
-			
+			<div className="genImage" onClick={this.genImage.bind(this)}>Generar imagen</div>
 			</div>
 			<style jsx>{`
 				.stageContainer {
 					width:100%;
 					height:100%;
 					background-color:#f0f0f0;
+				}
+				.genImage {
+					background-color: #000;
+					padding:6px;
 				}
 				`}</style>
 				</div>
