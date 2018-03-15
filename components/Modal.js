@@ -21,7 +21,7 @@ class Modal extends React.Component {
 		if(this.props.type === 'collage') {
 			this.setState({
 				specs: {
-					width: '90%',
+					width: '70%',
 					height: '600px',
 					overflowX: 'hidden',
 					overflowY: 'hidden',

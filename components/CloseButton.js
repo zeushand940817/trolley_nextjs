@@ -1,3 +1,5 @@
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'	
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 
 class CloseButton extends React.Component {
 	constructor(props) {
@@ -7,7 +9,7 @@ class CloseButton extends React.Component {
 	render() {
 		return(
 		<div>
-			<a onClick={this.props.onClick} className="CloseButton"><i className="fas fa-times"></i></a>
+			<a onClick={this.props.onClick} className="CloseButton"><FontAwesomeIcon icon={faTimes}/></a>
 			<style jsx>{`
 				.CloseButton {
 					clear:both;

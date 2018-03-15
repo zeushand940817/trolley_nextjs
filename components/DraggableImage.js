@@ -10,7 +10,7 @@ class DraggableImage extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.props.image);
+		console.log(this.props.position);
 		const image = new window.Image();
 		image.src = './static/collage/' + this.props.image;
 		image.onload = () => {
@@ -29,7 +29,7 @@ class DraggableImage extends React.Component {
 
 	render() {
 		return(
-			<Image x={50} y={20} image={this.state.image} scale={{x:0.7, y:0.7}} draggable={true}/>
+			<Image x={this.props.position.x} y={this.props.position.y} image={this.state.image} scale={{x:0.7, y:0.7}} draggable={true}/>
 			)
 	}	
 }

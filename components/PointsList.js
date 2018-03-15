@@ -1,4 +1,5 @@
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
+import ShowMenu from '../components/ShowMenu.js';
 
 class PointsList extends React.Component {
 	constructor(props) {
@@ -84,27 +85,7 @@ class PointsList extends React.Component {
 		if(this.props.hotspots !== undefined) {
 		return(
 			<div>
-			<div className="button" onClick={this.showLista.bind(this)}>
-				<i className="fas fa-bars"></i>
-			</div>
-			<style jsx>{
-				`
-				.button {
-					position: absolute;
-					top:0;
-					left:0;
-					background-color:white;
-					color:black;
-					padding:6px;
-					z-index:10;
-					font-size:24px;
-				}
-				.button:hover {
-					background-color:black;
-					color:white;
-				}
-				`
-			}</style>
+			<ShowMenu onClick={this.showLista.bind(this)} active={this.state.isActive}/>
 			{isActiveNavi()}
 			</div>
 		)

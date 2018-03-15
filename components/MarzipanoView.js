@@ -109,11 +109,12 @@ class Panorama extends React.Component {
     }
   }
 
-  hpState(index, event) {
-    console.log('hpstate', index);
+  hpState(index, position, event) {
     this.setState({
       activeKey: index
-    })
+    });
+    console.log(position);
+    this.setPos(position, index);
   }
 
   close(index, event) {
@@ -166,7 +167,7 @@ class Panorama extends React.Component {
           <Hotspot  
                     type={hotspot.type}
                     active={this.state.activeKey === hotspot.id? true : false}
-                    onClick={this.hpState.bind(this, hotspot.id)}
+                    onClick={this.hpState.bind(this, hotspot.id, hotspot.position)}
                     close={this.close.bind(this, hotspot.id)} 
                     scene={this.state.scene} 
                     key={hotspot.id} 

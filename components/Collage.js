@@ -5,7 +5,9 @@ class Collage extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			image: null
+			image: null,
+			stageHeight: 500,
+			stageWidth: 900
 		}
 	}
 
@@ -13,6 +15,15 @@ class Collage extends React.Component {
 		const testFolder = './static/collage/';
 
 	}
+
+	randomNum(max) {
+		return (Math.floor(Math.random() * Math.floor(max)));
+	}
+
+	randomPos() {
+		return {x: this.randomNum(this.state.stageWidth), y: this.randomNum(this.state.stageHeight)}
+	}
+
 
 	onDrag() {
 
@@ -30,7 +41,7 @@ class Collage extends React.Component {
 			<Stage ref="collage" height="500" width="900">
 			<Layer>
 			{this.props.data.cortes.map((corte, id) => (
-				<DraggableImage key={id} image={corte}/>
+				<DraggableImage position={this.randomPos()} key={id} image={corte}/>
 				))		
 			}
 			</Layer>
