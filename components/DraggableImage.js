@@ -29,7 +29,7 @@ class DraggableImage extends React.Component {
 
 	render() {
 		return(
-			<Image x={this.props.position.x} y={this.props.position.y} image={this.state.image} scale={{x:0.7, y:0.7}} draggable={true}/>
+			<Image x={this.props.position.x} y={this.props.position.y} image={this.state.image} scale={{x:1, y:1}} draggable={true}/>
 			)
 	}	
 }

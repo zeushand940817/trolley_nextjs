@@ -12,6 +12,7 @@ class Panorama extends React.Component {
       scene: false,
       view: false,
       activeKey: 0,
+      hotspotType: null,
       isRotating: false,
       autorotate: null,
       viewer: null,
@@ -117,29 +118,26 @@ class Panorama extends React.Component {
     }
   }
 
-  hpState(index, position, event) {
-    this.setState({
-      activeKey: index,
-      isRotating: false
-    });
-    console.log(position);
-    this.setPos(position, index);
+  hpState(index, position, hotspotType, event) {
+    this.setPos(position, index, hotspotType);
   }
 
   close(index, event) {
     this.setState({
-      activeKey: 0
+      activeKey: 0,
+      hotspotType: null
     })
   }
 
-  setPos(position, hotspotid) {
+  setPos(position, hotspotid, type) {
     this.setState({
       goTo: {
         yaw: position.yaw,
         pitch: position.pitch
       },
       activeKey: hotspotid,
-      isRotating: false
+      isRotating: false,
+      hotspotType: type
     })
   }
 
@@ -185,7 +183,7 @@ class Panorama extends React.Component {
           <Hotspot  
                     type={hotspot.type}
                     active={this.state.activeKey === hotspot.id? true : false}
-                    onClick={this.hpState.bind(this, hotspot.id, hotspot.position)}
+                    onClick={this.hpState.bind(this, hotspot.id, hotspot.position, hotspot.type)}
                     close={this.close.bind(this, hotspot.id)} 
                     scene={this.state.scene} 
                     key={hotspot.id} 
@@ -199,6 +197,8 @@ class Panorama extends React.Component {
                   activeKey={this.state.activeKey}
                   hotspots={this.props.hotspots}
                   setPos={this.setPos.bind(this)}
+                  hotspotType={this.state.hotspotType}
+                  
           />
           <MarzipanoUI autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)}/>
       </div>

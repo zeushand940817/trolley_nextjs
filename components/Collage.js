@@ -7,12 +7,16 @@ class Collage extends React.Component {
 		this.state = {
 			image: null,
 			stageHeight: 500,
-			stageWidth: 900
+			stageWidth: 0
 		}
 	}
 
 	componentDidMount() {
 		const testFolder = './static/collage/';
+		this.setState({
+			stageWidth: window.innerWidth - 200,
+			stageHeight: window.innerHeight - 300
+		})
 
 	}
 
@@ -38,7 +42,7 @@ class Collage extends React.Component {
 		return(
 			<div>
 			<div className="stageContainer">
-			<Stage ref="collage" height="500" width="900">
+			<Stage ref="collage" height={this.state.stageHeight} width={this.state.stageWidth}>
 			<Layer>
 			{this.props.data.cortes.map((corte, id) => (
 				<DraggableImage position={this.randomPos()} key={id} image={corte}/>
@@ -55,8 +59,18 @@ class Collage extends React.Component {
 					background-color:#f0f0f0;
 				}
 				.genImage {
-					background-color: #000;
+					background-color: #E34F35;
 					padding:6px;
+					color:white;
+					font-family:'Barrio', sans-serif;
+					font-size:24px;
+					transform:rotate3d(0, 0, 1, 3deg);
+					width:300px;
+					cursor:pointer;
+					text-align:center;
+					position:absolute;
+					top:20px;
+					right:20px;
 				}
 				`}</style>
 				</div>

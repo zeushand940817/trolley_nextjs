@@ -5,8 +5,7 @@ class PointsList extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isActive: false,
-			animation: 'animated fadeInLeft'
+			isActive: false
 		}
 	}
 
@@ -32,13 +31,13 @@ class PointsList extends React.Component {
 
 	render() {
 		const isActiveNavi = () => {
-			if(this.state.isActive === true) {
+			if(this.state.isActive === true && this.props.hotspotType !== 'collage') {
 				return(
 					<div>
 						<div className="navi active">
 							<ul>
 							{this.props.hotspots.map((hotspot)=>
-								<li className={this.props.activeKey === hotspot.id ? 'active' : ''} onClick={ () => this.props.setPos(hotspot.position, hotspot.id) } position={hotspot.position} key={hotspot.id}>{hotspot.title}</li>
+								<li className={this.props.activeKey === hotspot.id ? 'active' : ''} onClick={ () => this.props.setPos(hotspot.position, hotspot.id, hotspot.type) } position={hotspot.position} key={hotspot.id}>{hotspot.title}</li>
 								)}
 							</ul>
 						</div>

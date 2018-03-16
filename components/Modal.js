@@ -8,7 +8,8 @@ class Modal extends React.Component {
 				height: 'auto',
 				overflowY: 'scroll',
 				overflowX: 'hidden',
-				transform: 'rotate3d(0, 0, 1, 3deg)'
+				transform: 'rotate3d(0, 0, 1, 3deg)',
+				position: 'absolute'
 			}
 		}
 	}
@@ -21,11 +22,12 @@ class Modal extends React.Component {
 		if(this.props.type === 'collage') {
 			this.setState({
 				specs: {
-					width: '70%',
-					height: '600px',
+					width: '90%',
+					height: '100%',
 					overflowX: 'hidden',
 					overflowY: 'hidden',
-					transform: 'none'
+					transform: 'none',
+					position: 'relative'
 				}
 			})
 		}
@@ -49,7 +51,7 @@ class Modal extends React.Component {
           					margin-top:0
 						}
 						.modal {
-							position:absolute;
+							position:${this.state.specs.position};
 							width:${this.state.specs.width};
 							max-height:100%;
 							top:50px;
@@ -58,10 +60,11 @@ class Modal extends React.Component {
 							overflow-y: ${this.state.specs.overflowY};
 							overflow-x: ${this.state.specs.overflowX};
 							transform: ${this.state.specs.transform};
-							border-top:4px solid white;			
+							border-top:4px solid white;
+							margin:0 auto;	
 						}
 						.modalContent {
-							padding:12px 32px 16px;
+							padding:12px 32px 64px;
 							background-color:rgba(0,0,0,0.8);
 							height: ${this.state.specs.height};
 						}
