@@ -21,6 +21,7 @@ class MarzipanoUI extends React.Component {
 			<div className={this.props.autorotate === true ? 'button active' : 'button'} onClick={this.props.rotate}>
 				{checkIcon()}
 			</div>
+		{/* AÑADIR CAMBIADOR DE ESCENAS <div className="switchScene">Cambiar escena</div>*/}
 			<style jsx>{
 				`
 				.button {

@@ -1,106 +1,119 @@
 {
   "tilesurl": "./static/tiles/rtrolley_{f}.jpg",
-  "hotspots": [
+  "scenes": [
     {
-      "title": " Escenario / Obras",
-      "id": 1,
-      "keyword": "escenario", 
-      "type": "gallery",
-      "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
-      "position": {
-          "pitch": -0.1833731575070061,
-          "yaw": -0.19213234443906124
-        }
-    },
-    {
-      "title": "Participantes",
+      "title": "Escenario Vacío",
+      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
       "id": 2,
-      "keyword": "actores",
-      "type": "gallery",
-      "position": {
-          "pitch": 0.4317066448356943,
-          "yaw": 0.334982661843263
-        }
+      "hotspots": []
     },
     {
-      "title": "Caja Boletería Recepción",
-      "id": 4,
-      "keyword": "espacio",
-      "type": "gallery",
-      "position": {
-          "pitch": 0.08021686724895538,
-          "yaw": 2.6967840991547067
+      "title": "Función de teatro",
+      "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
+      "id": 1,
+      "hotspots": [
+        {
+          "title": " Escenario / Obras",
+          "id": 1,
+          "keyword": "escenario", 
+          "type": "gallery",
+          "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "position": {
+            "pitch": -0.1833731575070061,
+            "yaw": -0.19213234443906124
+          }
+        },
+        {
+          "title": "Participantes",
+          "id": 2,
+          "keyword": "actores",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.4317066448356943,
+            "yaw": 0.334982661843263
+          }
+        },
+        {
+          "title": "Caja Boletería Recepción",
+          "id": 4,
+          "keyword": "espacio",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.08021686724895538,
+            "yaw": 2.6967840991547067
+          }
+        },
+        {
+          "title": "Escalera al altillo",
+          "id": 5,
+          "type": "gallery",
+          "position": {
+            "pitch": -0.02197501326752338,
+            "yaw": -2.6999674119240904
+          }
+        },
+        {
+          "title": "Historias del Trolley",
+          "id": 6,
+          "type": "text",
+          "position": {
+            "pitch": 0.23353624877265133,
+            "yaw": -1.9640503636375026
+          }
+        },
+        {
+          "title": "Bambalinas",
+          "id": 7,
+          "type": "video",
+          "data": {
+            "url": "https://www.youtube.com/embed/7IY-dpHHsGA"
+          },
+          "position": {
+            "pitch": 0.055153182733935324,
+            "yaw": -0.3981602943236453
+          }
+        },
+        {
+          "title": "Gráfica del Trolley",
+          "id": 8,
+          "type": "collage",
+          "keyword": "gráfica",
+          "data": {
+            "cortes": [
+              "nombre_1.png",
+              "nombre_2.png",
+              "nombre_3.png",
+              "nombre_4.png",
+              "actor_01.png",
+              "cortinaizq.png",
+              "escenario_02.png",
+              "publico.png",
+              "puerta_02.png",
+              "reloj.png",
+              "foco.png",
+              "telon.png",
+              "sr_1.png",
+              "sra_1.png",
+              "sra_2.png",
+              "sres.png",
+              "sres_02"
+            ]
+          },
+          "position": {
+            "pitch": 0.0477167644995955,
+            "yaw": 1.2337197524706873
+          }
+        },
+        {
+          "title": "Entrada Salida",
+          "id": 9,
+          "type": "sceneto",
+          "position": {
+            "pitch": -0.20892931548385718,
+            "yaw": 3.0131884543852365
+          }
         }
-    },
-    {
-      "title": "Escalera al altillo",
-      "id": 5,
-      "type": "gallery",
-      "position": {
-          "pitch": -0.02197501326752338,
-          "yaw": -2.6999674119240904
-        }
-    },
-    {
-      "title": "Historias del Trolley",
-      "id": 6,
-      "type": "text",
-      "position": {
-          "pitch": 0.23353624877265133,
-          "yaw": -1.9640503636375026
-        }
-    },
-    {
-      "title": "Bambalinas",
-      "id": 7,
-      "type": "video",
-      "data": {
-        "url": "https://www.youtube.com/embed/7IY-dpHHsGA"
-      },
-      "position": {
-          "pitch": 0.055153182733935324,
-          "yaw": -0.3981602943236453
-        }
-    },
-    {
-      "title": "Gráfica del Trolley",
-      "id": 8,
-      "type": "collage",
-      "keyword": "gráfica",
-      "data": {
-        "cortes": [
-          "nombre_1.png",
-          "nombre_2.png",
-          "nombre_3.png",
-          "nombre_4.png",
-          "actor_01.png",
-          "cortinaizq.png",
-          "escenario_02.png",
-          "publico.png",
-          "puerta_02.png",
-          "reloj.png",
-          "foco.png",
-          "telon.png",
-          "sr_1.png",
-          "sra_1.png",
-          "sra_2.png",
-          "sres.png",
-          "sres_02"
-        ]
-      },
-      "position": {
-          "pitch": 0.0477167644995955,
-          "yaw": 1.2337197524706873
-        }
-    },
-    {
-      "title": "Entrada Salida",
-      "id": 9,
-      "type": "sceneto",
-      "position": {
-        "pitch": -0.20892931548385718,
-        "yaw": 3.0131884543852365
-      }
+      ]
     }
   ],
   "pages": {

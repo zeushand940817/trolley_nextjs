@@ -35,7 +35,8 @@ class Collage extends React.Component {
 
 	genImage() {
 		let stage = this.refs.collage.getStage();
-		window.open(stage.toDataURL());
+		let image = stage.toDataURL();
+		window.open(image, '_blank');
 	}
 
 	render() {

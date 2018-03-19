@@ -27,7 +27,7 @@ updateWindowDimensions() {
     return(
      <Layout>
      <div className="panoWrapper">
-     <Panorama tilesurl={data.tilesurl} hotspots={data.hotspots}/>
+     <Panorama scenes={data.scenes} />
 
      </div>
      <style jsx>{`

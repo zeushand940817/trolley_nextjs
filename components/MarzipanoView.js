@@ -28,20 +28,31 @@ class Panorama extends React.Component {
     script.src = "./static/marzipano.js";
 
     script.onload = () => {
-
       let panoElement = this.divContainer;
-
       // Create viewer.
       let viewer = new Marzipano.Viewer(panoElement);
-
       let autorotate = Marzipano.autorotate({
         yawSpeed: 0.1,         // Yaw rotation speed
         targetPitch: 0,        // Pitch value to converge to
         targetFov: Math.PI/2   // Fov value to converge to
       });
 
+      let scenes = this.props.scenes.map((scene) => {
+        return this.createScene(scene, viewer);
+      });
+
+      console.log(scenes);
+      scenes[0].scene.switchTo();
+    }
+
+    document.body.appendChild(script);
+    this.setState({loaded: true});
+  }
+
+  createScene(scene, viewer) {
+
       // Create source.
-      let source = Marzipano.ImageUrlSource.fromString(this.props.tilesurl);
+      let source = Marzipano.ImageUrlSource.fromString(scene.tilesurl);
 
       // Create geometry.
       let geometry = new Marzipano.CubeGeometry([{ tileSize: 2000, size: 2000}]);
@@ -54,7 +65,7 @@ class Panorama extends React.Component {
       let view = new Marzipano.RectilinearView({yaw: 4 * Math.PI / 180, pitch: 0, fov: 1.2}, limiter);
 
       // Create scene.
-      let scene = viewer.createScene({
+      let curscene = viewer.createScene({
           source: source,
           geometry: geometry,
           view: view,
@@ -62,24 +73,21 @@ class Panorama extends React.Component {
       });
 
       //Create hotspots
-      let hotspots = this.props.hotspots;
+      let hotspots = scene.hotspots;
       
 
       // Display scene.
-      scene.switchTo();
-
-      this.setState({
-        loaded: true,
-        scene: scene,
-        view: view,
-        viewer: viewer,
-        autorotate: autorotate
-      });
+      //scene.switchTo();
+      //console.log(curscene);
+      return {
+        scene: curscene,
+        view: view
+      };
 
       //this.setState({scene: scene});
-    }
+  }
 
-    document.body.appendChild(script);
+  switchScene(scene) {
     
   }
 
@@ -168,6 +176,10 @@ class Panorama extends React.Component {
               height: "100%",
               overflow: "hidden"
             }
+
+    const hotspots = {
+
+    }
     
     if(this.state.loaded == true) {
     return (
@@ -179,28 +191,8 @@ class Panorama extends React.Component {
           }}
           onClick={this.handleClick.bind(this)}
         />
-        {this.props.hotspots.map((hotspot) => (
-          <Hotspot  
-                    type={hotspot.type}
-                    active={this.state.activeKey === hotspot.id? true : false}
-                    onClick={this.hpState.bind(this, hotspot.id, hotspot.position, hotspot.type)}
-                    close={this.close.bind(this, hotspot.id)} 
-                    scene={this.state.scene} 
-                    key={hotspot.id} 
-                    title={hotspot.title} 
-                    content={hotspot.content}
-                    data={hotspot.data} 
-                    keyword={hotspot.keyword} 
-                    position={hotspot.position}/>  
-          ))}
-          <PointsList 
-                  activeKey={this.state.activeKey}
-                  hotspots={this.props.hotspots}
-                  setPos={this.setPos.bind(this)}
-                  hotspotType={this.state.hotspotType}
-                  
-          />
-          <MarzipanoUI autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)}/>
+        
+          <MarzipanoUI autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} switcher={this.switchScene.bind(this)}/>
       </div>
       
     );
