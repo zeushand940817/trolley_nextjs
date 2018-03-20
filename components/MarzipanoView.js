@@ -228,7 +228,7 @@ class Panorama extends React.Component {
                   hotspotType={this.state.hotspotType}
                   
           />
-          <MarzipanoUI scenes={this.state.scenes} autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} switcher={this.switchScene.bind(this)}/>
+          <MarzipanoUI scenes={this.state.scenes} autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} activeScene={this.state.scene} switcher={this.switchScene.bind(this)}/>
       </div>
     );
   } else {

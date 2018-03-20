@@ -23,7 +23,7 @@ class MarzipanoUI extends React.Component {
 			</div>
 			<div className="sceneSwitcher">
 				{this.props.scenes.map((scene) => (
-					<div key={scene.id} className="sceneButton" onClick={ () => this.props.switcher(scene.scene, scene.id) } title={scene.title}>{scene.id}</div>
+					<div key={scene.id} className={this.props.activeScene === scene.id ? 'sceneButton active' : 'sceneButton'} onClick={ () => this.props.switcher(scene.scene, scene.id) } title={scene.title}>{scene.id}</div>
 				))}
 			</div>
 			<style jsx>{
@@ -59,6 +59,10 @@ class MarzipanoUI extends React.Component {
 					color:black;
 					margin-right:6px;
 					cursor: pointer;
+				}
+				.sceneButton.active {
+					background-color:#E34F35;
+					color:white;
 				}
 				`
 			}</style>
