@@ -9,9 +9,9 @@ class Panorama extends React.Component {
     super(props);
     this.state = {
       loaded: false,
-      scene: false,
+      scene: 0,
       scenes: [],
-      view: false,
+      curHotspots: [],
       activeKey: 0,
       hotspotType: null,
       isRotating: false,
@@ -22,6 +22,39 @@ class Panorama extends React.Component {
         pitch: 0
       }
     }
+  }
+
+  componentDidMount() {
+      this.startMarzipano();
+  }
+
+  componentDidUpdate() {
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    //Movement updates
+    if(prevState.goTo.yaw !== this.state.goTo.yaw) {
+      let curscene = this.findScene(this.state.scenes, this.state.scene);
+      console.log(curscene);
+      curscene.scene.lookTo(this.state.goTo);
+    }
+    if(prevState.isRotating !== this.state.isRotating) {
+      if(this.state.isRotating === false) {
+        this.state.viewer.stopMovement();
+      }
+      if(this.state.isRotating === true) {
+       this.state.viewer.startMovement(this.state.autorotate);
+      }
+    }
+
+    //Scene updates
+    if(prevState.scene !== this.state.scene) {
+      this.setState({ curHotspots: this.findScene(this.state.scenes, this.state.scene).hotspots})
+    }
+  }
+
+  componentWillUnmount() {
+    //Destroy marzipano
   }
 
   startMarzipano() {
@@ -42,9 +75,15 @@ class Panorama extends React.Component {
         return this.createScene(scene, viewer);
       });
 
-      this.setState({scenes: scenes});
+      this.setState({
+        scenes: scenes,
+        viewer: viewer,
+        autorotate: autorotate
+      });
 
+      //Start with first scene
       scenes[0].scene.switchTo();
+      this.setState({scene: scenes[0].id});
     }
 
     document.body.appendChild(script);
@@ -74,10 +113,7 @@ class Panorama extends React.Component {
           pinFirstLevel: true
       });
 
-      //Create hotspots
-      let hotspots = scene.hotspots;
       
-
       // Display scene.
       //scene.switchTo();
       //console.log(curscene);
@@ -85,14 +121,19 @@ class Panorama extends React.Component {
         scene: curscene,
         view: view,
         title: scene.title,
-        id: scene.id
+        id: scene.id,
+        hotspots: scene.hotspots,
+        active: false
       };
-
-      //this.setState({scene: scene});
   }
 
-  switchScene(scene) {
-    scene.switchTo();
+  findScene(scenes, sceneid) {
+    return scenes.find(curscene => curscene.id === sceneid);
+  }
+
+  switchScene(scene, id) {
+    this.findScene(this.state.scenes, id).scene.switchTo();
+    this.setState({scene: id});
   }
 
   toggleRotate() {
@@ -105,16 +146,6 @@ class Panorama extends React.Component {
      }
   }
 
-
-  componentDidMount() {
-      //window.Marzipano = require('marzipano');
-      this.startMarzipano();
-  }
-
-  componentDidUpdate() {
-    //console.log(this.state.view.size())
-  }
-
   getCursorPosition(canvas, event) {
     var rect = canvas.getBoundingClientRect();
     var x = event.clientX - rect.left;
@@ -125,7 +156,8 @@ class Panorama extends React.Component {
   handleClick(e) { 
     if(process.env.NODE_ENV !== 'production') {
       let position = this.getCursorPosition(this.divContainer, e);
-      let coords = this.state.view.screenToCoordinates(position);
+      let curScene = this.findScene(this.state.scenes, this.state.scene);
+      let coords = curScene.view.screenToCoordinates(position);
       console.log(coords);
     }
   }
@@ -153,24 +185,6 @@ class Panorama extends React.Component {
     })
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if(prevState.goTo.yaw !== this.state.goTo.yaw) {
-      this.state.scene.lookTo(this.state.goTo);
-    }
-    if(prevState.isRotating !== this.state.isRotating) {
-      if(this.state.isRotating === false) {
-        this.state.viewer.stopMovement();
-      }
-      if(this.state.isRotating === true) {
-       this.state.viewer.startMovement(this.state.autorotate);
-      }
-    }
-  }
-
-  componentWillUnmount() {
-    //Destroy marzipano
-  }
-
   render() {
     const panoStyle = {
               position: "absolute",
@@ -181,11 +195,8 @@ class Panorama extends React.Component {
               overflow: "hidden"
             }
 
-    const hotspots = {
+    if(this.state.loaded === true) {
 
-    }
-    
-    if(this.state.loaded == true) {
     return (
       <div>
         <div style={panoStyle}
@@ -195,10 +206,30 @@ class Panorama extends React.Component {
           }}
           onClick={this.handleClick.bind(this)}
         />
-        
+        {this.state.curHotspots.map((hotspot) => (
+          <Hotspot  
+                    type={hotspot.type}
+                    active={this.state.activeKey === hotspot.id? true : false}
+                    onClick={this.hpState.bind(this, hotspot.id, hotspot.position, hotspot.type)}
+                    close={this.close.bind(this, hotspot.id)} 
+                    scene={this.findScene(this.state.scenes, this.state.scene)} 
+                    key={hotspot.id} 
+                    title={hotspot.title} 
+                    content={hotspot.content}
+                    data={hotspot.data} 
+                    keyword={hotspot.keyword} 
+                    position={hotspot.position}/>
+          ))}
+
+          <PointsList 
+                  activeKey={this.state.activeKey}
+                  hotspots={this.state.curHotspots}
+                  setPos={this.setPos.bind(this)}
+                  hotspotType={this.state.hotspotType}
+                  
+          />
           <MarzipanoUI scenes={this.state.scenes} autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} switcher={this.switchScene.bind(this)}/>
       </div>
-      
     );
   } else {
     return (

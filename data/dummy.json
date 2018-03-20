@@ -5,7 +5,19 @@
       "title": "Escenario Vacío",
       "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
       "id": 2,
-      "hotspots": []
+      "hotspots": [
+        {
+          "title": "Hotspot Vacío",
+          "id": 1,
+          "keyword": "escenario", 
+          "type": "gallery",
+          "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "position": {
+            "pitch": -0.1833731575070061,
+            "yaw": -0.19213234443906124
+          }
+        }
+      ]
     },
     {
       "title": "Función de teatro",

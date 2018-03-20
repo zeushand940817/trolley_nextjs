@@ -30,7 +30,7 @@ class Hotspot extends React.Component {
   }
 
   createHotspot(element, position) {
-    this.props.scene.hotspotContainer().createHotspot(element, position);    
+    this.props.scene.scene.hotspotContainer().createHotspot(element, position);    
   }
 
   componentWillUnmount() {}
