@@ -10,6 +10,7 @@ class Panorama extends React.Component {
     this.state = {
       loaded: false,
       scene: false,
+      scenes: [],
       view: false,
       activeKey: 0,
       hotspotType: null,
@@ -41,7 +42,8 @@ class Panorama extends React.Component {
         return this.createScene(scene, viewer);
       });
 
-      console.log(scenes);
+      this.setState({scenes: scenes});
+
       scenes[0].scene.switchTo();
     }
 
@@ -81,14 +83,16 @@ class Panorama extends React.Component {
       //console.log(curscene);
       return {
         scene: curscene,
-        view: view
+        view: view,
+        title: scene.title,
+        id: scene.id
       };
 
       //this.setState({scene: scene});
   }
 
   switchScene(scene) {
-    
+    scene.switchTo();
   }
 
   toggleRotate() {
@@ -192,7 +196,7 @@ class Panorama extends React.Component {
           onClick={this.handleClick.bind(this)}
         />
         
-          <MarzipanoUI autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} switcher={this.switchScene.bind(this)}/>
+          <MarzipanoUI scenes={this.state.scenes} autorotate={this.state.isRotating} rotate={this.toggleRotate.bind(this)} switcher={this.switchScene.bind(this)}/>
       </div>
       
     );
