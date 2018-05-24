@@ -1,14 +1,14 @@
-import config from '../config.js'
-import Layout from '../components/MyLayout.js'
-import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
+import config from "../config.js";
+import Layout from "../components/MyLayout.js";
+import Link from "next/link";
+import fetch from "isomorphic-unfetch";
+import Vista from "../components/Vista.js";
+import data from "../data/dummy.json";
 
-const Index = (props) =>  (
-  <Layout>
-    <h1>{ config.project_name }</h1>
-    <p>{ config.project_intro }</p>
-  </Layout>
-  )
-  
+const Index = props => (
+	<Layout>
+		<Vista />
+	</Layout>
+);
 
-export default Index
+export default Index;

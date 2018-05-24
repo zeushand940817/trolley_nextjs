@@ -1,15 +1,14 @@
 module.exports = {
-  webpack: (config) => {
+  webpack: config => {
     config.externals = {
-          'marzipano': 'Marzipano'
-      }
-    return config
+      marzipano: "Marzipano"
+    };
+    return config;
   },
   exportPathMap: function() {
-  	return {
-  		'/': { page: '/' },
-  		'/about': { page: '/about' },
-  		'/vista': { page: '/vista' }
-  	}
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" }
+    };
   }
-}
+};

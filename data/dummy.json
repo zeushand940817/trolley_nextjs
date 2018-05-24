@@ -2,16 +2,17 @@
   "tilesurl": "./static/tiles/rtrolley_{f}.jpg",
   "scenes": [
     {
-      "title": "Escenario Vacío",
-      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
-      "id": 2,
+      "title": "Fiesta",
+      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.png",
+      "id": 1,
       "hotspots": [
         {
-          "title": "Hotspot Vacío",
+          "title": "Escenario",
           "id": 1,
-          "keyword": "escenario", 
+          "keyword": "escenario",
           "type": "gallery",
-          "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "content":
+            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
             "pitch": -0.1833731575070061,
             "yaw": -0.19213234443906124
@@ -22,14 +23,15 @@
     {
       "title": "Función de teatro",
       "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
-      "id": 1,
+      "id": 2,
       "hotspots": [
         {
           "title": " Escenario / Obras",
           "id": 1,
-          "keyword": "escenario", 
+          "keyword": "escenario",
           "type": "gallery",
-          "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "content":
+            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
             "pitch": -0.1833731575070061,
             "yaw": -0.19213234443906124
@@ -86,37 +88,6 @@
           }
         },
         {
-          "title": "Gráfica del Trolley",
-          "id": 8,
-          "type": "collage",
-          "keyword": "gráfica",
-          "data": {
-            "cortes": [
-              "nombre_1.png",
-              "nombre_2.png",
-              "nombre_3.png",
-              "nombre_4.png",
-              "actor_01.png",
-              "cortinaizq.png",
-              "escenario_02.png",
-              "publico.png",
-              "puerta_02.png",
-              "reloj.png",
-              "foco.png",
-              "telon.png",
-              "sr_1.png",
-              "sra_1.png",
-              "sra_2.png",
-              "sres.png",
-              "sres_02"
-            ]
-          },
-          "position": {
-            "pitch": 0.0477167644995955,
-            "yaw": 1.2337197524706873
-          }
-        },
-        {
           "title": "Entrada Salida",
           "id": 9,
           "type": "sceneto",
@@ -129,6 +100,7 @@
     }
   ],
   "pages": {
-    "about": "Sed porta laoreet ligula euismod condimentum. Suspendisse porta hendrerit turpis tempus mattis. Nullam non dictum libero. Ut placerat dignissim efficitur. Ut felis ex, gravida in maximus vitae, sagittis sed nibh. Vestibulum vel finibus velit. Vestibulum in turpis dolor. Nullam fringilla sed ligula eu ullamcorper. Quisque efficitur, erat eget imperdiet imperdiet, felis velit porta lacus, consequat congue libero nibh id augue. Pellentesque accumsan ornare commodo. Sed ut augue at ipsum ultrices viverra vel non enim. In at tortor sed arcu consectetur pellentesque ut non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae bibendum nisi, sit amet sodales risus. Proin pulvinar purus et tristique imperdiet. Phasellus rhoncus est nulla, at varius turpis pellentesque quis. "
+    "about":
+      "Sed porta laoreet ligula euismod condimentum. Suspendisse porta hendrerit turpis tempus mattis. Nullam non dictum libero. Ut placerat dignissim efficitur. Ut felis ex, gravida in maximus vitae, sagittis sed nibh. Vestibulum vel finibus velit. Vestibulum in turpis dolor. Nullam fringilla sed ligula eu ullamcorper. Quisque efficitur, erat eget imperdiet imperdiet, felis velit porta lacus, consequat congue libero nibh id augue. Pellentesque accumsan ornare commodo. Sed ut augue at ipsum ultrices viverra vel non enim. In at tortor sed arcu consectetur pellentesque ut non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae bibendum nisi, sit amet sodales risus. Proin pulvinar purus et tristique imperdiet. Phasellus rhoncus est nulla, at varius turpis pellentesque quis. "
   }
 }

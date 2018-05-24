@@ -4,12 +4,12 @@ import Hotspot from '../components/Hotspot.js';
 import PointsList from '../components/PointsList.js';
 import MarzipanoUI from '../components/MarzipanoUI.js';
 
-class Panorama extends React.Component {
+class MarzipanoView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
-      scene: 0,
+      scene: 1,
       scenes: [],
       curHotspots: [],
       activeKey: 0,
@@ -26,6 +26,7 @@ class Panorama extends React.Component {
 
   componentDidMount() {
       this.startMarzipano();
+      console.log(this.props);
   }
 
   componentDidUpdate() {
@@ -57,11 +58,15 @@ class Panorama extends React.Component {
     //Destroy marzipano
   }
 
+
   startMarzipano() {
     const script = document.createElement('script');
     script.src = "./static/marzipano.js";
 
+
     script.onload = () => {
+      
+
       let panoElement = this.divContainer;
       // Create viewer.
       let viewer = new Marzipano.Viewer(panoElement);
@@ -71,7 +76,7 @@ class Panorama extends React.Component {
         targetFov: Math.PI/2   // Fov value to converge to
       });
 
-      let scenes = this.props.scenes.map((scene) => {
+      let scenes = this.props.data.scenes.map((scene) => {
         return this.createScene(scene, viewer);
       });
 
@@ -82,13 +87,58 @@ class Panorama extends React.Component {
       });
 
       //Start with first scene
-      scenes[0].scene.switchTo();
-      this.setState({scene: scenes[0].id});
+      scenes[this.state.scene].scene.switchTo();
+      this.setState({scene: scenes[this.state.scene].id});
     }
 
     document.body.appendChild(script);
     this.setState({loaded: true});
   }
+
+rotateEuler(euler, result) {
+  var heading, bank, attitude,
+    ch = Math.cos(euler.yaw),
+    sh = Math.sin(euler.yaw),
+    ca = Math.cos(euler.pitch),
+    sa = Math.sin(euler.pitch),
+    cb = Math.cos(euler.roll),
+    sb = Math.sin(euler.roll),
+
+    matrix = [
+      sh*sb - ch*sa*cb,   -ch*ca,    ch*sa*sb + sh*cb,
+      ca*cb,              -sa,      -ca*sb,
+      sh*sa*cb + ch*sb,    sh*ca,   -sh*sa*sb + ch*cb
+    ]; // Includes 90-degree rotation around z axis
+
+  /* [m00 m01 m02] 0 1 2
+   * [m10 m11 m12] 3 4 5
+   * [m20 m21 m22] 6 7 8 */
+
+  if (matrix[3] > 0.9999)
+  {
+    // Deal with singularity at north pole
+    heading = Math.atan2(matrix[2],matrix[8]);
+    attitude = Math.PI/2;
+    bank = 0;
+  }
+  else if (matrix[3] < -0.9999)
+  {
+    // Deal with singularity at south pole
+    heading = Math.atan2(matrix[2],matrix[8]);
+    attitude = -Math.PI/2;
+    bank = 0;
+  }
+  else
+  {
+    heading = Math.atan2(-matrix[6],matrix[0]);
+    bank = Math.atan2(-matrix[5],matrix[4]);
+    attitude = Math.asin(matrix[3]);
+  }
+
+  result.yaw = heading;
+  result.pitch = attitude;
+  result.roll = bank;
+}
 
   createScene(scene, viewer) {
 
@@ -248,4 +298,4 @@ class Panorama extends React.Component {
   }
 }
 
-export default Panorama;
+export default MarzipanoView;
