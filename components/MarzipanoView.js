@@ -171,7 +171,10 @@ class MarzipanoView extends React.Component {
   }
 
   toggleGyro() {
+    let controls = this.state.viewer.controls();
+
     if (this.state.isGyroOn === true) {
+      controls.disableMethod("deviceOrientation");
       this.setState({
         isGyroOn: false
       });
@@ -181,7 +184,7 @@ class MarzipanoView extends React.Component {
           this.state.view.setPitch(pitch);
         }
       };
-      let controls = this.state.viewer.controls();
+
       controls.enableMethod("deviceOrientation");
       this.setState({ isGyroOn: true });
     }
@@ -281,6 +284,7 @@ class MarzipanoView extends React.Component {
             activeScene={this.state.scene}
             switcher={this.switchScene.bind(this)}
             gyro={this.toggleGyro.bind(this)}
+            isGyroOn={this.state.isGyroOn}
           />
         </div>
       );

@@ -30,7 +30,7 @@ class MarzipanoUI extends React.Component {
 				</div>
 				<div
 					className={
-						this.props.gyro === true
+						this.props.isGyroOn === true
 							? "button-gyro active"
 							: "button-gyro"
 					}
@@ -81,7 +81,10 @@ class MarzipanoUI extends React.Component {
 						cursor: pointer;
 					}
 
-					.button:hover {
+					.button:hover,
+					button-gyro:hover,
+					.button.active,
+					.button-gyro.active {
 						background-color: black;
 						color: white;
 					}
