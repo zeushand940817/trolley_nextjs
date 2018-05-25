@@ -1,0 +1,50 @@
+class ModalContainer extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	componentDidMount() {
+		this.ModalContainerDimensions();
+	}
+
+	ModalContainerDimensions() {}
+
+	render() {
+		return (
+			<div>
+				<div className="ModalContainer">
+					{this.props.close}
+					<div className="ModalContainerContent">
+						{this.props.content}
+					</div>
+				</div>
+				<style jsx>
+					{`
+						h2 {
+							font-family: "Barrio", sans-serif;
+							font-size: 32px;
+							margin-top: 0;
+						}
+						.ModalContainer {
+							width: auto;
+							max-width: 600px;
+							max-height: 60%;
+							top: 50px;
+							right: 0;
+							padding: 0;
+
+							transform: rotate3d(0, 0, 1, 1deg);
+							margin: 24px auto;
+						}
+						.ModalContainerContent {
+							padding: 0;
+							background-color: transparent;
+						}
+					`}
+				</style>
+			</div>
+		);
+	}
+}
+
+export default ModalContainer;

@@ -76,18 +76,6 @@
           }
         },
         {
-          "title": "Bambalinas",
-          "id": 7,
-          "type": "video",
-          "data": {
-            "url": "https://www.youtube.com/embed/7IY-dpHHsGA"
-          },
-          "position": {
-            "pitch": 0.055153182733935324,
-            "yaw": -0.3981602943236453
-          }
-        },
-        {
           "title": "Entrada Salida",
           "id": 9,
           "type": "sceneto",
