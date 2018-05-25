@@ -56,33 +56,6 @@
             "pitch": 0.08021686724895538,
             "yaw": 2.6967840991547067
           }
-        },
-        {
-          "title": "Escalera al altillo",
-          "id": 5,
-          "type": "gallery",
-          "position": {
-            "pitch": -0.02197501326752338,
-            "yaw": -2.6999674119240904
-          }
-        },
-        {
-          "title": "Historias del Trolley",
-          "id": 6,
-          "type": "text",
-          "position": {
-            "pitch": 0.23353624877265133,
-            "yaw": -1.9640503636375026
-          }
-        },
-        {
-          "title": "Entrada Salida",
-          "id": 9,
-          "type": "sceneto",
-          "position": {
-            "pitch": -0.20892931548385718,
-            "yaw": 3.0131884543852365
-          }
         }
       ]
     }

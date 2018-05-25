@@ -40,6 +40,11 @@ class ModalContainer extends React.Component {
 							padding: 0;
 							background-color: transparent;
 						}
+						@media screen and (max-width: 720px) {
+							.ModalContainer {
+								max-width: 90%;
+							}
+						}
 					`}
 				</style>
 			</div>
