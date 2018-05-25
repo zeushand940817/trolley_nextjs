@@ -1,5 +1,8 @@
 import data_trolley from "../data/data_trolley.json";
 import Figure from "./Figure.js";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import faChevronRight from "@fortawesome/fontawesome-free-solid/faChevronRight";
+import faChevronLeft from "@fortawesome/fontawesome-free-solid/faChevronLeft";
 
 class Gallery extends React.Component {
 	constructor(props) {
@@ -11,6 +14,7 @@ class Gallery extends React.Component {
 		};
 
 		this.nextImage = this.nextImage.bind(this);
+		this.prevImage = this.prevImage.bind(this);
 	}
 
 	componentDidMount() {
@@ -52,6 +56,7 @@ class Gallery extends React.Component {
 	}
 
 	nextImage() {
+		console.log("next");
 		let next = 0;
 		if (this.state.imagesTotal - 1 !== this.state.curImage) {
 			next = this.state.curImage + 1;
@@ -62,9 +67,10 @@ class Gallery extends React.Component {
 	}
 
 	prevImage() {
-		let prev = this.state.imagesTotal - 1;
+		console.log("prev");
+		let prev = this.state.curImage > 0 ? this.state.imagesTotal - 1 : 0;
 		if (this.state.imagesTotal !== this.state.curImage) {
-			prev = this.state.curImage - 1;
+			prev = this.state.curImage === 0 ? 0 : this.state.curImage - 1;
 		}
 		this.setState({
 			curImage: prev
@@ -74,17 +80,56 @@ class Gallery extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="Gallery" onClick={this.nextImage}>
+				<div className="Gallery">
 					{this.curImage()}
+					<span className="GalleryNavPrev" onClick={this.prevImage}>
+						<FontAwesomeIcon icon={faChevronLeft} />
+					</span>
+					<span className="GalleryNavNext" onClick={this.nextImage}>
+						<FontAwesomeIcon icon={faChevronRight} />
+					</span>
 				</div>
 				<style jsx>{`
 					.Gallery {
 						overflow: hidden;
-						margin: 24px 0;
+						margin: 48px 0 0 0;
 						padding: 6px;
-						background-color: #f0f0f0;
+						background-color: #fff8eb;
 						color: #333;
 						box-shadow: 0 0 35px #333;
+					}
+
+					.GalleryNavPrev,
+					.GalleryNavNext {
+						position: absolute;
+						top: 40%;
+						display: block;
+						background-color: #333;
+						color: white;
+						font-size: 24px;
+						padding: 12px 24px;
+						opacity: 0.4;
+						-webkit-touch-callout: none; /* iOS Safari */
+						-webkit-user-select: none; /* Safari */
+						-khtml-user-select: none; /* Konqueror HTML */
+						-moz-user-select: none; /* Firefox */
+						-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+					}
+
+					.GalleryNavPrev:hover,
+					.GalleryNavNext:hover {
+						background-color: #e34f35;
+						opacity: 0.8;
+					}
+
+					.GalleryNavPrev {
+						left: -12px;
+					}
+
+					.GalleryNavNext {
+						right: -12px;
 					}
 				`}</style>
 			</div>
