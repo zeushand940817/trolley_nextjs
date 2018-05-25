@@ -81,6 +81,9 @@ class Gallery extends React.Component {
 		return (
 			<div>
 				<div className="Gallery">
+					<span className="counter">
+						#{this.state.curImage + 1} / {this.state.imagesTotal}
+					</span>
 					{this.curImage()}
 					<span className="GalleryNavPrev" onClick={this.prevImage}>
 						<FontAwesomeIcon icon={faChevronLeft} />
@@ -116,6 +119,20 @@ class Gallery extends React.Component {
 						-ms-user-select: none; /* Internet Explorer/Edge */
 						user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+					}
+
+					.counter {
+						background-color: #e34f35;
+						color: white;
+						display: block;
+						padding: 6px;
+						width: 80px;
+						position: absolute;
+						top: -12px;
+						left: -12px;
+						transform: rotate3d(0, 0, 1, 4deg);
+						font-family: "Barrio", sans-serif;
+						text-align: center;
 					}
 
 					.GalleryNavPrev:hover,
