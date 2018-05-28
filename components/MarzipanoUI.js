@@ -20,7 +20,7 @@ class MarzipanoUI extends React.Component {
 		};
 		return (
 			<div>
-				<div className="buttons">
+				<div className="buttons noselect">
 					<div
 						className={
 							this.props.autorotate === true
