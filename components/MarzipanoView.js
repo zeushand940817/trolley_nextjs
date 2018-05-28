@@ -3,6 +3,7 @@ import config from "../config.js";
 import Hotspot from "../components/Hotspot.js";
 import PointsList from "../components/PointsList.js";
 import MarzipanoUI from "../components/MarzipanoUI.js";
+import MarzipanoBrand from "../components/MarzipanoBrand.js";
 
 class MarzipanoView extends React.Component {
   constructor(props) {
@@ -124,10 +125,10 @@ class MarzipanoView extends React.Component {
     // Create view.
     let limiter = Marzipano.RectilinearView.limit.traditional(
       4096,
-      100 * Math.PI / 180
+      (100 * Math.PI) / 180
     );
     let view = new Marzipano.RectilinearView(
-      { yaw: 4 * Math.PI / 180, pitch: 0, fov: 1.2 },
+      { yaw: (4 * Math.PI) / 180, pitch: 0, fov: 1.2 },
       limiter
     );
 
@@ -277,6 +278,7 @@ class MarzipanoView extends React.Component {
             setPos={this.setPos.bind(this)}
             hotspotType={this.state.hotspotType}
           />
+          <MarzipanoBrand />
           <MarzipanoUI
             scenes={this.state.scenes}
             autorotate={this.state.isRotating}
@@ -285,6 +287,7 @@ class MarzipanoView extends React.Component {
             switcher={this.switchScene.bind(this)}
             gyro={this.toggleGyro.bind(this)}
             isGyroOn={this.state.isGyroOn}
+            goFull={this.props.goFull}
           />
         </div>
       );

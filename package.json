@@ -23,6 +23,7 @@
     "npm": "^5.7.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-full-screen": "^0.2.2",
     "react-konva": "^1.6.7",
     "react-transition-group": "1.x"
   },

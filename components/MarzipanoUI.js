@@ -1,7 +1,9 @@
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+
 import faPlay from "@fortawesome/fontawesome-free-solid/faPlay";
 import faStop from "@fortawesome/fontawesome-free-solid/faStop";
 import faCompass from "@fortawesome/fontawesome-free-solid/faCompass";
+import faArrowsAlt from "@fortawesome/fontawesome-free-solid/faArrowsAlt";
 
 class MarzipanoUI extends React.Component {
 	constructor(props) {
@@ -18,74 +20,79 @@ class MarzipanoUI extends React.Component {
 		};
 		return (
 			<div>
-				<div
-					className={
-						this.props.autorotate === true
-							? "button active"
-							: "button"
-					}
-					onClick={this.props.rotate}
-				>
-					{checkIcon()}
-				</div>
-				<div
-					className={
-						this.props.isGyroOn === true
-							? "button-gyro active"
-							: "button-gyro"
-					}
-					onClick={this.props.gyro}
-				>
-					<FontAwesomeIcon icon={faCompass} />
-				</div>
-				<div className="sceneSwitcher">
-					{this.props.scenes.map(scene => (
-						<div
-							key={scene.id}
-							className={
-								this.props.activeScene === scene.id
-									? "sceneButton active"
-									: "sceneButton"
-							}
-							onClick={() =>
-								this.props.switcher(scene.scene, scene.id)
-							}
-							title={scene.title}
-						>
-							{scene.id}
-						</div>
-					))}
+				<div className="buttons">
+					<div
+						className={
+							this.props.autorotate === true
+								? "button active"
+								: "button"
+						}
+						onClick={this.props.rotate}
+					>
+						{checkIcon()}
+					</div>
+					<div
+						className={
+							this.props.isGyroOn === true
+								? "button-gyro active"
+								: "button-gyro"
+						}
+						onClick={this.props.gyro}
+					>
+						<FontAwesomeIcon icon={faCompass} />
+					</div>
+					<div
+						className="button fullScreen"
+						onClick={this.props.goFull}
+					>
+						<FontAwesomeIcon icon={faArrowsAlt} />
+					</div>
+					<div className="sceneSwitcher">
+						{this.props.scenes.map(scene => (
+							<div
+								key={scene.id}
+								className={
+									this.props.activeScene === scene.id
+										? "sceneButton active"
+										: "sceneButton"
+								}
+								onClick={() =>
+									this.props.switcher(scene.scene, scene.id)
+								}
+								title={scene.title}
+							>
+								{scene.id}
+							</div>
+						))}
+					</div>
 				</div>
 				<style jsx>{`
-					.button {
+					.buttons {
 						position: absolute;
 						bottom: 0;
-						left: 10px;
+						left: 0;
+					}
+					.button {
 						background-color: white;
 						color: black;
 						padding: 6px;
 						z-index: 10;
 						font-size: 20px;
 						cursor: pointer;
+						margin-right: 10px;
+						display: inline-block;
+						margin-right: 6px;
 					}
 
 					.button-gyro {
-						position: absolute;
-						bottom: 0;
-						left: 60px;
 						background-color: white;
 						color: black;
 						padding: 6px;
 						z-index: 10;
 						font-size: 20px;
 						cursor: pointer;
-						-webkit-touch-callout: none; /* iOS Safari */
-						-webkit-user-select: none; /* Safari */
-						-khtml-user-select: none; /* Konqueror HTML */
-						-moz-user-select: none; /* Firefox */
-						-ms-user-select: none; /* Internet Explorer/Edge */
-						user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+						display: inline-block;
+						margin-right: 6px;
 					}
 
 					.button:hover,
@@ -96,9 +103,7 @@ class MarzipanoUI extends React.Component {
 						color: white;
 					}
 					.sceneSwitcher {
-						position: absolute;
-						left: 120px;
-						bottom: 0;
+						display: inline-block;
 					}
 					.sceneButton {
 						padding: 6px 12px;

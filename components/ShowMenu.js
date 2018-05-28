@@ -24,8 +24,8 @@ class ShowMenu extends React.Component {
 				`
 				.button {
 					position: absolute;
-					top:0;
-					left:0;
+					top:6px;
+					right:6px;
 					background-color:white;
 					color:black;
 					padding:6px;

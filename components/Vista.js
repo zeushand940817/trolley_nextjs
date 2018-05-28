@@ -1,13 +1,20 @@
 import Layout from "./MyLayout.js";
 import Link from "next/link";
 import MarzipanoView from "./MarzipanoView.js";
+import Fullscreen from "react-full-screen";
+
 import data from "../data/dummy.json";
 
 class Vista extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { width: "0", height: "0" };
+    this.state = { width: "0", height: "0", isFull: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.goFull = this.goFull.bind(this);
+  }
+
+  goFull() {
+    this.setState({ isFull: this.state.isFull === true ? false : true });
   }
 
   componentDidMount() {
@@ -27,13 +34,18 @@ class Vista extends React.Component {
     return (
       <div>
         <div className="panoWrapper">
-          <MarzipanoView data={data} />
+          <Fullscreen
+            enabled={this.state.isFull}
+            onChange={isFull => this.setState({ isFull })}
+          >
+            <MarzipanoView data={data} goFull={this.goFull} />
+          </Fullscreen>
         </div>
         <style jsx>{`
           .panoWrapper {
             position: relative;
-            height: ${this.state.height - 60}px;
-            margin-top: 20px;
+            height: ${this.state.height}px;
+            margin-top: 0;
             overflow: hidden;
           }
         `}</style>
