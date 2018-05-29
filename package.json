@@ -25,6 +25,8 @@
     "react-dom": "^16.3.2",
     "react-full-screen": "^0.2.2",
     "react-konva": "^1.6.7",
+    "react-player": "^1.6.2",
+    "react-tooltip": "^3.6.0",
     "react-transition-group": "1.x"
   },
   "devDependencies": {}

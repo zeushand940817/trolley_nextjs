@@ -5,6 +5,8 @@ import faStop from "@fortawesome/fontawesome-free-solid/faStop";
 import faCompass from "@fortawesome/fontawesome-free-solid/faCompass";
 import faArrowsAlt from "@fortawesome/fontawesome-free-solid/faArrowsAlt";
 
+import ReactTooltip from "react-tooltip";
+
 class MarzipanoUI extends React.Component {
 	constructor(props) {
 		super(props);
@@ -18,10 +20,18 @@ class MarzipanoUI extends React.Component {
 				return <FontAwesomeIcon icon={faPlay} />;
 			}
 		};
+		const showGyro = () => {
+			if (this.props.isMobile === true) {
+				return "visible inline";
+			} else {
+				return "hidden";
+			}
+		};
 		return (
 			<div>
 				<div className="buttons noselect">
 					<div
+						data-tip="Activar rotación automática"
 						className={
 							this.props.autorotate === true
 								? "button active"
@@ -31,17 +41,22 @@ class MarzipanoUI extends React.Component {
 					>
 						{checkIcon()}
 					</div>
-					<div
-						className={
-							this.props.isGyroOn === true
-								? "button-gyro active"
-								: "button-gyro"
-						}
-						onClick={this.props.gyro}
-					>
-						<FontAwesomeIcon icon={faCompass} />
+
+					<div className={showGyro()}>
+						<div
+							data-tip="Activar sensor de movimiento"
+							className={
+								this.props.isGyroOn === true
+									? "button button-gyro active"
+									: "button button-gyro"
+							}
+							onClick={this.props.gyro}
+						>
+							<FontAwesomeIcon icon={faCompass} />
+						</div>
 					</div>
 					<div
+						data-tip="Pantalla completa"
 						className="button fullScreen"
 						onClick={this.props.goFull}
 					>
@@ -50,6 +65,8 @@ class MarzipanoUI extends React.Component {
 					<div className="sceneSwitcher">
 						{this.props.scenes.map(scene => (
 							<div
+								data-for="Escena"
+								data-tip={`${scene.title}`}
 								key={scene.id}
 								className={
 									this.props.activeScene === scene.id
@@ -59,18 +76,23 @@ class MarzipanoUI extends React.Component {
 								onClick={() =>
 									this.props.switcher(scene.scene, scene.id)
 								}
-								title={scene.title}
 							>
 								{scene.id}
 							</div>
 						))}
 					</div>
+					<ReactTooltip place="top" effect="solid" />
+					<ReactTooltip
+						place="top"
+						effect="solid"
+						getContent={dataTip => `${dataTip}`}
+					/>
 				</div>
 				<style jsx>{`
 					.buttons {
 						position: absolute;
 						bottom: 0;
-						left: 0;
+						left: 30px;
 					}
 					.button {
 						background-color: white;

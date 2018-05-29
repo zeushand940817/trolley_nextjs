@@ -4,9 +4,8 @@ import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
 import CloseButton from "../components/CloseButton.js";
 import fetch from "isomorphic-unfetch";
-import Collage from "../components/Collage.js";
 
-class Hotspot extends React.Component {
+class VideoHotspot extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +30,9 @@ class Hotspot extends React.Component {
   }
 
   createHotspot(element, position) {
-    this.props.scene.scene.hotspotContainer().createHotspot(element, position);
+    this.props.scene.scene.hotspotContainer().createHotspot(element, position, {
+      perspective: { radius: 1640, extraRotations: "rotateX(5deg)" }
+    });
   }
 
   componentWillUnmount() {}
@@ -42,48 +43,23 @@ class Hotspot extends React.Component {
         return (
           <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
         );
-      } else {
-        return (
-           <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
-          )
-      }
-    };
-
-    const activeModal = () => {
-      if (this.props.active === true) {
-        return (
-          <div>
-            <ModalContainer
-              close={<CloseButton onClick={this.props.close} />}
-              title={this.props.title}
-              content={hotspotType(this.props.type)}
-              type={this.props.type}
-            >
-              {this.props.content}
-            </ModalContainer>
-          </div>
-        );
       }
     };
 
     return (
       <div>
         <div
-          onClick={this.props.onClick}
           ref={hpDiv => {
             this.hpDiv = hpDiv;
           }}
-          className="trHotspot"
+          className="videoHotspot"
         >
           <div
             className={
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
-          >
-            <h2 className="hptitle">{this.props.title}</h2>
-          </div>
+          />
         </div>
-        {activeModal()}
         <style jsx>
           {`
             .hpcontent {
@@ -117,4 +93,4 @@ class Hotspot extends React.Component {
   }
 }
 
-export default Hotspot;
+export default VideoHotspot;

@@ -7,8 +7,8 @@
       "id": 1,
       "hotspots": [
         {
-          "title": "Escenario",
-          "id": 1,
+          "title": "Escena",
+          "id": 0,
           "keyword": "escenario",
           "type": "gallery",
           "content":
@@ -16,6 +16,27 @@
           "position": {
             "pitch": -0.1833731575070061,
             "yaw": -0.19213234443906124
+          }
+        },
+        {
+          "title": "Obras",
+          "id": 1,
+          "keyword": "obras",
+          "type": "gallery",
+          "content": "Video test",
+          "position": {
+            "pitch": 0.07183897129165828,
+            "yaw": 0.019389230474400776
+          }
+        },
+        {
+          "title": "Caja Boletería Recepción",
+          "id": 2,
+          "keyword": "espacio",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.08021686724895538,
+            "yaw": 2.6967840991547067
           }
         }
       ]
@@ -26,8 +47,8 @@
       "id": 2,
       "hotspots": [
         {
-          "title": " Escenario / Obras",
-          "id": 1,
+          "title": "Escenario / Obras",
+          "id": 0,
           "keyword": "escenario",
           "type": "gallery",
           "content":
@@ -39,7 +60,7 @@
         },
         {
           "title": "Participantes",
-          "id": 2,
+          "id": 1,
           "keyword": "actores",
           "type": "gallery",
           "position": {
@@ -49,7 +70,7 @@
         },
         {
           "title": "Caja Boletería Recepción",
-          "id": 4,
+          "id": 2,
           "keyword": "espacio",
           "type": "gallery",
           "position": {

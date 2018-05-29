@@ -1,6 +1,7 @@
 import fetch from "isomorphic-unfetch";
 import config from "../config.js";
 import Hotspot from "../components/Hotspot.js";
+import VideoHotspot from "../components/VideoHotspot.js";
 import PointsList from "../components/PointsList.js";
 import MarzipanoUI from "../components/MarzipanoUI.js";
 import MarzipanoBrand from "../components/MarzipanoBrand.js";
@@ -13,7 +14,7 @@ class MarzipanoView extends React.Component {
       scene: 1,
       scenes: [],
       curHotspots: [],
-      activeKey: 0,
+      activeKey: null,
       hotspotType: null,
       isRotating: false,
       autorotate: null,
@@ -31,7 +32,6 @@ class MarzipanoView extends React.Component {
 
   componentDidMount() {
     this.startMarzipano();
-    console.log(this.props);
   }
 
   componentDidUpdate() {}
@@ -213,7 +213,7 @@ class MarzipanoView extends React.Component {
 
   close(index, event) {
     this.setState({
-      activeKey: 0,
+      activeKey: null,
       hotspotType: null
     });
   }
@@ -251,26 +251,24 @@ class MarzipanoView extends React.Component {
             }}
             onClick={this.handleClick.bind(this)}
           />
-          {this.state.curHotspots.map(hotspot => (
-            <Hotspot
-              type={hotspot.type}
-              active={this.state.activeKey === hotspot.id ? true : false}
-              onClick={this.hpState.bind(
-                this,
-                hotspot.id,
-                hotspot.position,
-                hotspot.type
-              )}
-              close={this.close.bind(this, hotspot.id)}
-              scene={this.findScene(this.state.scenes, this.state.scene)}
-              key={hotspot.id}
-              title={hotspot.title}
-              content={hotspot.content}
-              data={hotspot.data}
-              keyword={hotspot.keyword}
-              position={hotspot.position}
-            />
-          ))}
+          {this.state.curHotspots.map(hotspot => <Hotspot
+            type={hotspot.type}
+            active={this.state.activeKey === hotspot.id ? true : false}
+            onClick={this.hpState.bind(
+              this,
+              hotspot.id,
+              hotspot.position,
+              hotspot.type
+            )}
+            close={this.close.bind(this, hotspot.id)}
+            scene={this.findScene(this.state.scenes, this.state.scene)}
+            key={hotspot.id}
+            title={hotspot.title}
+            content={hotspot.content}
+            data={hotspot.data}
+            keyword={hotspot.keyword}
+            position={hotspot.position}
+          />)}
 
           <PointsList
             activeKey={this.state.activeKey}
@@ -288,6 +286,7 @@ class MarzipanoView extends React.Component {
             gyro={this.toggleGyro.bind(this)}
             isGyroOn={this.state.isGyroOn}
             goFull={this.props.goFull}
+            isMobile={this.props.isMobile}
           />
         </div>
       );
