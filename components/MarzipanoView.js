@@ -10,10 +10,10 @@ class MarzipanoView extends React.Component {
     super(props);
     this.state = {
       loaded: false,
-      scene: 1,
+      scene: 0,
       scenes: [],
       curHotspots: [],
-      activeKey: 0,
+      activeKey: null,
       hotspotType: null,
       isRotating: false,
       autorotate: null,
