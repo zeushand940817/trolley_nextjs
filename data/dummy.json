@@ -48,7 +48,7 @@
       "hotspots": [
         {
           "title": "Escenario / Obras",
-          "id": 0,
+          "id": 3,
           "keyword": "escenario",
           "type": "gallery",
           "content":
@@ -60,7 +60,7 @@
         },
         {
           "title": "Participantes",
-          "id": 1,
+          "id": 4,
           "keyword": "actores",
           "type": "gallery",
           "position": {
@@ -70,7 +70,7 @@
         },
         {
           "title": "Caja Boletería Recepción",
-          "id": 2,
+          "id": 5,
           "keyword": "espacio",
           "type": "gallery",
           "position": {
