@@ -7,6 +7,7 @@
       "id": 1,
       "hotspots": [
         {
+
           "title": "Escena",
           "id": 0,
           "keyword": "escenario",
@@ -14,7 +15,7 @@
           "content":
             "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
-            "pitch": -0.1833731575070061,
+            "pitch": 0.1833731575070061,
             "yaw": -0.19213234443906124
           }
         },
