@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Po",
+				"PointText"
+			],
+			[
 				"hotspot",
 				"hotspotCircle"
 			],
@@ -63,34 +67,27 @@
 			"file": "components/Hotspot.js",
 			"settings":
 			{
-				"buffer_size": 3558,
+				"buffer_size": 4033,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/donhilo/Documentos/code/containers/ufutura/docker-compose.yml",
+			"file": "/home/donhilo/Escritorio/Postulaciones.todo",
 			"settings":
 			{
-				"buffer_size": 1101,
+				"buffer_size": 161,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Unix",
+				"name": "Postulaciones"
 			}
 		},
 		{
-			"file": "/tmp/fz3temp-1/wp-config.php",
+			"file": "components/Point.js",
 			"settings":
 			{
-				"buffer_size": 3730,
+				"buffer_size": 1302,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/donhilo/Documentos/code/containers/c80/public/wp-content/themes/c80-template/dploy.yaml",
-			"settings":
-			{
-				"buffer_size": 447,
 				"line_ending": "Unix"
 			}
 		},
@@ -130,13 +127,11 @@
 			}
 		},
 		{
-			"file": "components/MarzipanoBrand.js",
+			"file": "components/MarzipanoView.js",
 			"settings":
 			{
-				"buffer_size": 945,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "const MarzipanoBrand = () => {"
+				"buffer_size": 8046,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -154,6 +149,14 @@
 			[
 				"babe",
 				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"pretti",
@@ -192,10 +195,6 @@
 				"JsPrettier: Format Code"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"instal",
 				"Package Control: Install Package"
 			],
@@ -206,10 +205,6 @@
 			[
 				"tood",
 				"Set Syntax: ToDone"
-			],
-			[
-				"comm",
-				"Toggle Comment"
 			],
 			[
 				"packin",
@@ -244,6 +239,10 @@
 	],
 	"file_history":
 	[
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
+		"/home/donhilo/Documentos/code/containers/c80/public/wp-content/themes/c80-template/dploy.yaml",
+		"/home/donhilo/Documentos/code/containers/ufutura/docker-compose.yml",
+		"/tmp/fz3temp-1/wp-config.php",
 		"/usr/share/applications/org.kde.dolphin.desktop",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
 		"/home/donhilo/.gitignore",
@@ -327,6 +326,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"48",
+			"64",
+			"100",
+			"200",
+			"xlink:",
 			"cma_web",
 			"hotspotData",
 			"curhots",
@@ -366,15 +370,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3558,
+						"buffer_size": 4033,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2703,
-								2703
+								1702,
+								1702
 							]
 						],
 						"settings":
@@ -384,62 +388,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1260.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/donhilo/Documentos/code/containers/ufutura/docker-compose.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								835,
-								835
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/tmp/fz3temp-1/wp-config.php",
+					"buffer": 1,
+					"file": "/home/donhilo/Escritorio/Postulaciones.todo",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3730,
+						"buffer_size": 161,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								779,
-								779
+								39,
+								39
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"auto_name": "Postulaciones",
+							"syntax": "Packages/ToDone/ToDone.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "components/Point.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								792
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -450,36 +455,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/home/donhilo/Documentos/code/containers/c80/public/wp-content/themes/c80-template/dploy.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								340,
-								340
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "components/Head.js",
 					"semi_transient": false,
 					"settings":
@@ -497,17 +472,19 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "components/ModalContainer.js",
 					"semi_transient": false,
 					"settings":
@@ -532,11 +509,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
@@ -548,8 +525,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								487,
+								487
 							]
 						],
 						"settings":
@@ -562,11 +539,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "components/VideoHotspot.js",
 					"semi_transient": false,
 					"settings":
@@ -578,8 +555,8 @@
 						"selection":
 						[
 							[
-								353,
-								353
+								779,
+								779
 							]
 						],
 						"settings":
@@ -592,33 +569,34 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "components/MarzipanoBrand.js",
+					"buffer": 7,
+					"file": "components/MarzipanoView.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 945,
+						"buffer_size": 8046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								423,
-								423
+								6796,
+								6796
 							]
 						],
 						"settings":
 						{
-							"auto_name": "const MarzipanoBrand = () => {",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3495.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -676,6 +654,10 @@
 		"selected_items":
 		[
 			[
+				"marzip",
+				"components/MarzipanoView.js"
+			],
+			[
 				"packa",
 				"package.json"
 			],
@@ -709,10 +691,6 @@
 			],
 			[
 				"marzipanoui",
-				"components/MarzipanoUI.js"
-			],
-			[
-				"marzip",
 				"components/MarzipanoUI.js"
 			],
 			[

@@ -4,6 +4,7 @@ import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
 import CloseButton from "../components/CloseButton.js";
 import Point from "../components/Point.js";
+import { CSSTransitionGroup } from "react-transition-group";
 //import fetch from "isomorphic-unfetch";
 //import Collage from "../components/Collage.js";
 
@@ -53,16 +54,15 @@ class Hotspot extends React.Component {
     const activeModal = () => {
       if (this.props.active === true) {
         return (
-          <div>
-            <ModalContainer
-              close={<CloseButton onClick={this.props.close} />}
-              title={this.props.title}
-              content={hotspotType(this.props.type)}
-              type={this.props.type}
-            >
-              {this.props.content}
-            </ModalContainer>
-          </div>
+          <ModalContainer
+            className="animated"
+            close={<CloseButton onClick={this.props.close} />}
+            title={this.props.title}
+            content={hotspotType(this.props.type)}
+            type={this.props.type}
+          >
+            {this.props.content}
+          </ModalContainer>
         );
       }
     };
@@ -87,11 +87,41 @@ class Hotspot extends React.Component {
             />
           </div>
         </div>
-
-        {activeModal()}
-
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+          transitionAppear={true}
+        >
+          {activeModal()}
+        </CSSTransitionGroup>
         <style jsx>
           {`
+            .example-appear {
+              opacity: 0.01;
+            }
+
+            .example-appear.example-appear-active {
+              opacity: 1;
+              transition: opacity 0.5s ease-in;
+            }
+            .example-enter {
+              opacity: 0.01;
+            }
+
+            .example-enter.example-enter-active {
+              opacity: 1;
+              transition: opacity 500ms ease-in;
+            }
+
+            .example-leave {
+              opacity: 1;
+            }
+
+            .example-leave.example-leave-active {
+              opacity: 0.01;
+              transition: opacity 300ms ease-in;
+            }
             .hpcontent {
               position: relative;
             }

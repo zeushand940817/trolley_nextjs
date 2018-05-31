@@ -19,13 +19,13 @@ const Point = props => (
 			.Point {
 				animation: rotating 10s linear infinite;
 				transform-origin: 50% 50%;
-				fill: #e34f35;
+				fill: white;
 				transition: fill ease-in 0.4s;
 			}
 
 			.Point:hover {
 				//animation: rotating 6s linear infinite;
-				fill: white;
+				fill: #e34f35;
 			}
 
 			.PointText {
