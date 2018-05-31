@@ -32,6 +32,7 @@ const MarzipanoBrand = () => (
 				padding: 12px;
 				background-color: #000;
 				opacity: 0.8;
+				transform: rotate3d(0, 0, 1, -13deg);
 			}
 			.tr_nav {
 				padding: 12px 0 0 12px;

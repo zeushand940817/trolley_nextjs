@@ -251,24 +251,27 @@ class MarzipanoView extends React.Component {
             }}
             onClick={this.handleClick.bind(this)}
           />
-          {this.state.curHotspots.map(hotspot => <Hotspot
-            type={hotspot.type}
-            active={this.state.activeKey === hotspot.id ? true : false}
-            onClick={this.hpState.bind(
-              this,
-              hotspot.id,
-              hotspot.position,
-              hotspot.type
-            )}
-            close={this.close.bind(this, hotspot.id)}
-            scene={this.findScene(this.state.scenes, this.state.scene)}
-            key={hotspot.id}
-            title={hotspot.title}
-            content={hotspot.content}
-            data={hotspot.data}
-            keyword={hotspot.keyword}
-            position={hotspot.position}
-          />)}
+          {this.state.curHotspots.map(hotspot => (
+            <Hotspot
+              type={hotspot.type}
+              active={this.state.activeKey === hotspot.id ? true : false}
+              onClick={this.hpState.bind(
+                this,
+                hotspot.id,
+                hotspot.position,
+                hotspot.type
+              )}
+              close={this.close.bind(this, hotspot.id)}
+              scene={this.findScene(this.state.scenes, this.state.scene)}
+              key={hotspot.id}
+              id={hotspot.id}
+              title={hotspot.title}
+              content={hotspot.content}
+              data={hotspot.data}
+              keyword={hotspot.keyword}
+              position={hotspot.position}
+            />
+          ))}
 
           <PointsList
             activeKey={this.state.activeKey}

@@ -3,8 +3,9 @@ import Modal from "../components/Modal.js";
 import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
 import CloseButton from "../components/CloseButton.js";
-import fetch from "isomorphic-unfetch";
-import Collage from "../components/Collage.js";
+import Point from "../components/Point.js";
+//import fetch from "isomorphic-unfetch";
+//import Collage from "../components/Collage.js";
 
 class Hotspot extends React.Component {
   constructor(props) {
@@ -44,8 +45,8 @@ class Hotspot extends React.Component {
         );
       } else {
         return (
-           <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
-          )
+          <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
+        );
       }
     };
 
@@ -80,10 +81,15 @@ class Hotspot extends React.Component {
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
           >
-            <h2 className="hptitle">{this.props.title}</h2>
+            <Point
+              id={`${this.props.type}-${this.props.id}`}
+              title={this.props.title}
+            />
           </div>
         </div>
+
         {activeModal()}
+
         <style jsx>
           {`
             .hpcontent {
@@ -109,6 +115,7 @@ class Hotspot extends React.Component {
               top: 0;
               left: 0;
               z-index: 2;
+              display: none;
             }
           `}
         </style>
