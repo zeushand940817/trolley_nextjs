@@ -61,15 +61,17 @@ class PointsList extends React.Component {
 							{`
 								.navi {
 									position: absolute;
-									top: 0;
-									right: -12px;
+									bottom: 100px;
+									right: -24px;
 									width: 300px;
 									z-index: 2;
 									display: block;
+									width: 100%;
+									max-width: 700px;
 								}
 
 								ul {
-									margin: 90px 0 0 -60px;
+									margin: 0;
 									padding: 0;
 								}
 
@@ -81,8 +83,8 @@ class PointsList extends React.Component {
 									color: white;
 									background-color: #000;
 									margin: 10px 0;
-									padding: 12px 6px 6px 102px;
-									transform: rotate3d(0, 0, 1, 15deg);
+									padding: 12px 6px 6px 12px;
+									transform: rotate3d(0, 0, 1, -15deg);
 									display: block;
 									border-left: 5px solid white;
 								}

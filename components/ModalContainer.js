@@ -32,7 +32,7 @@ class ModalContainer extends React.Component {
 							top: 50px;
 							right: 0;
 							padding: 0;
-
+							z-index: 2;
 							transform: rotate3d(0, 0, 1, -3deg);
 							margin: 24px auto;
 						}

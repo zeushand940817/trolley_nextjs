@@ -10,9 +10,9 @@ class ShowMenu extends React.Component {
 	render() {
 		const checkIcon = () => {
 			if (this.props.active === true) {
-				return <FontAwesomeIcon icon={faTimes} />;
+				return <FontAwesomeIcon icon={faTimes} fixedWidth />;
 			} else {
-				return <FontAwesomeIcon icon={faBars} />;
+				return <FontAwesomeIcon icon={faBars} fixedWidth />;
 			}
 		};
 		return (
@@ -30,7 +30,7 @@ class ShowMenu extends React.Component {
 				<style jsx>{`
 					.button {
 						position: absolute;
-						top: 6px;
+						bottom: 0;
 						right: 6px;
 						background-color: white;
 						color: black;
