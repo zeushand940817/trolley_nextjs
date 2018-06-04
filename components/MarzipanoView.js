@@ -1,10 +1,10 @@
-import fetch from "isomorphic-unfetch";
 import config from "../config.js";
 import Hotspot from "../components/Hotspot.js";
 import VideoHotspot from "../components/VideoHotspot.js";
 import PointsList from "../components/PointsList.js";
 import MarzipanoUI from "../components/MarzipanoUI.js";
 import MarzipanoBrand from "../components/MarzipanoBrand.js";
+import TextWindow from "../components/TextWindow.js";
 
 class MarzipanoView extends React.Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class MarzipanoView extends React.Component {
     this.state = {
       loaded: false,
       scene: 0,
+      sceneText: null,
       scenes: [],
       curHotspots: [],
       activeKey: null,
@@ -94,8 +95,9 @@ class MarzipanoView extends React.Component {
       });
 
       //Start with first scene
-      scenes[this.state.scene].scene.switchTo();
-      this.setState({ scene: scenes[this.state.scene].id });
+      this.switchScene(scenes[this.state.scene], 1);
+      // scenes[this.state.scene].scene.switchTo();
+      // this.setState({ scene: scenes[this.state.scene].id });
     };
 
     document.body.appendChild(script);
@@ -148,6 +150,7 @@ class MarzipanoView extends React.Component {
       title: scene.title,
       id: scene.id,
       hotspots: scene.hotspots,
+      text: scene.text,
       active: false
     };
   }
@@ -157,8 +160,10 @@ class MarzipanoView extends React.Component {
   }
 
   switchScene(scene, id) {
-    this.findScene(this.state.scenes, id).scene.switchTo();
-    this.setState({ scene: id });
+    let sceneTo = this.findScene(this.state.scenes, id);
+    sceneTo.scene.switchTo();
+
+    this.setState({ scene: id, sceneText: sceneTo.text });
   }
 
   toggleRotate() {
@@ -272,7 +277,10 @@ class MarzipanoView extends React.Component {
               position={hotspot.position}
             />
           ))}
-
+          <TextWindow
+            close={this.close.bind(this, 666)}
+            content={this.state.sceneText}
+          />
           <PointsList
             activeKey={this.state.activeKey}
             hotspots={this.state.curHotspots}

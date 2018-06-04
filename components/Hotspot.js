@@ -4,7 +4,6 @@ import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
 import CloseButton from "../components/CloseButton.js";
 import Point from "../components/Point.js";
-import { CSSTransitionGroup } from "react-transition-group";
 //import fetch from "isomorphic-unfetch";
 //import Collage from "../components/Collage.js";
 
@@ -58,9 +57,9 @@ class Hotspot extends React.Component {
             className="animated"
             close={<CloseButton onClick={this.props.close} />}
             title={this.props.title}
-            content={hotspotType(this.props.type)}
             type={this.props.type}
           >
+            {hotspotType(this.props.type)}
             {this.props.content}
           </ModalContainer>
         );
@@ -87,14 +86,9 @@ class Hotspot extends React.Component {
             />
           </div>
         </div>
-        <CSSTransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-          transitionAppear={true}
-        >
-          {activeModal()}
-        </CSSTransitionGroup>
+
+        {activeModal()}
+
         <style jsx>
           {`
             .example-appear {

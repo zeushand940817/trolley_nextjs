@@ -6,10 +6,10 @@ const Point = props => (
 				d="M 32,0 A 32,32 0 0 1 -32,0 A 32,32 0 0 1 32,0"
 				transform="translate(50,50)"
 				stroke="black"
-				stroke-width="25"
+				strokeWidth="25"
 			/>
 
-			<text className="PointText" fill="#fff" stroke-width="0">
+			<text className="PointText" fill="#fff" strokeWidth="0">
 				<textPath href={`#${props.id}`} startOffset="0">
 					<tspan dy="6">{props.title}</tspan>
 				</textPath>

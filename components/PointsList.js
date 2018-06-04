@@ -1,4 +1,3 @@
-import { CSSTransitionGroup } from "react-transition-group"; // ES6
 import ShowMenu from "../components/ShowMenu.js";
 
 class PointsList extends React.Component {
@@ -26,6 +25,7 @@ class PointsList extends React.Component {
 	componentDidUpdate(prevProps, prevState) {}
 
 	render() {
+		const { isActive } = this.state;
 		const isActiveNavi = () => {
 			if (
 				this.state.isActive === true &&

@@ -1,13 +1,18 @@
 {
-  "tilesurl": "./static/tiles/rtrolley_{f}.jpg",
   "scenes": [
     {
       "title": "Fiesta",
+      "text": "./static/textos/fiestas.md",
       "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.png",
       "id": 1,
+      "description": [
+        {
+          "title": "Fiestas en el Trolley",
+          "content": ""
+        }
+      ],
       "hotspots": [
         {
-
           "title": "Escena",
           "id": 0,
           "keyword": "escenario",
@@ -44,6 +49,7 @@
     },
     {
       "title": "Función de teatro",
+      "text": "./static/textos/intro.md",
       "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
       "id": 2,
       "hotspots": [
@@ -81,9 +87,5 @@
         }
       ]
     }
-  ],
-  "pages": {
-    "about":
-      "Sed porta laoreet ligula euismod condimentum. Suspendisse porta hendrerit turpis tempus mattis. Nullam non dictum libero. Ut placerat dignissim efficitur. Ut felis ex, gravida in maximus vitae, sagittis sed nibh. Vestibulum vel finibus velit. Vestibulum in turpis dolor. Nullam fringilla sed ligula eu ullamcorper. Quisque efficitur, erat eget imperdiet imperdiet, felis velit porta lacus, consequat congue libero nibh id augue. Pellentesque accumsan ornare commodo. Sed ut augue at ipsum ultrices viverra vel non enim. In at tortor sed arcu consectetur pellentesque ut non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae bibendum nisi, sit amet sodales risus. Proin pulvinar purus et tristique imperdiet. Phasellus rhoncus est nulla, at varius turpis pellentesque quis. "
-  }
+  ]
 }

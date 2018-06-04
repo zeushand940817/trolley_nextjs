@@ -15,7 +15,7 @@ class ModalContainer extends React.Component {
 				<div className="ModalContainer">
 					{this.props.close}
 					<div className="ModalContainerContent">
-						{this.props.content}
+						{this.props.children}
 					</div>
 				</div>
 				<style jsx>
@@ -29,7 +29,7 @@ class ModalContainer extends React.Component {
 							width: auto;
 							max-width: 600px;
 							max-height: 60%;
-							top: 50px;
+							top: 150px;
 							right: 0;
 							padding: 0;
 							z-index: 2;
