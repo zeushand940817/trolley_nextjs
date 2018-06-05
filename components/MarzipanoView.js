@@ -250,6 +250,7 @@ class MarzipanoView extends React.Component {
           id={this.textWindowId()}
           close={this.close.bind(this, 666)}
           content={this.state.sceneText}
+          height={this.props.height}
         />
       );
     } else {

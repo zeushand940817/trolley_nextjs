@@ -51,6 +51,7 @@ class Vista extends React.Component {
               data={data}
               goFull={this.goFull}
               isMobile={this.state.isMobile}
+              height={this.state.height}
             />
           </Fullscreen>
         </div>

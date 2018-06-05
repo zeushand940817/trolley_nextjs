@@ -1,6 +1,6 @@
 import ModalContainer from "../components/ModalContainer";
 import CloseButton from "../components/CloseButton.js";
-
+import scrollParagraph from "../components/scrollParagraph.js";
 import ReactMarkDown from "react-markdown";
 
 //Recibe un prop de un archivo markdown que se usa para generar texto
@@ -8,7 +8,8 @@ class TextWindow extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			markdown: null
+			markdown: null,
+			activeParagraph: 1
 		};
 	}
 
@@ -38,13 +39,17 @@ class TextWindow extends React.Component {
 		return (
 			<div>
 				<ModalContainer
-					top={150}
+					top={50}
 					className="TextWindow"
 					close={<CloseButton onClick={this.props.close} />}
 					title={this.props.title}
 				>
 					<div className="textContent">
-						<ReactMarkDown source={this.state.markdown} />
+						<ReactMarkDown
+							renderers={{ root: scrollParagraph }}
+							sourcePos={true}
+							source={this.state.markdown}
+						/>
 					</div>
 				</ModalContainer>
 				<style jsx>
@@ -56,12 +61,15 @@ class TextWindow extends React.Component {
 							line-height: 1.4em;
 							font-size: 18px;
 							box-shadow: 0 0 22px #333;
+							max-height: ${(this.props.height / 100) * 70}px;
+							overflow-y: auto;
 						}
 
 						@media screen and (max-width: 720px) {
 							.textContent {
 								background-color: rgba(0, 0, 0, 0.8);
 								font-size: 16px;
+								max-height: ;
 							}
 						}
 					`}
