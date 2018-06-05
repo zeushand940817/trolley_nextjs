@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"switc",
+				"switchScene"
+			],
+			[
+				"scene",
+				"sceneTextContent"
+			],
+			[
+				"find",
+				"findScene"
+			],
+			[
 				"Po",
 				"PointText"
 			],
@@ -67,61 +79,7 @@
 			"file": "components/Hotspot.js",
 			"settings":
 			{
-				"buffer_size": 4033,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/donhilo/Escritorio/Postulaciones.todo",
-			"settings":
-			{
-				"buffer_size": 161,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "Postulaciones"
-			}
-		},
-		{
-			"file": "components/Point.js",
-			"settings":
-			{
-				"buffer_size": 1302,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Head.js",
-			"settings":
-			{
-				"buffer_size": 752,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ModalContainer.js",
-			"settings":
-			{
-				"buffer_size": 1008,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 863,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/VideoHotspot.js",
-			"settings":
-			{
-				"buffer_size": 2317,
+				"buffer_size": 3749,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -130,7 +88,106 @@
 			"file": "components/MarzipanoView.js",
 			"settings":
 			{
-				"buffer_size": 8046,
+				"buffer_size": 8343,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Vista.js",
+			"settings":
+			{
+				"buffer_size": 1766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/TextWindow.js",
+			"settings":
+			{
+				"buffer_size": 1283,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 19,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/donhilo/Documentos/code/containers/pueblonuevo/public/wp-content/themes/pueblonuevo-ajax/dploy.yaml",
+			"settings":
+			{
+				"buffer_size": 519,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/dummy.json",
+			"settings":
+			{
+				"buffer_size": 2393,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Point.js",
+			"settings":
+			{
+				"buffer_size": 1300,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/textos/fiestas.md",
+			"settings":
+			{
+				"buffer_size": 369,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Las fiestas, usualmente de toque a toque, que se l"
+			}
+		},
+		{
+			"file": "static/textos/intro.md",
+			"settings":
+			{
+				"buffer_size": 502,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/textos/intro_fulltext.md",
+			"settings":
+			{
+				"buffer_size": 2729,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "El Trolley fue un espacio para la creación y difus"
+			}
+		},
+		{
+			"file": "components/Head.js",
+			"settings":
+			{
+				"buffer_size": 880,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/ModalContainer.js",
+			"settings":
+			{
+				"buffer_size": 1028,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -147,12 +204,28 @@
 		"selected_items":
 		[
 			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
 				"babe",
 				"Set Syntax: JavaScript (Babel)"
 			],
 			[
-				"comm",
-				"Toggle Comment"
+				"ww",
+				"Word Wrap: Toggle"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
 			],
 			[
 				"insta",
@@ -161,10 +234,6 @@
 			[
 				"pretti",
 				"Preferences: JsPrettier Settings - User"
-			],
-			[
-				"bab",
-				"Set Syntax: JavaScript (Babel)"
 			],
 			[
 				"prefere",
@@ -234,26 +303,35 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static"
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages"
 	],
 	"file_history":
 	[
+		"/usr/share/applications/sublime_text.desktop",
+		"/home/donhilo/Escritorio/Postulaciones.todo",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Point.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/VideoHotspot.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TestWindow.js",
+		"/home/donhilo/Escritorio/trjmama.txt",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/Fade.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/fade.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
+		"/home/donhilo/.bashrc",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
 		"/home/donhilo/Documentos/code/containers/c80/public/wp-content/themes/c80-template/dploy.yaml",
 		"/home/donhilo/Documentos/code/containers/ufutura/docker-compose.yml",
 		"/tmp/fz3temp-1/wp-config.php",
 		"/usr/share/applications/org.kde.dolphin.desktop",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
 		"/home/donhilo/.gitignore",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Header.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/base.css",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
 		"/home/donhilo/.config/sublime-text-3/Packages/User/JsPrettier.sublime-settings",
 		"/home/donhilo/.config/sublime-text-3/Packages/Babel/Babel.sublime-settings",
 		"/home/donhilo/Escritorio/testingtesting.txt",
@@ -264,7 +342,6 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/control_implementation.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/about.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/devicecontrol.js",
@@ -326,6 +403,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{\n",
+			"http://eltrolley.apie.cl/",
+			"localhost:3000/static/textos",
+			"./static/textos/",
+			"http://localhost:3000/",
+			"props",
+			"message",
 			"48",
 			"64",
 			"100",
@@ -361,7 +445,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -370,15 +454,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4033,
+						"buffer_size": 3749,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1702,
-								1702
+								1683,
+								1683
 							]
 						],
 						"settings":
@@ -388,63 +472,120 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "components/MarzipanoView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7315,
+								7315
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3645.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "components/Vista.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								682,
+								682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "components/TextWindow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/home/donhilo/Escritorio/Postulaciones.todo",
+					"buffer": 4,
+					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 161,
+						"buffer_size": 19,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								39,
-								39
+								19,
+								19
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Postulaciones",
-							"syntax": "Packages/ToDone/ToDone.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "components/Point.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								792,
-								792
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -454,85 +595,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "components/Head.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 752,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								658,
-								658
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "components/ModalContainer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								501,
-								501
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "package.json",
+					"file": "/home/donhilo/Documentos/code/containers/pueblonuevo/public/wp-content/themes/pueblonuevo-ajax/dploy.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 863,
+						"buffer_size": 519,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								487,
-								487
+								519,
+								519
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -544,19 +626,169 @@
 				},
 				{
 					"buffer": 6,
-					"file": "components/VideoHotspot.js",
+					"file": "data/dummy.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2317,
+						"buffer_size": 2393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								779,
-								779
+								78,
+								78
+							],
+							[
+								1339,
+								1339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "components/Point.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1179,
+								1179
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "static/textos/fiestas.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Las fiestas, usualmente de toque a toque, que se l",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "static/textos/intro.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "static/textos/intro_fulltext.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2729,
+								2729
+							]
+						],
+						"settings":
+						{
+							"auto_name": "El Trolley fue un espacio para la creación y difus",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "components/Head.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								652,
+								652
 							]
 						],
 						"settings":
@@ -569,37 +801,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "components/MarzipanoView.js",
+					"buffer": 12,
+					"file": "components/ModalContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8046,
+						"buffer_size": 1028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6796,
-								6796
+								327,
+								327
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3495.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -654,20 +885,36 @@
 		"selected_items":
 		[
 			[
-				"marzip",
-				"components/MarzipanoView.js"
+				"point",
+				"components/Point.js"
+			],
+			[
+				"vista",
+				"components/Vista.js"
+			],
+			[
+				"modalcon",
+				"components/ModalContainer.js"
 			],
 			[
 				"packa",
 				"package.json"
 			],
 			[
-				"head",
-				"components/Head.js"
+				"showmn",
+				"components/ShowMenu.js"
 			],
 			[
-				"modalcon",
-				"components/ModalContainer.js"
+				"points",
+				"components/PointsList.js"
+			],
+			[
+				"marzip",
+				"components/MarzipanoView.js"
+			],
+			[
+				"head",
+				"components/Head.js"
 			],
 			[
 				"dumm",

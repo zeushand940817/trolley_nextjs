@@ -24,6 +24,10 @@ class TextWindow extends React.Component {
 			});
 	}
 
+	componentDidMount() {
+		this.fetchText(this.props.content);
+	}
+
 	componentDidUpdate(prevProps, prevState) {
 		if (prevProps.content !== this.props.content) {
 			this.fetchText(this.props.content);
@@ -32,13 +36,37 @@ class TextWindow extends React.Component {
 
 	render() {
 		return (
-			<ModalContainer
-				className="TextWindow"
-				close={<CloseButton onClick={this.props.close} />}
-				title={this.props.title}
-			>
-				<ReactMarkDown source={this.state.markdown} />
-			</ModalContainer>
+			<div>
+				<ModalContainer
+					top={150}
+					className="TextWindow"
+					close={<CloseButton onClick={this.props.close} />}
+					title={this.props.title}
+				>
+					<div className="textContent">
+						<ReactMarkDown source={this.state.markdown} />
+					</div>
+				</ModalContainer>
+				<style jsx>
+					{`
+						.textContent {
+							background-color: #000;
+							padding: 36px;
+							font-family: "Cutive Mono", monospace;
+							line-height: 1.4em;
+							font-size: 18px;
+							box-shadow: 0 0 22px #333;
+						}
+
+						@media screen and (max-width: 720px) {
+							.textContent {
+								background-color: rgba(0, 0, 0, 0.8);
+								font-size: 16px;
+							}
+						}
+					`}
+				</style>
+			</div>
 		);
 	}
 }

@@ -54,6 +54,7 @@ class Hotspot extends React.Component {
       if (this.props.active === true) {
         return (
           <ModalContainer
+            top={60}
             className="animated"
             close={<CloseButton onClick={this.props.close} />}
             title={this.props.title}

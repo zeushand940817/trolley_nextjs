@@ -163,7 +163,11 @@ class MarzipanoView extends React.Component {
     let sceneTo = this.findScene(this.state.scenes, id);
     sceneTo.scene.switchTo();
 
-    this.setState({ scene: id, sceneText: sceneTo.text });
+    this.setState({
+      scene: id,
+      sceneText: sceneTo.text,
+      activeKey: "scenetext-" + id
+    });
   }
 
   toggleRotate() {
@@ -235,6 +239,24 @@ class MarzipanoView extends React.Component {
     });
   }
 
+  textWindowId() {
+    return `scenetext-${this.state.scene}`;
+  }
+
+  renderTextWindow() {
+    if (this.state.activeKey === this.textWindowId()) {
+      return (
+        <TextWindow
+          id={this.textWindowId()}
+          close={this.close.bind(this, 666)}
+          content={this.state.sceneText}
+        />
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     const panoStyle = {
       position: "absolute",
@@ -277,10 +299,8 @@ class MarzipanoView extends React.Component {
               position={hotspot.position}
             />
           ))}
-          <TextWindow
-            close={this.close.bind(this, 666)}
-            content={this.state.sceneText}
-          />
+          {this.renderTextWindow()}
+
           <PointsList
             activeKey={this.state.activeKey}
             hotspots={this.state.curHotspots}

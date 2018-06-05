@@ -29,12 +29,10 @@ class ModalContainer extends React.Component {
 							width: auto;
 							max-width: 600px;
 							max-height: 60%;
-							top: 150px;
-							right: 0;
 							padding: 0;
 							z-index: 2;
 							transform: rotate3d(0, 0, 1, -3deg);
-							margin: 24px auto;
+							margin: ${this.props.top}px auto 24px auto;
 						}
 						.ModalContainerContent {
 							padding: 0;
@@ -43,6 +41,8 @@ class ModalContainer extends React.Component {
 						@media screen and (max-width: 720px) {
 							.ModalContainer {
 								max-width: 90%;
+								margin-top: 24px;
+								transform: rotate3d(0, 0, 1, 1deg);
 							}
 						}
 					`}
