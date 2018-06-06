@@ -35,16 +35,6 @@
             "pitch": 0.07183897129165828,
             "yaw": 0.019389230474400776
           }
-        },
-        {
-          "title": "Caja Boletería Recepción",
-          "id": 2,
-          "keyword": "espacio",
-          "type": "gallery",
-          "position": {
-            "pitch": 0.08021686724895538,
-            "yaw": 2.6967840991547067
-          }
         }
       ]
     },

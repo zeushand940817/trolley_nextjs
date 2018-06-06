@@ -11,7 +11,7 @@ class ModalContainer extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="ModalWrapper">
 				<div className="ModalContainer">
 					{this.props.close}
 					<div className="ModalContainerContent">

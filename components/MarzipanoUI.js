@@ -1,3 +1,5 @@
+import PointsList from "../components/PointsList.js";
+
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 
 import faPlay from "@fortawesome/fontawesome-free-solid/faPlay";
@@ -93,6 +95,15 @@ class MarzipanoUI extends React.Component {
 						))}
 					</div>
 
+					<PointsList
+						activeKey={this.props.activeKey}
+						hotspots={this.props.curHotspots}
+						setPos={this.props.setPos}
+						hotspotType={this.props.hotspotType}
+						showMenu={this.props.showMenu}
+						activeMenu={this.props.activeMenu}
+					/>
+
 					<ReactTooltip place="top" effect="solid" />
 					<ReactTooltip
 						place="top"
@@ -104,7 +115,8 @@ class MarzipanoUI extends React.Component {
 					.buttons {
 						position: absolute;
 						bottom: -4px;
-						left: 30px;
+						left: 5%;
+						width: 90%;
 					}
 					.button {
 						background-color: white;

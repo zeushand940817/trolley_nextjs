@@ -61,7 +61,6 @@ class Hotspot extends React.Component {
             type={this.props.type}
           >
             {hotspotType(this.props.type)}
-            {this.props.content}
           </ModalContainer>
         );
       }

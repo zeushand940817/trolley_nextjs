@@ -3,34 +3,15 @@ import ShowMenu from "../components/ShowMenu.js";
 class PointsList extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			isActive: false
-		};
 	}
 
 	componentDidMount() {}
 
-	showLista() {
-		if (this.state.isActive === true) {
-			this.setState({
-				isActive: false
-			});
-		} else {
-			this.setState({
-				isActive: true
-			});
-		}
-	}
-
 	componentDidUpdate(prevProps, prevState) {}
 
 	render() {
-		const { isActive } = this.state;
 		const isActiveNavi = () => {
-			if (
-				this.state.isActive === true &&
-				this.props.hotspotType !== "collage"
-			) {
+			if (this.props.activeMenu === true) {
 				return (
 					<div>
 						<div className="navi active">
@@ -103,18 +84,14 @@ class PointsList extends React.Component {
 			return (
 				<div>
 					<ShowMenu
-						onClick={this.showLista.bind(this)}
-						active={this.state.isActive}
+						onClick={this.props.showMenu}
+						active={this.props.activeMenu}
 					/>
 					{isActiveNavi()}
 				</div>
 			);
 		} else {
-			return (
-				<div>
-					<div className="navi" />
-				</div>
-			);
+			return null;
 		}
 	}
 }

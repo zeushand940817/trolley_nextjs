@@ -10,14 +10,6 @@ const MarzipanoBrand = () => (
 				src="./static/imgs/eltrolley.png"
 				title="El Trolley"
 			/>
-			<nav className="tr_nav">
-				<Link href="/">
-					<a className="tr_link">VRI</a>
-				</Link>
-				<Link href="/about">
-					<a className="tr_link">Acerca de</a>
-				</Link>
-			</nav>
 		</div>
 		<style jsx>{`
 			.tr_header {
