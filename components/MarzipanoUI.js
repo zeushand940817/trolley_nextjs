@@ -4,6 +4,7 @@ import faPlay from "@fortawesome/fontawesome-free-solid/faPlay";
 import faStop from "@fortawesome/fontawesome-free-solid/faStop";
 import faCompass from "@fortawesome/fontawesome-free-solid/faCompass";
 import faArrowsAlt from "@fortawesome/fontawesome-free-solid/faArrowsAlt";
+import faQuestion from "@fortawesome/fontawesome-free-solid/faQuestion";
 
 import ReactTooltip from "react-tooltip";
 
@@ -15,9 +16,9 @@ class MarzipanoUI extends React.Component {
 	render() {
 		const checkIcon = () => {
 			if (this.props.autorotate === true) {
-				return <FontAwesomeIcon icon={faStop} />;
+				return <FontAwesomeIcon className="fa-fw" icon={faStop} />;
 			} else {
-				return <FontAwesomeIcon icon={faPlay} />;
+				return <FontAwesomeIcon className="fa-fw" icon={faPlay} />;
 			}
 		};
 		const showGyro = () => {
@@ -52,7 +53,10 @@ class MarzipanoUI extends React.Component {
 							}
 							onClick={this.props.gyro}
 						>
-							<FontAwesomeIcon icon={faCompass} />
+							<FontAwesomeIcon
+								className="fa-fw"
+								icon={faCompass}
+							/>
 						</div>
 					</div>
 					<div
@@ -60,7 +64,14 @@ class MarzipanoUI extends React.Component {
 						className="button fullScreen"
 						onClick={this.props.goFull}
 					>
-						<FontAwesomeIcon icon={faArrowsAlt} />
+						<FontAwesomeIcon className="fa-fw" icon={faArrowsAlt} />
+					</div>
+					<div
+						className="info button"
+						data-tip="Ayuda de uso"
+						onClick={() => this.props.toggleHelp()}
+					>
+						<FontAwesomeIcon className="fa-fw" icon={faQuestion} />
 					</div>
 					<div className="sceneSwitcher">
 						{this.props.scenes.map(scene => (
@@ -81,6 +92,7 @@ class MarzipanoUI extends React.Component {
 							</div>
 						))}
 					</div>
+
 					<ReactTooltip place="top" effect="solid" />
 					<ReactTooltip
 						place="top"
@@ -91,7 +103,7 @@ class MarzipanoUI extends React.Component {
 				<style jsx>{`
 					.buttons {
 						position: absolute;
-						bottom: 0;
+						bottom: -4px;
 						left: 30px;
 					}
 					.button {
@@ -104,6 +116,7 @@ class MarzipanoUI extends React.Component {
 						margin-right: 10px;
 						display: inline-block;
 						margin-right: 6px;
+						box-shadow: 0 0 6px #555;
 					}
 
 					.button-gyro {
@@ -137,9 +150,15 @@ class MarzipanoUI extends React.Component {
 						color: black;
 						margin-right: 6px;
 						cursor: pointer;
+						box-shadow: 0 0 6px #555;
 					}
 					.sceneButton.active {
 						background-color: #e34f35;
+						color: white;
+					}
+
+					.sceneButton:hover {
+						background-color: #333;
 						color: white;
 					}
 				`}</style>

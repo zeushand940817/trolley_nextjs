@@ -70,6 +70,7 @@ class TextWindow extends React.Component {
 								background-color: rgba(0, 0, 0, 0.8);
 								font-size: 16px;
 								max-height: ;
+								padding: 12px;
 							}
 						}
 					`}

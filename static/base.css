@@ -25,3 +25,8 @@ body {
 .inline {
 	display: inline-block;
 }
+
+.textContent img {
+	max-width: 100%;
+	height: auto;
+}

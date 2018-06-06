@@ -22,8 +22,10 @@ class MarzipanoView extends React.Component {
       isGyroOn: false,
       viewer: null,
       view: null,
+      firstRun: true,
       deviceControl: null,
       controls: null,
+      utiltext: null,
       goTo: {
         yaw: 0,
         pitch: 0
@@ -34,8 +36,6 @@ class MarzipanoView extends React.Component {
   componentDidMount() {
     this.startMarzipano();
   }
-
-  componentDidUpdate() {}
 
   componentDidUpdate(prevProps, prevState) {
     //Movement updates
@@ -59,6 +59,9 @@ class MarzipanoView extends React.Component {
         curHotspots: this.findScene(this.state.scenes, this.state.scene)
           .hotspots
       });
+    }
+    if (prevState.loaded !== this.state.loaded) {
+      this.setState({ utiltext: this.props.data.utils.utiltext });
     }
   }
 
@@ -163,10 +166,25 @@ class MarzipanoView extends React.Component {
     let sceneTo = this.findScene(this.state.scenes, id);
     sceneTo.scene.switchTo();
 
+    if (this.state.firstRun === true) {
+      this.setState({
+        scene: id,
+        sceneText: sceneTo.text,
+        activeKey: "infotext"
+      });
+      this.setState({ firstRun: false });
+    } else {
+      this.setState({
+        scene: id,
+        sceneText: sceneTo.text,
+        activeKey: "scenetext-" + id
+      });
+    }
+  }
+
+  toggleHelpWindow() {
     this.setState({
-      scene: id,
-      sceneText: sceneTo.text,
-      activeKey: "scenetext-" + id
+      activeKey: this.state.activeKey === "infotext" ? null : "infotext"
     });
   }
 
@@ -248,13 +266,26 @@ class MarzipanoView extends React.Component {
       return (
         <TextWindow
           id={this.textWindowId()}
-          close={this.close.bind(this, 666)}
+          close={this.close.bind(this, "closeTextWindow")}
           content={this.state.sceneText}
           height={this.props.height}
         />
       );
     } else {
       return null;
+    }
+  }
+
+  renderHelpWindow() {
+    if (this.state.activeKey === "infotext") {
+      return (
+        <TextWindow
+          id="infotext"
+          close={this.close.bind(this, "closeInfoText")}
+          content={this.state.utiltext}
+          height={this.props.height}
+        />
+      );
     }
   }
 
@@ -301,7 +332,7 @@ class MarzipanoView extends React.Component {
             />
           ))}
           {this.renderTextWindow()}
-
+          {this.renderHelpWindow()}
           <PointsList
             activeKey={this.state.activeKey}
             hotspots={this.state.curHotspots}
@@ -319,6 +350,7 @@ class MarzipanoView extends React.Component {
             isGyroOn={this.state.isGyroOn}
             goFull={this.props.goFull}
             isMobile={this.props.isMobile}
+            toggleHelp={this.toggleHelpWindow.bind(this)}
           />
         </div>
       );

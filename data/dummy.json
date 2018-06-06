@@ -1,4 +1,5 @@
 {
+  "utils": { "utiltext": "./static/textos/ayuda.md" },
   "scenes": [
     {
       "title": "Fiesta",
