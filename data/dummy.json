@@ -4,7 +4,7 @@
     {
       "title": "Fiesta",
       "text": "./static/textos/fiestas.md",
-      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.png",
+      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
       "id": 1,
       "description": [
         {
@@ -34,6 +34,24 @@
           "position": {
             "pitch": 0.07183897129165828,
             "yaw": 0.019389230474400776
+          }
+        },
+        {
+          "title": "Video",
+          "id": 11,
+          "keyword": "vids",
+          "type": "video",
+          "content": {
+            "videos": [
+              {
+                "title": "Video Test",
+                "url": "./static/videos/video_test_trolley.mp4"
+              }
+            ]
+          },
+          "position": {
+            "pitch": -0.03791614506401508,
+            "yaw": -0.2018105925692435
           }
         }
       ]
