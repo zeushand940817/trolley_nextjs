@@ -25,6 +25,7 @@ export default () => (
         rel="stylesheet"
       />
       <link rel="stylesheet" href="./static/base.css" media="screen" />
+      <link rel="stylesheet" href="./static/video-react.css" media="screen" />
     </Head>
   </div>
 );

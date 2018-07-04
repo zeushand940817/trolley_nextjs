@@ -14,29 +14,6 @@
       ],
       "hotspots": [
         {
-          "title": "Escena",
-          "id": 0,
-          "keyword": "escenario",
-          "type": "gallery",
-          "content":
-            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
-          "position": {
-            "pitch": 0.1833731575070061,
-            "yaw": -0.19213234443906124
-          }
-        },
-        {
-          "title": "Obras",
-          "id": 1,
-          "keyword": "obras",
-          "type": "gallery",
-          "content": "Video test",
-          "position": {
-            "pitch": 0.07183897129165828,
-            "yaw": 0.019389230474400776
-          }
-        },
-        {
           "title": "Video",
           "id": 11,
           "keyword": "vids",
@@ -50,8 +27,8 @@
             ]
           },
           "position": {
-            "pitch": -0.03791614506401508,
-            "yaw": -0.2018105925692435
+            "pitch": -0.01653123055334424,
+            "yaw": 0.030126741758483206
           }
         }
       ]

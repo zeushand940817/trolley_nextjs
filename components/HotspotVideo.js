@@ -1,10 +1,5 @@
 import config from "../config.js";
-import Modal from "../components/Modal.js";
-import ModalContainer from "../components/ModalContainer.js";
-import Gallery from "../components/Gallery.js";
-import Video from "../components/Video.js";
-import CloseButton from "../components/CloseButton.js";
-import Point from "../components/Point.js";
+import { Player } from "video-react";
 
 class HotspotVideo extends React.Component {
   constructor(props) {
@@ -31,7 +26,9 @@ class HotspotVideo extends React.Component {
   }
 
   createHotspot(element, position) {
-    this.props.scene.scene.hotspotContainer().createHotspot(element, position);
+    this.props.scene.scene.hotspotContainer().createHotspot(element, position, {
+      perspective: { radius: 1640, extraRotations: "rotateX(5deg)" }
+    });
   }
 
   componentWillUnmount() {}
@@ -39,18 +36,31 @@ class HotspotVideo extends React.Component {
   render() {
     return (
       <div>
-        <div className="trHotspot">
+        <div
+          className="trHotspot"
+          ref={hpDiv => {
+            this.hpDiv = hpDiv;
+          }}
+        >
           <div
             className={
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
           >
-            VIDEO
+            <div className="videoContainer">
+              <Player src="./static/video/video_test_trolley.mp4" playsInline />
+            </div>
           </div>
         </div>
 
         <style jsx>
           {`
+            .videoContainer {
+              background: url(./static/imgs/static.gif) repeat center;
+              position: relative;
+              width: 900px;
+              height: 650px;
+            }
             .hpcontent {
               position: relative;
             }

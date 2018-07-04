@@ -2,7 +2,6 @@ import config from "../config.js";
 import Modal from "../components/Modal.js";
 import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
-import Video from "../components/Video.js";
 import CloseButton from "../components/CloseButton.js";
 import Point from "../components/Point.js";
 
@@ -37,22 +36,6 @@ class Hotspot extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const hotspotType = type => {
-      if (type === "gallery") {
-        return (
-          <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
-        );
-      } else if (type === "video") {
-        return (
-          <Video keyword={this.props.keyword ? this.props.keyword : null} />
-        );
-      } else {
-        return (
-          <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
-        );
-      }
-    };
-
     const activeModal = () => {
       if (this.props.active === true) {
         return (
@@ -63,23 +46,19 @@ class Hotspot extends React.Component {
             title={this.props.title}
             type={this.props.type}
           >
-            {hotspotType(this.props.type)}
+            <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
           </ModalContainer>
         );
       }
     };
 
     const marker = () => {
-      if (this.props.type === "video") {
-        return <div>VIDEO</div>;
-      } else if (this.props.type === "gallery") {
-        return (
-          <Point
-            id={`${this.props.type}-${this.props.id}`}
-            title={this.props.title}
-          />
-        );
-      }
+      return (
+        <Point
+          id={`${this.props.type}-${this.props.id}`}
+          title={this.props.title}
+        />
+      );
     };
 
     return (
