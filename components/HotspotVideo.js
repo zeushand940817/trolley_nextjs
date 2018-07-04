@@ -2,10 +2,11 @@ import config from "../config.js";
 import Modal from "../components/Modal.js";
 import ModalContainer from "../components/ModalContainer.js";
 import Gallery from "../components/Gallery.js";
+import Video from "../components/Video.js";
 import CloseButton from "../components/CloseButton.js";
-import fetch from "isomorphic-unfetch";
+import Point from "../components/Point.js";
 
-class VideoHotspot extends React.Component {
+class HotspotVideo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,36 +31,24 @@ class VideoHotspot extends React.Component {
   }
 
   createHotspot(element, position) {
-    this.props.scene.scene.hotspotContainer().createHotspot(element, position, {
-      perspective: { radius: 1640, extraRotations: "rotateX(5deg)" }
-    });
+    this.props.scene.scene.hotspotContainer().createHotspot(element, position);
   }
 
   componentWillUnmount() {}
 
   render() {
-    const hotspotType = type => {
-      if (type === "gallery") {
-        return (
-          <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
-        );
-      }
-    };
-
     return (
       <div>
-        <div
-          ref={hpDiv => {
-            this.hpDiv = hpDiv;
-          }}
-          className="videoHotspot"
-        >
+        <div className="trHotspot">
           <div
             className={
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
-          />
+          >
+            VIDEO
+          </div>
         </div>
+
         <style jsx>
           {`
             .hpcontent {
@@ -71,21 +60,6 @@ class VideoHotspot extends React.Component {
               background-color: #e34f35;
               color: white;
             }
-
-            .hptitle {
-              font-family: "Barrio", sans-serif;
-              font-size: 18px;
-              color: white;
-              margin: 0;
-              transform: rotate3d(0, 0, 1, -25deg);
-              background-color: #000;
-              padding: 6px;
-              border-left: 6px solid white;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: 2;
-            }
           `}
         </style>
       </div>
@@ -93,4 +67,4 @@ class VideoHotspot extends React.Component {
   }
 }
 
-export default VideoHotspot;
+export default HotspotVideo;

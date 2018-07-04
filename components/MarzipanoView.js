@@ -1,7 +1,5 @@
 import config from "../config.js";
-import Hotspot from "../components/Hotspot.js";
-import VideoHotspot from "../components/VideoHotspot.js";
-
+import HotspotWrapper from "../components/HotspotWrapper.js";
 import MarzipanoUI from "../components/MarzipanoUI.js";
 import MarzipanoBrand from "../components/MarzipanoBrand.js";
 import TextWindow from "../components/TextWindow.js";
@@ -325,7 +323,7 @@ class MarzipanoView extends React.Component {
             onClick={this.handleClick.bind(this)}
           />
           {this.state.curHotspots.map(hotspot => (
-            <Hotspot
+            <HotspotWrapper
               type={hotspot.type}
               active={this.state.activeKey === hotspot.id ? true : false}
               onClick={this.hpState.bind(

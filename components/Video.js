@@ -80,18 +80,7 @@ class Gallery extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="Gallery">
-					<span className="counter">
-						#{this.state.curImage + 1} / {this.state.imagesTotal}
-					</span>
-					{this.curImage()}
-					<span className="GalleryNavPrev" onClick={this.prevImage}>
-						<FontAwesomeIcon icon={faChevronLeft} />
-					</span>
-					<span className="GalleryNavNext" onClick={this.nextImage}>
-						<FontAwesomeIcon icon={faChevronRight} />
-					</span>
-				</div>
+				<div className="Gallery">VIDEO PLAYER</div>
 				<style jsx>{`
 					.Gallery {
 						overflow: hidden;

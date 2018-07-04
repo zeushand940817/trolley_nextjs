@@ -44,7 +44,7 @@ class Hotspot extends React.Component {
         );
       } else if (type === "video") {
         return (
-          <Gallery keyword={this.props.keyword ? this.props.keyword : null} />
+          <Video keyword={this.props.keyword ? this.props.keyword : null} />
         );
       } else {
         return (
@@ -69,6 +69,19 @@ class Hotspot extends React.Component {
       }
     };
 
+    const marker = () => {
+      if (this.props.type === "video") {
+        return <div>VIDEO</div>;
+      } else if (this.props.type === "gallery") {
+        return (
+          <Point
+            id={`${this.props.type}-${this.props.id}`}
+            title={this.props.title}
+          />
+        );
+      }
+    };
+
     return (
       <div>
         <div
@@ -83,10 +96,7 @@ class Hotspot extends React.Component {
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
           >
-            <Point
-              id={`${this.props.type}-${this.props.id}`}
-              title={this.props.title}
-            />
+            {marker()}
           </div>
         </div>
 
@@ -94,31 +104,6 @@ class Hotspot extends React.Component {
 
         <style jsx>
           {`
-            .example-appear {
-              opacity: 0.01;
-            }
-
-            .example-appear.example-appear-active {
-              opacity: 1;
-              transition: opacity 0.5s ease-in;
-            }
-            .example-enter {
-              opacity: 0.01;
-            }
-
-            .example-enter.example-enter-active {
-              opacity: 1;
-              transition: opacity 500ms ease-in;
-            }
-
-            .example-leave {
-              opacity: 1;
-            }
-
-            .example-leave.example-leave-active {
-              opacity: 0.01;
-              transition: opacity 300ms ease-in;
-            }
             .hpcontent {
               position: relative;
             }
@@ -127,22 +112,6 @@ class Hotspot extends React.Component {
             .hpcontent.active .hptitle {
               background-color: #e34f35;
               color: white;
-            }
-
-            .hptitle {
-              font-family: "Barrio", sans-serif;
-              font-size: 18px;
-              color: white;
-              margin: 0;
-              transform: rotate3d(0, 0, 1, -25deg);
-              background-color: #000;
-              padding: 6px;
-              border-left: 6px solid white;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: 2;
-              display: none;
             }
           `}
         </style>
