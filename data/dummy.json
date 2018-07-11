@@ -21,15 +21,33 @@
       "id": 2,
       "hotspots": [
         {
-          "title": "Escenario / Obras",
+          "title": "Video",
+          "id": 11,
+          "keyword": "vids",
+          "type": "video",
+          "content": {
+            "videos": [
+              {
+                "title": "Video Test",
+                "url": "./static/videos/video_test_trolley.mp4"
+              }
+            ]
+          },
+          "position": {
+            "pitch": -0.01653123055334424,
+            "yaw": 0.030126741758483206
+          }
+        },
+        {
+          "title": "Obras",
           "id": 3,
           "keyword": "escenario",
           "type": "gallery",
           "content":
             "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
-            "pitch": -0.1833731575070061,
-            "yaw": -0.19213234443906124
+            "pitch": 0.28021016282170663,
+            "yaw": 0.33586122947428265
           }
         },
         {
@@ -43,7 +61,7 @@
           }
         },
         {
-          "title": "Caja Boletería Recepción",
+          "title": "Caja",
           "id": 5,
           "keyword": "espacio",
           "type": "gallery",

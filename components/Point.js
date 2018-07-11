@@ -1,5 +1,10 @@
 const Point = props => (
 	<div>
+		<img
+			src={`./static/imgs/hotspots/hotspot_${props.hpid}.png`}
+			alt=""
+			className="hpIcon"
+		/>
 		<svg className="Point" height="100px" width="100px">
 			<path
 				id={props.id}
@@ -16,10 +21,18 @@ const Point = props => (
 			</text>
 		</svg>
 		<style jsx>{`
+			img.hpIcon {
+				position: absolute;
+				max-width: 40px;
+				height: auto;
+				top: 28px;
+				left: 28px;
+				z-index: 10;
+			}
 			.Point {
-				animation: rotating 10s linear infinite;
+				animation: rotating 30s linear infinite;
 				transform-origin: 50% 50%;
-				fill: white;
+				fill: #e34f35;
 				transition: fill ease-in 0.4s;
 			}
 

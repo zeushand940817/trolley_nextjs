@@ -55,6 +55,7 @@ class Hotspot extends React.Component {
     const marker = () => {
       return (
         <Point
+          hpid={this.props.id}
           id={`${this.props.type}-${this.props.id}`}
           title={this.props.title}
         />
