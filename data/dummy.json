@@ -12,26 +12,7 @@
           "content": ""
         }
       ],
-      "hotspots": [
-        {
-          "title": "Video",
-          "id": 11,
-          "keyword": "vids",
-          "type": "video",
-          "content": {
-            "videos": [
-              {
-                "title": "Video Test",
-                "url": "./static/videos/video_test_trolley.mp4"
-              }
-            ]
-          },
-          "position": {
-            "pitch": -0.04653123055334424,
-            "yaw": 0.030126741758483206
-          }
-        }
-      ]
+      "hotspots": []
     },
     {
       "title": "Función de teatro",
