@@ -41,7 +41,7 @@ class ModalContainer extends React.Component {
 						@media screen and (max-width: 720px) {
 							.ModalContainer {
 								max-width: 90%;
-								margin-top: 48px;
+								margin-top: 90px;
 								transform: rotate3d(0, 0, 1, 1deg);
 							}
 						}

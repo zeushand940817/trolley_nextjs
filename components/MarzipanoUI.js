@@ -8,8 +8,6 @@ import faCompass from "@fortawesome/fontawesome-free-solid/faCompass";
 import faArrowsAlt from "@fortawesome/fontawesome-free-solid/faArrowsAlt";
 import faQuestion from "@fortawesome/fontawesome-free-solid/faQuestion";
 
-import ReactTooltip from "react-tooltip";
-
 class MarzipanoUI extends React.Component {
 	constructor(props) {
 		super(props);
@@ -104,12 +102,7 @@ class MarzipanoUI extends React.Component {
 						activeMenu={this.props.activeMenu}
 					/>
 
-					<ReactTooltip place="top" effect="solid" />
-					<ReactTooltip
-						place="top"
-						effect="solid"
-						getContent={dataTip => `${dataTip}`}
-					/>
+					
 				</div>
 				<style jsx>{`
 					.buttons {

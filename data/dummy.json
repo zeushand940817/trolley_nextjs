@@ -48,7 +48,7 @@
       ]
     },
     {
-      "title": "Función de teatro",
+      "title": "Videos",
       "text": "./static/textos/intro.md",
       "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
       "id": 2,
@@ -61,8 +61,16 @@
           "content": {
             "videos": [
               {
-                "title": "Video Test",
-                "url": "./static/videos/video_test_trolley.mp4"
+                "id": "106V",
+                "url": "./static/video/106V.mp4"
+              },
+              {
+                "id": "107V",
+                "url": "./static/video/107V.mp4"
+              },
+              {
+                "id": "105V",
+                "url": "./static/video/105V.mp4"
               }
             ]
           },
