@@ -12,7 +12,29 @@
           "content": ""
         }
       ],
-      "hotspots": []
+      "hotspots": [
+      {
+          "title": "Fiesta",
+          "id": 14,
+          "keyword": "fiesta",
+          "type": "gallery",
+          "content":
+            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "position": {
+            "pitch": 0.28021016282170663,
+            "yaw": 0.33586122947428265
+          }
+        },
+      {
+          "title": "Música",
+          "id": 7,
+          "keyword": "música",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.08021686724895538,
+            "yaw": 2.6967840991547067
+          }
+        }]
     },
     {
       "title": "Función de teatro",
@@ -39,21 +61,19 @@
           }
         },
         {
-          "title": "Obras",
+          "title": "Teatro fin de siglo",
           "id": 3,
-          "keyword": "escenario",
+          "keyword": "Teatro fin de siglo",
           "type": "gallery",
-          "content":
-            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
             "pitch": 0.28021016282170663,
             "yaw": 0.33586122947428265
           }
         },
         {
-          "title": "Participantes",
+          "title": "Escenografía",
           "id": 4,
-          "keyword": "actores",
+          "keyword": "escenografía",
           "type": "gallery",
           "position": {
             "pitch": 0.4317066448356943,
@@ -61,9 +81,9 @@
           }
         },
         {
-          "title": "Caja",
+          "title": "Cinema Utoppia",
           "id": 5,
-          "keyword": "espacio",
+          "keyword": "Cinema utoppia",
           "type": "gallery",
           "position": {
             "pitch": 0.08021686724895538,

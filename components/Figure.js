@@ -13,6 +13,7 @@ const Figure = props => (
 				}
 				img {
 					max-width: 100%;
+					max-height: 70vh;
 				}
 				p {
 					font-size: 24px;

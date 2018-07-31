@@ -6,6 +6,7 @@ const Point = props => (
 			className="hpIcon"
 		/>
 		<svg className="Point" height="100px" width="100px">
+			
 			<path
 				id={props.id}
 				d="M 32,0 A 32,32 0 0 1 -32,0 A 32,32 0 0 1 32,0"
@@ -19,6 +20,7 @@ const Point = props => (
 					<tspan dy="6">{props.title}</tspan>
 				</textPath>
 			</text>
+			
 		</svg>
 		<style jsx>{`
 			img.hpIcon {

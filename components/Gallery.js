@@ -1,4 +1,5 @@
-import data_trolley from "../data/data_trolley.json";
+import data_trolley from "../data/data_trolley_dspace.json";
+import config from "../config.js";
 import Figure from "./Figure.js";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faChevronRight from "@fortawesome/fontawesome-free-solid/faChevronRight";
@@ -17,9 +18,24 @@ class Gallery extends React.Component {
 		this.prevImage = this.prevImage.bind(this);
 	}
 
+	parseDspaceKeywords(keywords) {
+		let arrKeywords = keywords.split(config.dspaceKeywordSeparator);
+		console.log(arrKeywords);
+		return arrKeywords;
+	}
+
+	isKeywordIn(keywords, keyword) {
+		let kw = this.parseDspaceKeywords(keywords);
+		if (kw.indexOf(keyword) !== -1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	componentDidMount() {
 		let images = data_trolley.filter(
-			image => image["PALABRAS CLAVES"] === this.props.keyword
+			image => this.isKeywordIn(image["dc.subject.other"], this.props.keyword)
 		);
 		this.setState({
 			images: images,
@@ -31,7 +47,7 @@ class Gallery extends React.Component {
 		if (this.state.images[key] !== undefined) {
 			return (
 				"./static/material/" +
-				this.state.images[key].ID.toUpperCase() +
+				this.state.images[key]['dc.identifier.other'].toUpperCase() +
 				".jpg"
 			);
 		}
@@ -39,7 +55,7 @@ class Gallery extends React.Component {
 
 	buildImageTitle(key) {
 		if (this.state.images[key] !== undefined) {
-			return this.state.images[key]["TITULO"];
+			return this.state.images[key]["dc.title"];
 		}
 	}
 

@@ -114,15 +114,15 @@ class MarzipanoUI extends React.Component {
 				<style jsx>{`
 					.buttons {
 						position: absolute;
-						bottom: -4px;
-						left: 5%;
+						bottom: 0;
+						left: 12px;
 						width: 90%;
+						z-index: 100;
 					}
 					.button {
 						background-color: white;
 						color: black;
 						padding: 6px;
-						z-index: 10;
 						font-size: 20px;
 						cursor: pointer;
 						margin-right: 10px;
