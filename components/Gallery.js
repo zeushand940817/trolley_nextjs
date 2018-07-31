@@ -24,9 +24,10 @@ class Gallery extends React.Component {
 		return arrKeywords;
 	}
 
-	isKeywordIn(keywords, keyword) {
+	isKeywordIn(keywords, keyword, imgid) {
 		let kw = this.parseDspaceKeywords(keywords);
-		if (kw.indexOf(keyword) !== -1) {
+		let imgexists = this.urlExists('./static/material/' + imgid.toUpperCase() + '.jpg');
+		if (kw.indexOf(keyword) !== -1 && imgexists === true) {
 			return true;
 		} else {
 			return false;
@@ -34,8 +35,8 @@ class Gallery extends React.Component {
 	}
 
 	componentDidMount() {
-		let images = data_trolley.filter(
-			image => this.isKeywordIn(image["dc.subject.other"], this.props.keyword)
+		let images = data_trolley.filter(image =>
+			this.isKeywordIn(image["dc.subject.other"], this.props.keyword, image["dc.identifier.other"])
 		);
 		this.setState({
 			images: images,
@@ -43,11 +44,18 @@ class Gallery extends React.Component {
 		});
 	}
 
+	urlExists(url) {
+		var http = new XMLHttpRequest();
+		http.open("HEAD", url, false);
+		http.send();
+		return http.status !== 404;
+	}
+
 	buildImageUrl(key) {
 		if (this.state.images[key] !== undefined) {
 			return (
 				"./static/material/" +
-				this.state.images[key]['dc.identifier.other'].toUpperCase() +
+				this.state.images[key]["dc.identifier.other"].toUpperCase() +
 				".jpg"
 			);
 		}
