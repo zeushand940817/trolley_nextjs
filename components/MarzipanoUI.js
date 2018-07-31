@@ -113,7 +113,7 @@ class MarzipanoUI extends React.Component {
 				</div>
 				<style jsx>{`
 					.buttons {
-						position: absolute;
+						position: fixed;
 						bottom: 0;
 						left: 12px;
 						width: 90%;
