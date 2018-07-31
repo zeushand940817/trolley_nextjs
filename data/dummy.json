@@ -62,15 +62,18 @@
             "videos": [
               {
                 "id": "106V",
-                "url": "./static/video/106V.mp4"
+                "url": "./static/video/106V.mp4",
+                "title": "Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "107V",
-                "url": "./static/video/107V.mp4"
+                "url": "./static/video/107V.mp4",
+                "title": "Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "105V",
-                "url": "./static/video/105V.mp4"
+                "url": "./static/video/105V.mp4",
+                "title": "Registro fragmentos 99 La morgue"
               }
             ]
           },
