@@ -16,7 +16,7 @@ const Point = props => (
 			/>
 
 			<text className="PointText" fill="#fff" strokeWidth="0">
-				<textPath href={`#${props.id}`} startOffset="0">
+				<textPath xlink:href={`#${props.id}`} startOffset="0">
 					<tspan dy="6">{props.title}</tspan>
 				</textPath>
 			</text>

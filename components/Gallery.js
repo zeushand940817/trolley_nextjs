@@ -20,7 +20,6 @@ class Gallery extends React.Component {
 
 	parseDspaceKeywords(keywords) {
 		let arrKeywords = keywords.split(config.dspaceKeywordSeparator);
-		console.log(arrKeywords);
 		return arrKeywords;
 	}
 
