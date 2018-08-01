@@ -47,7 +47,7 @@ const Point = props => (
 				stroke: #000;
 				text-transform: uppercase;
 				font-family: "Barrio", sans-serif;
-				font-size: 20px;
+				font-size: 16px;
 			}
 
 			@keyframes rotating {

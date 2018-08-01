@@ -40,10 +40,30 @@
           "id": 8,
           "keyword": "difusión",
           "type": "gallery",
-          "position": { 
-            "pitch": 1.0947317940381378, 
+          "position": {
+            "pitch": 1.0947317940381378,
             "yaw": 0.4483430412898386
-             }
+          }
+        },
+        {
+          "title": "Violencia de estado",
+          "id": 9,
+          "keyword": "violencia de estado",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.29719120797889786,
+            "yaw": 2.047539845564895
+          }
+        },
+        {
+          "title": "Crítica",
+          "id": 10,
+          "keyword": "crítica",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.40408306201541677,
+            "yaw": 1.3040823500527239
+          }
         }
       ]
     },
@@ -92,6 +112,36 @@
             "yaw": 0.33586122947428265
           }
         },
+        {
+          "title": "Historias de un galpón abandonado",
+          "id": 12,
+          "keyword": "Historias de un galpón abandonado",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.3449868928017459,
+            "yaw": -0.2521752468841285
+          }
+        },
+        {
+          "title": "Un viaje al interior de Kafka",
+          "id": 13,
+          "keyword": "Un viaje al interior de Kafka",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.2681399231263768,
+            "yaw": -0.36566996051410605
+          }
+        },
+        {
+          "title": "Santiago bauhaus",
+          "id": 8,
+          "keyword": "Santiago bauhaus",
+          "type": "gallery",
+          "position": {
+            "pitch": 0.9440514977664094,
+            "yaw": 0.62521582164959}
+        },
+
         {
           "title": "Escenografía",
           "id": 4,

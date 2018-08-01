@@ -3,6 +3,7 @@ import HotspotWrapper from "../components/HotspotWrapper.js";
 import MarzipanoUI from "../components/MarzipanoUI.js";
 import MarzipanoBrand from "../components/MarzipanoBrand.js";
 import TextWindow from "../components/TextWindow.js";
+import HotspotTitle from "../components/HotspotTitle.js";
 
 class MarzipanoView extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class MarzipanoView extends React.Component {
       scenes: [],
       curHotspots: [],
       activeKey: null,
+      activeTitle: null,
       hotspotType: null,
       isRotating: false,
       autorotate: null,

@@ -25,8 +25,8 @@ class Gallery extends React.Component {
 
 	isKeywordIn(keywords, keyword, imgid) {
 		let kw = this.parseDspaceKeywords(keywords);
-		let imgexists = this.urlExists('./static/material/' + imgid.toUpperCase() + '.jpg');
-		if (kw.indexOf(keyword) !== -1 && imgexists === true) {
+		let imgexists = imgid.indexOf('F');
+		if (kw.indexOf(keyword) !== -1 && imgexists !== -1) {
 			return true;
 		} else {
 			return false;
