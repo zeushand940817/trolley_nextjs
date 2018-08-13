@@ -108,7 +108,9 @@ class MarzipanoUI extends React.Component {
 						.buttons {
 							bottom: auto;
 							top: 0;
-							left: 170px;	
+							left: auto;
+							right: 6px;
+							width: 180px;	
 						}
 						
 					}

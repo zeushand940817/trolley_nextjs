@@ -13,7 +13,7 @@ const MarzipanoBrand = () => (
 		</div>
 		<style jsx>{`
 			.tr_header {
-				padding: 6px;
+				padding: 0;
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -23,8 +23,6 @@ const MarzipanoBrand = () => (
 				float: left;
 				padding: 12px;
 				background-color: #000;
-				opacity: 0.8;
-				transform: rotate3d(0, 0, 1, -13deg);
 			}
 			.tr_nav {
 				padding: 12px 0 0 12px;

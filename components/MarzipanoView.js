@@ -284,11 +284,7 @@ class MarzipanoView extends React.Component {
   }
 
   renderBrand() {
-    if (this.state.activeKey === null) {
-      return <MarzipanoBrand />;
-    } else {
-      return null;
-    }
+   return <MarzipanoBrand />
   }
 
   renderHelpWindow() {

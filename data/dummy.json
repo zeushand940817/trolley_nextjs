@@ -2,7 +2,7 @@
   "utils": { "utiltext": "./static/textos/ayuda.md" },
   "scenes": [
     {
-      "title": "Fiesta",
+      "title": "Fiestas",
       "text": "./static/textos/fiestas.md",
       "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
       "id": 1,
@@ -14,7 +14,7 @@
       ],
       "hotspots": [
         {
-          "title": "Fiesta",
+          "title": "Fiestas en el Trolley",
           "id": 14,
           "keyword": "fiesta",
           "type": "gallery",
@@ -36,7 +36,7 @@
           }
         },
         {
-          "title": "Difusión",
+          "title": "Material de Difusión",
           "id": 8,
           "keyword": "difusión",
           "type": "gallery",
@@ -53,16 +53,6 @@
           "position": {
             "pitch": 0.29719120797889786,
             "yaw": 2.047539845564895
-          }
-        },
-        {
-          "title": "Crítica",
-          "id": 10,
-          "keyword": "crítica",
-          "type": "gallery",
-          "position": {
-            "pitch": 0.40408306201541677,
-            "yaw": 1.3040823500527239
           }
         }
       ]
