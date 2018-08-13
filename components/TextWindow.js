@@ -57,7 +57,7 @@ class TextWindow extends React.Component {
 						.textContent {
 							background-color: #000;
 							padding: 36px;
-							font-family: "Cutive Mono", monospace;
+							font-family: "Special Elite", monospace;
 							line-height: 1.4em;
 							font-size: 18px;
 							box-shadow: 0 0 22px #333;

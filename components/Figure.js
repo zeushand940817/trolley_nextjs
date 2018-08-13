@@ -19,7 +19,7 @@ const Figure = props => (
 					font-size: 24px;
 					text-transform: capitalize;
 					margin: 0;
-					font-family: "Barrio", sans-serif;
+					font-family: "Special Elite", monospace;
 				}
 			`}
 		</style>

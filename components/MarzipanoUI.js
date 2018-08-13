@@ -172,6 +172,14 @@ class MarzipanoUI extends React.Component {
 						box-shadow: 0 0 6px #555;
 						transform: rotate(-45deg);
 					}
+
+					@media screen and (max-width:768px) {
+						.sceneButton {
+							font-size:16px;
+							margin-right: -33px;
+						}
+					}
+
 					.sceneButton.active {
 						background-color: #e34f35;
 						color: white;

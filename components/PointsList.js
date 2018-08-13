@@ -73,6 +73,12 @@ class PointsList extends React.Component {
 									color: white;
 									background-color: #e34f35;
 								}
+
+								@media screen and (max-width: 768px) {
+									li {
+										font-size: 18px;
+									}
+								}
 							`}
 						</style>
 					</div>

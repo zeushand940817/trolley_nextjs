@@ -81,7 +81,7 @@ class HotspotVideo extends React.Component {
   getCurVidPoster() {
     if (this.state.curVideo !== null) {
       let id = this.props.content.videos[this.state.curVideo].id;
-      return './static/video/' + id + '.png';
+      return config.assetsurl + 'videos/' + id + '.png';
     }
   }
 

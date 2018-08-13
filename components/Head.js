@@ -17,7 +17,7 @@ export default () => (
         media="screen"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Barrio&Cutive+Mono"
+        href="https://fonts.googleapis.com/css?family=Barrio|Special+Elite"
         rel="stylesheet"
       />
       <link
