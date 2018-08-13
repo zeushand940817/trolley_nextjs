@@ -20,15 +20,15 @@ class ShowMenu extends React.Component {
 				<div
 					className={
 						this.props.active === true
-							? "button active noselect"
-							: "button noselect"
+							? "button-show active noselect"
+							: "button-show noselect"
 					}
 					onClick={this.props.onClick}
 				>
 					{checkIcon()}
 				</div>
 				<style jsx>{`
-					.button {
+					.button-show {
 						position: absolute;
 						bottom: 0;
 						right: 6px;
@@ -38,7 +38,15 @@ class ShowMenu extends React.Component {
 						z-index: 10;
 						font-size: 24px;
 					}
-					.button:hover {
+
+					@media screen and (max-width: 768px) {
+						.button-show {
+							left: 132px;
+							right: auto;
+						}
+					}
+
+					.button-show:hover {
 						background-color: black;
 						color: white;
 					}

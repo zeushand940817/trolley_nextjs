@@ -41,13 +41,12 @@ class PointsList extends React.Component {
 						<style jsx>
 							{`
 								.navi {
-									position: absolute;
-									bottom: 100px;
-									right: -24px;
-									width: 300px;
+									position: fixed;
+									right: -20px;
+									top: 80px;
+									width: 100%;
 									z-index: 2;
 									display: block;
-									width: 100%;
 									max-width: 700px;
 								}
 

@@ -30,18 +30,27 @@ class MarzipanoUI extends React.Component {
 		};
 		return (
 			<div>
-				<div className="buttons noselect">
-					<div
-						data-tip="Activar rotación automática"
-						className={
-							this.props.autorotate === true
-								? "button active"
-								: "button"
-						}
-						onClick={this.props.rotate}
-					>
-						{checkIcon()}
+			<div className="sceneSwitcher">
+						{this.props.scenes.map(scene => (
+							<div
+								data-for="Escena"
+								data-tip={`${scene.title}`}
+								key={scene.id}
+								className={
+									this.props.activeScene === scene.id
+										? "sceneButton active"
+										: "sceneButton"
+								}
+								onClick={() =>
+									this.props.switcher(scene.scene, scene.id)
+								}
+							>
+								{scene.title}
+							</div>
+						))}
 					</div>
+				<div className="buttons noselect">
+					
 
 					<div className={showGyro()}>
 						<div
@@ -73,25 +82,7 @@ class MarzipanoUI extends React.Component {
 					>
 						<FontAwesomeIcon className="fa-fw" icon={faQuestion} />
 					</div>
-					<div className="sceneSwitcher">
-						{this.props.scenes.map(scene => (
-							<div
-								data-for="Escena"
-								data-tip={`${scene.title}`}
-								key={scene.id}
-								className={
-									this.props.activeScene === scene.id
-										? "sceneButton active"
-										: "sceneButton"
-								}
-								onClick={() =>
-									this.props.switcher(scene.scene, scene.id)
-								}
-							>
-								{scene.id}
-							</div>
-						))}
-					</div>
+					
 
 					<PointsList
 						activeKey={this.props.activeKey}
@@ -111,7 +102,29 @@ class MarzipanoUI extends React.Component {
 						left: 12px;
 						width: 90%;
 						z-index: 100;
+						height: 35px;
 					}
+					@media screen and (max-width: 768px) {
+						.buttons {
+							bottom: auto;
+							top: 0;
+							left: 170px;	
+						}
+						
+					}
+
+					.sceneSwitcher {
+						position: fixed;
+						bottom: 0;
+						left: 0;
+					}
+
+					@media screen and (min-width: 769px) {
+						.sceneSwitcher {
+							left: 200px;
+						}
+					}
+
 					.button {
 						background-color: white;
 						color: black;
@@ -146,16 +159,18 @@ class MarzipanoUI extends React.Component {
 						display: inline-block;
 					}
 					.sceneButton {
-						padding: 6px 12px;
+						padding: 6px 12px 6px 48px;
 						font-family: "Barrio", sans-serif;
 						font-size: 32px;
 						display: inline-block;
 						background-color: white;
 						text-align: center;
 						color: black;
-						margin-right: 6px;
+						margin-right: -66px;
+						margin-bottom: 12px;
 						cursor: pointer;
 						box-shadow: 0 0 6px #555;
+						transform: rotate(-45deg);
 					}
 					.sceneButton.active {
 						background-color: #e34f35;

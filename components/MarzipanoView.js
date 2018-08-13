@@ -170,7 +170,7 @@ class MarzipanoView extends React.Component {
       this.setState({
         scene: id,
         sceneText: sceneTo.text,
-        activeKey: "infotext"
+        activeKey: null
       });
       this.setState({ firstRun: false });
     } else {
@@ -235,6 +235,7 @@ class MarzipanoView extends React.Component {
   }
 
   hpState(index, position, hotspotType, event) {
+    console.log('hp-click');
     this.setPos(position, index, hotspotType);
   }
 
