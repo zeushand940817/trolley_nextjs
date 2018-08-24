@@ -22,6 +22,7 @@ class CloseButton extends React.Component {
 						right: -12px;
 						z-index: 10;
 						font-family: 'Special Elite', monospace;
+						cursor: pointer;
 					}
 				`}</style>
 			</div>

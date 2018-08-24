@@ -73,23 +73,23 @@
               {
                 "id": "106V",
                 "url": "http://eltrolley.apie.cl/videos/106V.mp4",
-                "title": "Ensayos viaje al mundo de Kafka"
+                "title": "1. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "107V",
                 "url": "http://eltrolley.apie.cl/videos/107V.mp4",
-                "title": "Ensayos viaje al mundo de Kafka"
+                "title": "2. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "105V",
                 "url": "http://eltrolley.apie.cl/videos/105V.mp4",
-                "title": "Registro fragmentos 99 La morgue"
+                "title": "3. Registro fragmentos 99 La morgue"
               }
             ]
           },
           "position": {
-            "pitch": -0.01653123055334424,
-            "yaw": 0.030126741758483206
+            "pitch": 0.045248115720397664,
+            "yaw": 0.031968252122581475
           }
         },
         {
