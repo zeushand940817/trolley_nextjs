@@ -13,7 +13,7 @@ class PointsList extends React.Component {
 		const isActiveNavi = () => {
 			if (this.props.activeMenu === true) {
 				return (
-					<div>
+					<div className="naviWrap">
 						<div className="navi active">
 							<ul>
 								{this.props.hotspots.map(hotspot => (
@@ -40,19 +40,22 @@ class PointsList extends React.Component {
 						</div>
 						<style jsx>
 							{`
-								.navi {
+								.naviWrap {
 									position: fixed;
-									right: -20px;
-									top: 80px;
 									width: 100%;
+									height: 100%;
+									top: 0;
+									left: 0;
 									z-index: 2;
-									display: block;
-									max-width: 700px;
+									text-align: center;
+									background-color: rgba(0, 0, 0, 0.8);
+								}
+								.navi {
+									
 								}
 
 								ul {
-									margin: 0;
-									padding: 0;
+									padding: 60px auto 48px auto;
 								}
 
 								li {
@@ -64,7 +67,7 @@ class PointsList extends React.Component {
 									background-color: #000;
 									margin: 10px 0;
 									padding: 12px 6px 6px 12px;
-									transform: rotate3d(0, 0, 1, -15deg);
+									transform: rotate3d(0, 0, 1, -5deg);
 									display: block;
 									border-left: 5px solid white;
 								}

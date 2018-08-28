@@ -1,22 +1,29 @@
 const Figure = props => (
-	<div>
+	<div className="figureWrapper">
 		<figure>
 			<img src={props.imageUrl} title={props.imageTitle} />
 			<p className="imageTitle">{props.imageTitle}</p>
 		</figure>
 		<style jsx>
 			{`
+				.figureWrapper {
+					display: flex;
+					height: 100%;
+					align-content: center;
+				}
+
 				figure {
 					text-align: center;
-					margin: 0;
-					padding: 0;
+					margin: auto;
+					align-self: center;
 				}
 				img {
 					max-width: 100%;
-					max-height: 70vh;
+					max-height: 560px;
+					margin: 0 auto;
 				}
 				p {
-					font-size: 24px;
+					font-size: 18px;
 					text-transform: capitalize;
 					margin: 0;
 					font-family: "Special Elite", monospace;

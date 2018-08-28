@@ -7,7 +7,7 @@ class Modal extends React.Component {
 				height: "auto",
 				overflowY: "scroll",
 				overflowX: "hidden",
-				transform: "rotate3d(0, 0, 1, 3deg)",
+				transform: "rotate3d(0, 0, 1, 1deg)",
 				position: "absolute"
 			}
 		};
