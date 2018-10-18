@@ -171,6 +171,12 @@ class Gallery extends React.Component {
 						perspective: 1200px;
 					}
 
+					@media screen and (max-width: 768px) {
+						.Gallery {
+							height: 490px;
+						}
+					}
+
 					.gallery-wrapper {
 						width: 100%;
 						height: 100%;

@@ -22,6 +22,13 @@ const Figure = props => (
 					max-height: 560px;
 					margin: 0 auto;
 				}
+
+				@media screen and (max-width: 768px) {
+					img {
+						max-height: 420px;
+					}
+				}
+				
 				p {
 					font-size: 18px;
 					text-transform: capitalize;
