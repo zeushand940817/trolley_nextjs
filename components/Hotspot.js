@@ -36,6 +36,8 @@ class Hotspot extends React.Component {
   componentWillUnmount() {}
 
   render() {
+    const PointTitle = this.props.title.length > 23 ? this.props.title.substring(0, 23) + '...' : this.props.title;
+
     const activeModal = () => {
       if (this.props.active === true) {
         return (
@@ -57,7 +59,7 @@ class Hotspot extends React.Component {
         <Point
           hpid={this.props.id}
           id={`${this.props.type}-${this.props.id}`}
-          title={this.props.title}
+          title={PointTitle}
           stopped={this.props.gyro}
         />
       );

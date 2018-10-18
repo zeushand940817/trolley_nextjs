@@ -19,7 +19,7 @@ class MarzipanoView extends React.Component {
       hotspotType: null,
       isRotating: false,
       autorotate: null,
-      isGyroOn: true,
+      isGyroOn: false,
       viewer: null,
       view: null,
       firstRun: true,

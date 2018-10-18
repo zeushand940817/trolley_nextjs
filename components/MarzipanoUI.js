@@ -93,7 +93,7 @@ class MarzipanoUI extends React.Component {
 						hotspotType={this.props.hotspotType}
 						showMenu={this.props.showMenu}
 						activeMenu={this.props.activeMenu}
-						scene={this.props.scenes[this.props.activeScene]}
+						scene={this.props.scenes[this.props.activeScene -1]}
 					/>
 				</div>
 				<style jsx>{`

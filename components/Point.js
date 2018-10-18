@@ -61,8 +61,8 @@ const Point = props => (
 			.PointText {
 				stroke: #000;
 				text-transform: uppercase;
-				font-family: "Barrio", sans-serif;
-				font-size: 18px;
+				font-family: "Special Elite", sans-serif;
+				font-size: 14px;
 			}
 
 			.stopped .PointText {
