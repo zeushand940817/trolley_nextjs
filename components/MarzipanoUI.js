@@ -31,37 +31,35 @@ class MarzipanoUI extends React.Component {
 		};
 		return (
 			<div>
-			<ShowMenu
-						onClick={this.props.showMenu}
-						active={this.props.activeMenu}
-					/>
-			<div className="sceneSwitcher">
-						{this.props.scenes.map(scene => (
-							<div
-								data-for="Escena"
-								data-tip={`${scene.title}`}
-								key={scene.id}
-								className={
-									this.props.activeScene === scene.id
-										? "sceneButton active"
-										: "sceneButton"
-								}
-								onClick={() =>
-									this.props.switcher(scene.scene, scene.id)
-								}
-							>
-								{scene.title}
-							</div>
-						))}
-					</div>
+				<ShowMenu
+					onClick={this.props.showMenu}
+					active={this.props.activeMenu}
+				/>
+				<div className="sceneSwitcher">
+					{this.props.scenes.map(scene => (
+						<div
+							data-for="Escena"
+							data-tip={`${scene.title}`}
+							key={scene.id}
+							className={
+								this.props.activeScene === scene.id
+									? "sceneButton active"
+									: "sceneButton"
+							}
+							onClick={() =>
+								this.props.switcher(scene.scene, scene.id)
+							}
+						>
+							{scene.title}
+						</div>
+					))}
+				</div>
 				<div className="buttons noselect">
-					
-
 					<div className={showGyro()}>
 						<div
 							data-tip="Activar sensor de movimiento"
 							className={
-								this.props.isGyroOn === true
+								this.props.isGyroOn
 									? "button button-gyro active"
 									: "button button-gyro"
 							}
@@ -87,7 +85,6 @@ class MarzipanoUI extends React.Component {
 					>
 						<FontAwesomeIcon className="fa-fw" icon={faQuestion} />
 					</div>
-					
 
 					<PointsList
 						activeKey={this.props.activeKey}
@@ -114,9 +111,8 @@ class MarzipanoUI extends React.Component {
 							top: 0;
 							left: auto;
 							right: 6px;
-							width: 180px;	
+							width: 180px;
 						}
-						
 					}
 
 					.sceneSwitcher {
@@ -128,6 +124,12 @@ class MarzipanoUI extends React.Component {
 					@media screen and (min-width: 769px) {
 						.sceneSwitcher {
 							left: 200px;
+						}
+
+						.button:hover,
+						.button-gyro:hover {
+							background-color: black;
+							color: white;
 						}
 					}
 
@@ -154,13 +156,12 @@ class MarzipanoUI extends React.Component {
 						margin-right: 6px;
 					}
 
-					.button:hover,
-					button-gyro:hover,
 					.button.active,
 					.button-gyro.active {
-						background-color: black;
+						background-color: #e04f36;
 						color: white;
 					}
+
 					.sceneSwitcher {
 						display: inline-block;
 					}
@@ -179,9 +180,9 @@ class MarzipanoUI extends React.Component {
 						transform: rotate(-45deg);
 					}
 
-					@media screen and (max-width:768px) {
+					@media screen and (max-width: 768px) {
 						.sceneButton {
-							font-size:16px;
+							font-size: 16px;
 							margin-right: -33px;
 						}
 					}

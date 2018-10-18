@@ -30,13 +30,14 @@ class ShowMenu extends React.Component {
 				<style jsx>{`
 					.button-show {
 						position: absolute;
-						bottom: 0;
+						bottom: 6px;
 						right: 6px;
 						background-color: white;
 						color: black;
-						padding: 6px;
+						padding: 0;
 						z-index: 100;
-						font-size: 24px;
+						font-size: 36px;
+						box-shadow: 0 0 3px #000;
 					}
 
 					@media screen and (max-width: 768px) {
@@ -48,7 +49,7 @@ class ShowMenu extends React.Component {
 
 					.button-show:hover {
 						background-color: black;
-						color: white;
+						color: #e04f36;
 					}
 				`}</style>
 			</div>

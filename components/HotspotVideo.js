@@ -146,6 +146,7 @@ class HotspotVideo extends React.Component {
                 </span>
                 {this.props.content.videos.map((video, key) => (
                   <span
+                  key={key}
                     className={
                       this.state.curVideo === key
                         ? "indicator active"
