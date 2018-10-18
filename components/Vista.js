@@ -8,9 +8,16 @@ import data from "../data/dummy.json";
 class Vista extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { width: "0", height: "0", isFull: false, isMobile: false };
+    this.state = {
+      width: "0",
+      height: "0",
+      isFull: false,
+      isMobile: false,
+      hasGyro: false
+    };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.goFull = this.goFull.bind(this);
+    //this.setGyro = this.setGyro.bind(this);
   }
 
   goFull() {
@@ -20,6 +27,20 @@ class Vista extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
+    //window.addEventListener("devicemotion", this.setGyro.bind(this, event));
+  }
+
+  setGyro(event) {
+    console.log(event.current);
+    if (event.rotationRate) {
+      if (
+        event.rotationRate.alpha ||
+        event.rotationRate.beta ||
+        event.rotationRate.gamma
+      ) {
+        this.setState({ hasGyro: true });
+      }
+    }
   }
 
   componentWillUnmount() {
@@ -35,7 +56,8 @@ class Vista extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.width !== prevState.width) {
-      this.setState({ isMobile: this.state.width < 1025 ? true : false });
+      let isMobile = this.state.width < 1025 ? true : false;
+      this.setState({ isMobile: isMobile , hasGyro: isMobile });
     }
   }
 
@@ -52,6 +74,7 @@ class Vista extends React.Component {
               goFull={this.goFull}
               isMobile={this.state.isMobile}
               height={this.state.height}
+              hasGyro={this.state.hasGyro}
             />
           </Fullscreen>
         </div>

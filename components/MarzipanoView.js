@@ -22,7 +22,7 @@ class MarzipanoView extends React.Component {
       isGyroOn: false,
       viewer: null,
       view: null,
-      firstRun: true,
+      firstRun: false,
       deviceControl: null,
       controls: null,
       utiltext: null,
@@ -341,6 +341,7 @@ class MarzipanoView extends React.Component {
               keyword={hotspot.keyword}
               position={hotspot.position}
               height={this.props.height}
+              gyro={this.state.isGyroOn}
             />
           ))}
           {this.renderTextWindow()}
@@ -364,6 +365,7 @@ class MarzipanoView extends React.Component {
             toggleHelp={this.toggleHelpWindow.bind(this)}
             setPos={this.setPos.bind(this)}
             activeMenu={this.state.activeKey === "menu" ? true : false}
+            hasGyro={this.props.hasGyro}
           />
         </div>
       );

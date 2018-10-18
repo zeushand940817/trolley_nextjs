@@ -5,8 +5,6 @@ const MarzipanoBrand = () => (
 		<div className="tr_header">
 			<img
 				className="tr_logo"
-				width="100"
-				height="47"
 				src="./static/imgs/eltrolley.png"
 				title="El Trolley"
 			/>
@@ -23,6 +21,8 @@ const MarzipanoBrand = () => (
 				float: left;
 				padding: 12px;
 				background-color: #000;
+				width: 211px;
+				height: auto;
 			}
 			.tr_nav {
 				padding: 12px 0 0 12px;
@@ -35,6 +35,12 @@ const MarzipanoBrand = () => (
 			}
 			.tr_link:hover {
 				color: #e34f35;
+			}
+
+			@media screen and (max-width: 768px) {
+				.tr_logo {
+					max-width: 120px;
+				}
 			}
 		`}</style>
 	</div>

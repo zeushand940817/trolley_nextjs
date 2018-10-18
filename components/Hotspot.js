@@ -58,6 +58,7 @@ class Hotspot extends React.Component {
           hpid={this.props.id}
           id={`${this.props.type}-${this.props.id}`}
           title={this.props.title}
+          stopped={this.props.gyro}
         />
       );
     };

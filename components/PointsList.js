@@ -15,6 +15,7 @@ class PointsList extends React.Component {
 				return (
 					<div className="naviWrap">
 						<div className="navi active">
+						<h2>{this.props.scene.title}</h2>
 							<ul>
 								{this.props.hotspots.map(hotspot => (
 									<li
@@ -38,6 +39,10 @@ class PointsList extends React.Component {
 								))}
 							</ul>
 						</div>
+						<ShowMenu
+						onClick={this.props.showMenu}
+						active={this.props.activeMenu}
+					/>
 						<style jsx>
 							{`
 								.naviWrap {
@@ -54,8 +59,14 @@ class PointsList extends React.Component {
 									
 								}
 
+								h2 {
+									margin-bottom: 36px;
+								}
+
 								ul {
 									padding: 60px auto 48px auto;
+									max-width: 600px;
+									margin: 0 auto;
 								}
 
 								li {
@@ -70,6 +81,7 @@ class PointsList extends React.Component {
 									transform: rotate3d(0, 0, 1, -5deg);
 									display: block;
 									border-left: 5px solid white;
+									text-align: left;
 								}
 								li.active,
 								li:hover {
@@ -91,10 +103,6 @@ class PointsList extends React.Component {
 		if (this.props.hotspots !== undefined) {
 			return (
 				<div>
-					<ShowMenu
-						onClick={this.props.showMenu}
-						active={this.props.activeMenu}
-					/>
 					{isActiveNavi()}
 				</div>
 			);

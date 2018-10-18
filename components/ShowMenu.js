@@ -1,6 +1,6 @@
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faTimes from "@fortawesome/fontawesome-free-solid/faTimes";
-import faBars from "@fortawesome/fontawesome-free-solid/faBars";
+import faDotCircle from "@fortawesome/fontawesome-free-solid/faDotCircle";
 
 class ShowMenu extends React.Component {
 	constructor(props) {
@@ -12,7 +12,7 @@ class ShowMenu extends React.Component {
 			if (this.props.active === true) {
 				return <FontAwesomeIcon icon={faTimes} fixedWidth />;
 			} else {
-				return <FontAwesomeIcon icon={faBars} fixedWidth />;
+				return <FontAwesomeIcon icon={faDotCircle} fixedWidth />;
 			}
 		};
 		return (
@@ -35,14 +35,14 @@ class ShowMenu extends React.Component {
 						background-color: white;
 						color: black;
 						padding: 6px;
-						z-index: 10;
+						z-index: 100;
 						font-size: 24px;
 					}
 
 					@media screen and (max-width: 768px) {
 						.button-show {
-							left: 132px;
-							right: auto;
+							right: 0;
+							bottom: 0;
 						}
 					}
 

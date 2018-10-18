@@ -1,5 +1,5 @@
 const Point = props => (
-	<div>
+	<div className={props.stopped && 'stopped'}>
 		<svg className="Point" height="100px" width="100px">
 			
 			<path
@@ -63,6 +63,11 @@ const Point = props => (
 				text-transform: uppercase;
 				font-family: "Barrio", sans-serif;
 				font-size: 18px;
+			}
+
+			.stopped .PointText {
+				transition: none !important;
+				animation: none !important;
 			}
 
 			@keyframes rotating {

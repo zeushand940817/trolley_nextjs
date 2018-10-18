@@ -1,4 +1,5 @@
 import PointsList from "../components/PointsList.js";
+import ShowMenu from "../components/ShowMenu.js";
 
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 
@@ -22,7 +23,7 @@ class MarzipanoUI extends React.Component {
 			}
 		};
 		const showGyro = () => {
-			if (this.props.isMobile === true) {
+			if (this.props.hasGyro === true) {
 				return "visible inline";
 			} else {
 				return "hidden";
@@ -30,6 +31,10 @@ class MarzipanoUI extends React.Component {
 		};
 		return (
 			<div>
+			<ShowMenu
+						onClick={this.props.showMenu}
+						active={this.props.activeMenu}
+					/>
 			<div className="sceneSwitcher">
 						{this.props.scenes.map(scene => (
 							<div
@@ -91,9 +96,8 @@ class MarzipanoUI extends React.Component {
 						hotspotType={this.props.hotspotType}
 						showMenu={this.props.showMenu}
 						activeMenu={this.props.activeMenu}
+						scene={this.props.scenes[this.props.activeScene]}
 					/>
-
-					
 				</div>
 				<style jsx>{`
 					.buttons {

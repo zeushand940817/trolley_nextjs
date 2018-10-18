@@ -119,165 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "components/Hotspot.js",
-			"settings":
-			{
-				"buffer_size": 2363,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/CloseButton.js",
-			"settings":
-			{
-				"buffer_size": 596,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ImageData.js",
-			"settings":
-			{
-				"buffer_size": 1868,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoUI.js",
-			"settings":
-			{
-				"buffer_size": 4446,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ShowMenu.js",
-			"settings":
-			{
-				"buffer_size": 1205,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Vista.js",
-			"settings":
-			{
-				"buffer_size": 1807,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 33 files for \"logo\"\n\n/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js:\n    5  \t\t<div className=\"tr_header\">\n    6  \t\t\t<img\n    7: \t\t\t\tclassName=\"tr_logo\"\n    8  \t\t\t\twidth=\"100\"\n    9  \t\t\t\theight=\"47\"\n   ..\n   20  \t\t\t\tz-index: 1;\n   21  \t\t\t}\n   22: \t\t\t.tr_logo {\n   23  \t\t\t\tfloat: left;\n   24  \t\t\t\tpadding: 12px;\n\n2 matches in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 371,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "components/PointsList.js",
-			"settings":
-			{
-				"buffer_size": 2148,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "notas.todo",
-			"settings":
-			{
-				"buffer_size": 1273,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Gallery.js",
-			"settings":
-			{
-				"buffer_size": 6337,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ModalContainer.js",
-			"settings":
-			{
-				"buffer_size": 1114,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "data/data_trolley.json",
-			"settings":
-			{
-				"buffer_size": 62739,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/data_trolley_dspace.json",
-			"settings":
-			{
-				"buffer_size": 89432,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Head.js",
-			"settings":
-			{
-				"buffer_size": 961,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Modal.js",
-			"settings":
-			{
-				"buffer_size": 1536,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Figure.js",
-			"settings":
-			{
-				"buffer_size": 660,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 1412,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoView.js",
-			"settings":
-			{
-				"buffer_size": 9917,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -406,18 +247,31 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos"
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages"
 	],
 	"file_history":
 	[
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley_dspace.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Figure.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ImageData.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/notas.todo",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley.json",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TextWindow.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Point.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/HotspotVideo.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/config.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
 		"/home/donhilo/Documentos/code/webassets/auraaustral.cl/static/index.html",
 		"/home/donhilo/Escritorio/Pedro's cacho.todo",
@@ -425,17 +279,11 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/scrollParagraph.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/base.css",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Video.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
 		"/home/donhilo/Documentos/code/containers/pueblonuevo/public/wp-content/themes/pueblonuevo-ajax/dploy.yaml",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/ayuda.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro_fulltext.md",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro.md",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/fiestas.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/.gitignore",
 		"/usr/share/applications/sublime_text.desktop",
@@ -445,7 +293,6 @@
 		"/home/donhilo/Escritorio/trjmama.txt",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/Fade.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/fade.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
 		"/home/donhilo/.bashrc",
 		"/home/donhilo/Documentos/code/containers/c80/public/wp-content/themes/c80-template/dploy.yaml",
 		"/home/donhilo/Documentos/code/containers/ufutura/docker-compose.yml",
@@ -457,10 +304,7 @@
 		"/home/donhilo/.config/sublime-text-3/Packages/Babel/Babel.sublime-settings",
 		"/home/donhilo/Escritorio/testingtesting.txt",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/vista.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
 		"/home/donhilo/.config/sublime-text-3/Packages/JsPrettier/JsPrettier.sublime-settings",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/control_implementation.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/about.js",
@@ -523,6 +367,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pointslist",
+			"glslify",
 			"setpos",
 			">\n",
 			"prevVid + 1",
@@ -580,652 +426,8 @@
 	"groups":
 	[
 		{
-			"selected": 7,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "components/Hotspot.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								847,
-								847
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "components/CloseButton.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 596,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								596,
-								596
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "components/ImageData.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1868,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								542,
-								542
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "components/MarzipanoUI.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4446,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1558,
-								1558
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 870.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "components/ShowMenu.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1205,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1020,
-								1020
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 12.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "components/Vista.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1435,
-								1435
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 371,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										186,
-										190
-									],
-									[
-										293,
-										297
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								371,
-								371
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "components/PointsList.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2148,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "notas.todo",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								920,
-								920
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ToDone/ToDone.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "components/Gallery.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6337,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "components/ModalContainer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								345,
-								345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "data/data_trolley.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 62739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "data/data_trolley_dspace.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								388,
-								388
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "components/Head.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								603,
-								603
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "components/Modal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								509,
-								509
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "components/Figure.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 660,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								448,
-								448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1412,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "components/MarzipanoView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9917,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9458,
-								9464
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5025.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "data/data_trolley_dspace.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "data/data_trolley_dspace.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "data/data_trolley_dspace.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1014,
-								1014
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1278,12 +480,44 @@
 		"selected_items":
 		[
 			[
-				"",
-				"components/PointsList.js"
+				"todo",
+				"notas.todo"
+			],
+			[
+				"hot",
+				"components/Hotspot.js"
 			],
 			[
 				"ui",
 				"components/MarzipanoUI.js"
+			],
+			[
+				"marv",
+				"components/MarzipanoView.js"
+			],
+			[
+				"point",
+				"components/PointsList.js"
+			],
+			[
+				"marzip",
+				"components/MarzipanoView.js"
+			],
+			[
+				"mar",
+				"components/MarzipanoView.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"",
+				"components/MarzipanoView.js"
+			],
+			[
+				"packa",
+				"package.json"
 			],
 			[
 				"vie",
@@ -1296,10 +530,6 @@
 			[
 				"menu",
 				"components/ShowMenu.js"
-			],
-			[
-				"point",
-				"components/PointsList.js"
 			],
 			[
 				"poin",
@@ -1370,14 +600,6 @@
 				"components/Modal.js"
 			],
 			[
-				"packa",
-				"package.json"
-			],
-			[
-				"todo",
-				"notas.todo"
-			],
-			[
 				"marzipanovi",
 				"components/MarzipanoView.js"
 			],
@@ -1416,10 +638,6 @@
 			[
 				"vid",
 				"components/HotspotVideo.js"
-			],
-			[
-				"hot",
-				"components/Hotspot.js"
 			],
 			[
 				"gal",
@@ -1488,10 +706,6 @@
 			[
 				"showmn",
 				"components/ShowMenu.js"
-			],
-			[
-				"marzip",
-				"components/MarzipanoView.js"
 			],
 			[
 				"sho",
@@ -1675,6 +889,10 @@
 				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
 			],
 			[
+				"gon",
+				"~/Documentos/code/php/ga/public/wp-content/themes/gonzalo-aguirre/gonzaloaguirre.sublime-project"
+			],
+			[
 				"go",
 				"~/Documentos/code/php/ga/public/wp-content/themes/gonzalo-aguirre/gonzaloaguirre.sublime-project"
 			],
@@ -1701,7 +919,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 301.0,
 	"status_bar_visible": true,
 	"template_settings":
