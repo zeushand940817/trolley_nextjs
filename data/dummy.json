@@ -4,7 +4,7 @@
     {
       "title": "Fiestas",
       "text": "./static/textos/fiestas.md",
-      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
+      "tilesurl": "./static/tiles/scene_02/web_rtrolley_{f}.jpg",
       "id": 1,
       "description": [
         {
@@ -60,7 +60,7 @@
     {
       "title": "Obras",
       "text": "./static/textos/intro.md",
-      "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
+      "tilesurl": "./static/tiles/scene_01/web_rtrolley_{f}.jpg",
       "id": 2,
       "hotspots": [
         {
