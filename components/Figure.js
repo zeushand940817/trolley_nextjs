@@ -19,7 +19,7 @@ const Figure = props => (
 				}
 				img {
 					max-width: 100%;
-					max-height: 560px;
+					max-height: 70vh;
 					margin: 0 auto;
 				}
 

@@ -167,7 +167,7 @@ class Gallery extends React.Component {
 					.Gallery {
 						margin: 48px 0 0 0;
 						padding: 6px;
-						height: 600px;
+						height: 80vh;
 						perspective: 1200px;
 					}
 
