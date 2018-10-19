@@ -36,7 +36,6 @@ class ShowMenu extends React.Component {
 					onClick={this.props.onClick}
 				>
 					{checkIcon()}
-					<span className="label">Puntos</span>
 				</div>
 				<style jsx>{`
 					.button-show {
@@ -45,17 +44,19 @@ class ShowMenu extends React.Component {
 						right: 0;
 						background-color: white;
 						color: black;
-						padding: 0 6px 0 0;
+						padding: 6px 6px 0 6px;
 						z-index: 100;
-						font-size: 36px;
+						font-size: 30px;
 						box-shadow: 0 0 3px #000;
 						cursor: pointer;
 					}
 
 					.button-show > span {
-						font-size: 18px;
+						font-size: 14px;
 						vertical-align: middle;
-						font-family: "Special Elite", sans-serif;
+						font-family: "Barrio", sans-serif;
+						text-transform: uppercase;
+						line-height: 36px;
 					}
 
 					@media screen and (max-width: 768px) {

@@ -23,7 +23,7 @@ class MarzipanoUI extends React.Component {
 			}
 		};
 		const showGyro = () => {
-			if (this.props.hasGyro === true) {
+			if (this.props.isMobile === true) {
 				return "visible inline";
 			} else {
 				return "hidden";
