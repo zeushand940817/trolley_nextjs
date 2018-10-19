@@ -173,7 +173,7 @@ class Gallery extends React.Component {
 
 					@media screen and (max-width: 768px) {
 						.Gallery {
-							height: 490px;
+							height: 70vh;
 						}
 					}
 

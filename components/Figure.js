@@ -25,10 +25,10 @@ const Figure = props => (
 
 				@media screen and (max-width: 768px) {
 					img {
-						max-height: 420px;
+						max-height: 50vh;
 					}
 				}
-				
+
 				p {
 					font-size: 18px;
 					text-transform: capitalize;

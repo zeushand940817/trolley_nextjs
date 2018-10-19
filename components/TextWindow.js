@@ -68,7 +68,7 @@ class TextWindow extends React.Component {
 						@media screen and (max-width: 720px) {
 							.textContent {
 								background-color: rgba(0, 0, 0, 0.8);
-								font-size: 16px;
+								font-size: 14px;
 								max-height: ;
 								padding: 12px;
 							}

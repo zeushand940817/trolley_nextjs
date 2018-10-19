@@ -34,8 +34,8 @@ class ImageData extends React.Component {
 				<div className="imageData">
 					<h2>Ficha técnica</h2>
 					<ul>
-						{this.checkEmpty("dc.identifier.other", "ID")}
 						{this.checkEmpty("dc.title", "Título")}
+						{this.checkEmpty("dc.identifier.other", "ID")}
 						{this.checkEmpty("dc.title.alternative", "Otro título")}
 						{this.checkEmpty("dc.subject", "Campo disciplinar")}
 						{this.checkEmpty(
@@ -66,6 +66,7 @@ class ImageData extends React.Component {
 						padding: 24px;
 						color: white;
 						font-family: "Special Elite", monospace;
+						font-size: 14px;
 					}
 
 					ul {
