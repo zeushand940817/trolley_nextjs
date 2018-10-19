@@ -166,7 +166,7 @@ class MarzipanoUI extends React.Component {
 						display: inline-block;
 					}
 					.sceneButton {
-						padding: 6px 12px 6px 48px;
+						padding: 12px 12px 12px 64px;
 						font-family: "Barrio", sans-serif;
 						font-size: 32px;
 						display: inline-block;
@@ -174,7 +174,7 @@ class MarzipanoUI extends React.Component {
 						text-align: center;
 						color: black;
 						margin-right: -66px;
-						margin-bottom: 12px;
+						margin-bottom: 0;
 						cursor: pointer;
 						box-shadow: 0 0 6px #555;
 						transform: rotate(-45deg);
@@ -182,8 +182,9 @@ class MarzipanoUI extends React.Component {
 
 					@media screen and (max-width: 768px) {
 						.sceneButton {
-							font-size: 16px;
-							margin-right: -33px;
+							padding: 6px 6px 6px 48px;
+							font-size: 22px;
+							margin-right: -55px;
 						}
 					}
 

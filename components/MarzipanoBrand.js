@@ -19,7 +19,7 @@ const MarzipanoBrand = () => (
 			}
 			.tr_logo {
 				float: left;
-				padding: 12px;
+				padding: 6px;
 				background-color: #000;
 				width: 211px;
 				height: auto;
