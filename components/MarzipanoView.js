@@ -235,8 +235,8 @@ class MarzipanoView extends React.Component {
   }
 
   hpState(index, position, hotspotType, event) {
-    console.log('hp-click');
     this.setPos(position, index, hotspotType);
+    //this.altHp(index, hotspotType);
   }
 
   close(index, event) {
@@ -250,6 +250,14 @@ class MarzipanoView extends React.Component {
     this.setState({
       activeKey: this.state.activeKey === "menu" ? null : "menu"
     });
+  }
+
+  altHp(index, type) {
+    this.setState({
+      activeKey: index,
+      hotspotType: type,
+      isRotating: false
+    })
   }
 
   setPos(position, hotspotid, type) {
@@ -305,8 +313,8 @@ class MarzipanoView extends React.Component {
       position: "absolute",
       top: 0,
       left: 0,
-      width: "100%",
-      height: "100%",
+      width: "100vw",
+      height: "100vh",
       overflow: "hidden"
     };
 
@@ -325,7 +333,7 @@ class MarzipanoView extends React.Component {
             <HotspotWrapper
               type={hotspot.type}
               active={this.state.activeKey === hotspot.id ? true : false}
-              onClick={this.hpState.bind(
+              clickfunction={this.hpState.bind(
                 this,
                 hotspot.id,
                 hotspot.position,

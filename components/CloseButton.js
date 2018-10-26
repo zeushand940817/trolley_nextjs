@@ -18,7 +18,7 @@ class CloseButton extends React.Component {
 						color: white;
 						position: absolute;
 						top: -12px;
-						background-color: #e34f35;
+						background-color:  #ff0307;
 						right: -12px;
 						z-index: 10;
 						font-family: 'Special Elite', monospace;

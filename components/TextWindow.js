@@ -65,6 +65,11 @@ class TextWindow extends React.Component {
 							overflow-y: auto;
 						}
 
+						.textContent h2 {
+							font-size: 32px;
+							margin: 0;
+						}
+
 						@media screen and (max-width: 720px) {
 							.textContent {
 								background-color: rgba(0, 0, 0, 0.8);

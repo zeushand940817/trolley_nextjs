@@ -68,7 +68,7 @@ class ShowMenu extends React.Component {
 
 					.button-show:hover {
 						background-color: black;
-						color: #e04f36;
+						color: #FF0307;
 					}
 				`}</style>
 			</div>

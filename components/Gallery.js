@@ -181,7 +181,7 @@ class Gallery extends React.Component {
 						width: 100%;
 						height: 100%;
 						position: relative;
-						transition: transform 1s;
+						transition: all 1s;
 						transform-style: preserve-3d;
 						background-color: #fff8eb;
 						color: #333;
@@ -205,9 +205,9 @@ class Gallery extends React.Component {
 						position: absolute;
 						height: 100%;
 						width: 100%;
-						backface-visibility: hidden;
 						top: 0;
 						left: 0;
+						backface-visibility: hidden;
 					}
 
 					.gallery-back {
@@ -215,8 +215,21 @@ class Gallery extends React.Component {
 						background-color: #555;
 					}
 
+					.gallery-front {
+						background-color: #fff8eb;
+					}
+
 					.gallery-wrapper.is-flipped {
 						transform: rotateY(180deg);
+						background-color: transparent;
+					}
+
+					.gallery-wrapper.is-flipped .gallery-front {
+						display: none;
+					}
+
+					.gallery-wrapper.is-flipped .gallery-back {
+						z-index: 100;
 					}
 
 					.GalleryNavPrev,
@@ -245,7 +258,7 @@ class Gallery extends React.Component {
 					}
 
 					.counter {
-						background-color: #e34f35;
+						background-color: #FF0307;
 						color: white;
 						display: block;
 						padding: 6px;
@@ -260,7 +273,7 @@ class Gallery extends React.Component {
 
 					.GalleryNavPrev:hover,
 					.GalleryNavNext:hover {
-						background-color: #e34f35;
+						background-color: #FF0307;
 						opacity: 0.8;
 					}
 

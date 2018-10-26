@@ -186,7 +186,7 @@ class HotspotVideo extends React.Component {
               text-align: center;
               display: inline-block;
               padding: 12px 0;
-              color: #e34f35;
+              color: #FF0307;
               cursor: pointer;
               margin: 0 6px;
             }
@@ -201,7 +201,7 @@ class HotspotVideo extends React.Component {
 
             .indicator {
               font-size: 36px;
-              color: #e34f35;
+              color: #FF0307;
               display: inline-block;
               padding: 5px;
             }

@@ -25,6 +25,7 @@
 		"react-full-screen": "^0.2.2",
 		"react-markdown": "^3.3.2",
 		"react-player": "^1.6.2",
+		"react-tappable": "^1.0.4",
 		"video-react": "^0.10.9"
 	},
 	"bundledDependencies": {

@@ -158,7 +158,7 @@ class MarzipanoUI extends React.Component {
 
 					.button.active,
 					.button-gyro.active {
-						background-color: #e04f36;
+						background-color: #FF0307;
 						color: white;
 					}
 
@@ -189,7 +189,7 @@ class MarzipanoUI extends React.Component {
 					}
 
 					.sceneButton.active {
-						background-color: #e34f35;
+						background-color: #ff0307;
 						color: white;
 					}
 

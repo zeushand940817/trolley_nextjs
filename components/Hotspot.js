@@ -18,8 +18,6 @@ class Hotspot extends React.Component {
   }
 
   componentDidMount() {
-    //Create hotspot function
-    //console.log(this.hpDiv)
     this.createHotspot(this.hpDiv, this.props.position);
   }
 
@@ -36,7 +34,10 @@ class Hotspot extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const PointTitle = this.props.title.length > 23 ? this.props.title.substring(0, 23) + '...' : this.props.title;
+    const PointTitle =
+      this.props.title.length > 23
+        ? this.props.title.substring(0, 23) + "..."
+        : this.props.title;
 
     const activeModal = () => {
       if (this.props.active === true) {
@@ -61,6 +62,7 @@ class Hotspot extends React.Component {
           id={`${this.props.type}-${this.props.id}`}
           title={PointTitle}
           stopped={this.props.gyro}
+          clickfunction={this.props.clickfunction}
         />
       );
     };
@@ -68,7 +70,6 @@ class Hotspot extends React.Component {
     return (
       <div>
         <div
-          onClick={this.props.onClick}
           ref={hpDiv => {
             this.hpDiv = hpDiv;
           }}
@@ -95,6 +96,9 @@ class Hotspot extends React.Component {
             .hpcontent.active .hptitle {
               background-color: #e34f35;
               color: white;
+            }
+            .trHotspot {
+              cursor: pointer;
             }
           `}
         </style>

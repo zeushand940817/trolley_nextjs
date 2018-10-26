@@ -1,5 +1,7 @@
+import Tappable from "react-tappable/lib/Tappable";
+
 const Point = props => (
-	<div className={props.stopped && 'stopped'}>
+	<Tappable className={`pointzone ${props.stopped && 'stopped'}`} onTap={props.clickfunction}>
 		<svg className="Point" height="100px" width="100px">
 			
 			<path
@@ -36,14 +38,22 @@ const Point = props => (
 				left: 28px;
 				z-index: 10;
 			}
-			.Point {
+
+			.pointzone {
 				cursor: pointer;
-				fill: cursor: pointer;
-				fill: white;
+				display: block;
 			}
 
-			.Point:hover .PathText {
-				stroke: #e25138;
+			.pointzone:hover .Point .PathText {
+				stroke:  #ff0307;
+			}
+
+			.pointzone:hover .Point {
+				fill: black;
+			}
+
+			.Point {
+				fill: white;
 			}
 
 			.PointText {
@@ -51,11 +61,6 @@ const Point = props => (
 				transform-origin: 50% 50%;
 				fill: white;
 				transition: fill ease-in 0.4s;		
-			}
-
-			.Point:hover {
-				//animation: rotating 6s linear infinite;
-				fill: black;
 			}
 
 			.PointText {
@@ -76,7 +81,7 @@ const Point = props => (
 				}
 			}
 		`}</style>
-	</div>
+	</Tappable>
 );
 
 export default Point;
