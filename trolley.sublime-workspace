@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"imagemin",
-				"imageminMozjpeg"
+				"active",
+				"activefov"
 			],
 			[
-				"active",
-				"activeScene"
+				"scene",
+				"sceneSwitcher"
+			],
+			[
+				"imagemin",
+				"imageminMozjpeg"
 			],
 			[
 				"Galler",
@@ -68,10 +72,6 @@
 				"switchScene"
 			],
 			[
-				"scene",
-				"sceneTextContent"
-			],
-			[
 				"find",
 				"findScene"
 			],
@@ -128,10 +128,11 @@
 	"buffers":
 	[
 		{
-			"file": "pages/index.js",
+			"file": "components/MarzipanoView.js",
 			"settings":
 			{
-				"buffer_size": 321,
+				"buffer_size": 10535,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -140,78 +141,22 @@
 			"settings":
 			{
 				"buffer_size": 2343,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "components/MarzipanoView.js",
+			"file": "components/HotspotWrapper.js",
 			"settings":
 			{
-				"buffer_size": 9999,
-				"encoding": "UTF-8",
+				"buffer_size": 520,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config.js",
+			"file": "components/Point.js",
 			"settings":
 			{
-				"buffer_size": 393,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoUI.js",
-			"settings":
-			{
-				"buffer_size": 4697,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Gallery.js",
-			"settings":
-			{
-				"buffer_size": 6434,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/CloseButton.js",
-			"settings":
-			{
-				"buffer_size": 597,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ImageData.js",
-			"settings":
-			{
-				"buffer_size": 1891,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Figure.js",
-			"settings":
-			{
-				"buffer_size": 752,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/TextWindow.js",
-			"settings":
-			{
-				"buffer_size": 1877,
+				"buffer_size": 1658,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -225,143 +170,10 @@
 			}
 		},
 		{
-			"file": "static/devicecontrol.js",
-			"settings":
-			{
-				"buffer_size": 4123,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/HotspotWrapper.js",
-			"settings":
-			{
-				"buffer_size": 520,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "components/Hotspot.js",
 			"settings":
 			{
-				"buffer_size": 2510,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Point.js",
-			"settings":
-			{
-				"buffer_size": 1560,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/PointsList.js",
-			"settings":
-			{
-				"buffer_size": 2322,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoBrand.js",
-			"settings":
-			{
-				"buffer_size": 786,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Head.js",
-			"settings":
-			{
-				"buffer_size": 1799,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/icons/site.webmanifest",
-			"settings":
-			{
-				"buffer_size": 494,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "next.config.js",
-			"settings":
-			{
-				"buffer_size": 245,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "data/dummy.json",
-			"settings":
-			{
-				"buffer_size": 4289,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ShowMenu.js",
-			"settings":
-			{
-				"buffer_size": 1534,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/donhilo/Escritorio/trjmama.txt",
-			"settings":
-			{
-				"buffer_size": 190,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/textos/ayuda.md",
-			"settings":
-			{
-				"buffer_size": 179,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/textos/fiestas.md",
-			"settings":
-			{
-				"buffer_size": 385,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/textos/intro.md",
-			"settings":
-			{
-				"buffer_size": 516,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/textos/intro_fulltext.md",
-			"settings":
-			{
-				"buffer_size": 2732,
+				"buffer_size": 2554,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -370,16 +182,71 @@
 			"file": "components/HotspotVideo.js",
 			"settings":
 			{
-				"buffer_size": 6122,
+				"buffer_size": 5718,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/MarzipanoUI.js",
+			"settings":
+			{
+				"buffer_size": 4904,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/MarzipanoBrand.js",
+			"settings":
+			{
+				"buffer_size": 1009,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Gallery.js",
+			"settings":
+			{
+				"buffer_size": 6885,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/ImageData.js",
+			"settings":
+			{
+				"buffer_size": 2277,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Figure.js",
+			"settings":
+			{
+				"buffer_size": 901,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/donhilo/Escritorio/clave_simple_hosting_nodejs.txt",
+			"settings":
+			{
+				"buffer_size": 12,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "JT3w56sO8HRQ"
 			}
 		},
 		{
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1208,
+				"buffer_size": 1274,
 				"line_ending": "Unix"
 			}
 		}
@@ -400,12 +267,16 @@
 				"JsPrettier: Format Code"
 			],
 			[
-				"comme",
+				"comm",
 				"Toggle Comment"
 			],
 			[
 				"pret",
 				"JsPrettier: Format Code"
+			],
+			[
+				"comme",
+				"Toggle Comment"
 			],
 			[
 				"wra",
@@ -418,10 +289,6 @@
 			[
 				"babe",
 				"Set Syntax: JavaScript (Babel)"
-			],
-			[
-				"comm",
-				"Toggle Comment"
 			],
 			[
 				"babl",
@@ -514,32 +381,42 @@
 	[
 		"/home/donhilo/Documentos/code/js/trolley_nextjs",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos"
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/imgs"
 	],
 	"file_history":
 	[
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
+		"/home/donhilo/Escritorio/trjmama.txt",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/ayuda.md",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/fiestas.md",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro.md",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/videopager.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/icons/site.webmanifest",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/next.config.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/devicecontrol.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TextWindow.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Figure.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ImageData.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/config.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley_dspace.json",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Figure.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ImageData.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/notas.todo",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TextWindow.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Point.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/HotspotVideo.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/config.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
 		"/home/donhilo/Documentos/code/webassets/auraaustral.cl/static/index.html",
 		"/home/donhilo/Escritorio/Pedro's cacho.todo",
 		"/etc/hosts",
@@ -547,17 +424,12 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/base.css",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Video.js",
 		"/home/donhilo/Documentos/code/containers/pueblonuevo/public/wp-content/themes/pueblonuevo-ajax/dploy.yaml",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/ayuda.md",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro_fulltext.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/fiestas.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/.gitignore",
 		"/usr/share/applications/sublime_text.desktop",
 		"/home/donhilo/Escritorio/Postulaciones.todo",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/VideoHotspot.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TestWindow.js",
-		"/home/donhilo/Escritorio/trjmama.txt",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/Fade.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/transitions/fade.js",
 		"/home/donhilo/.bashrc",
@@ -573,9 +445,7 @@
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/vista.js",
 		"/home/donhilo/.config/sublime-text-3/Packages/JsPrettier/JsPrettier.sublime-settings",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/control_implementation.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/about.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/devicecontrol.js",
 		"/home/donhilo/Documentos/code/boxes/cw/public/wp-content/themes/cw/dploy.yaml",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/page_vista.js",
 		"/home/donhilo/Escritorio/ps20.txt",
@@ -622,7 +492,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 107.0,
+		"height": 133.0,
 		"where_history":
 		[
 			"*.js",
@@ -634,6 +504,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"setpos",
+			"brand",
+			"hpdiv",
+			"hotspot",
 			"close",
 			"/static/",
 			"className=\"menupuntos\"",
@@ -697,35 +571,37 @@
 	"groups":
 	[
 		{
-			"selected": 22,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/index.js",
+					"file": "components/MarzipanoView.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 321,
+						"buffer_size": 10535,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
+								1137,
+								1137
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -741,8 +617,8 @@
 						"selection":
 						[
 							[
-								1602,
-								1602
+								1371,
+								1371
 							]
 						],
 						"settings":
@@ -752,305 +628,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 810.0,
+						"translation.y": 359.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "components/MarzipanoView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9999,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "components/MarzipanoUI.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4697,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3834,
-								3834
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 900.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "components/Gallery.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6434,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3991,
-								3991
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2160.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "components/CloseButton.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 597,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								415,
-								415
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "components/ImageData.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1891,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								898,
-								898
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "components/Figure.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 752,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								393,
-								393
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "components/TextWindow.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1877,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1130,
-								1130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 473.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "components/Modal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								881,
-								881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 450.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "static/devicecontrol.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 27,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
 					"file": "components/HotspotWrapper.js",
 					"semi_transient": false,
 					"settings":
@@ -1075,24 +660,82 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "components/Hotspot.js",
+					"buffer": 3,
+					"file": "components/Point.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2510,
+						"buffer_size": 1658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1220,
-								1220
+								415,
+								415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "components/Modal.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "components/Hotspot.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								592,
+								592
 							]
 						],
 						"settings":
@@ -1102,114 +745,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "components/Point.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1560,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1000,
-								1000
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "components/PointsList.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1806,
-								1806
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 585.0,
+						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "components/MarzipanoBrand.js",
+					"buffer": 6,
+					"file": "components/HotspotVideo.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 786,
+						"buffer_size": 5718,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								416,
-								416
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "components/Head.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1799,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1234,
-								1234
+								102,
+								102
 							]
 						],
 						"settings":
@@ -1217,237 +773,6 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 185.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "static/icons/site.webmanifest",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								490,
-								490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "next.config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								245,
-								245
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "data/dummy.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4289,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4289,
-								4289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2352.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "components/ShowMenu.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1198,
-								1198
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "/home/donhilo/Escritorio/trjmama.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								190,
-								190
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "static/textos/ayuda.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "static/textos/fiestas.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "static/textos/intro.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 516,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								516,
-								516
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1457,25 +782,171 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
-					"file": "static/textos/intro_fulltext.md",
-					"semi_transient": true,
+					"buffer": 7,
+					"file": "components/MarzipanoUI.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2732,
+						"buffer_size": 4904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								879,
-								879
+								3234,
+								3234
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1683.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "components/MarzipanoBrand.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "components/Gallery.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3733,
+								3733
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "components/ImageData.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "components/Figure.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/donhilo/Escritorio/clave_simple_hosting_nodejs.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"auto_name": "JT3w56sO8HRQ",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1485,50 +956,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
-					"file": "components/HotspotVideo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6122,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5603,
-								5603
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2835.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
+					"buffer": 13,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1208,
+						"buffer_size": 1274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								788,
-								788
+								796,
+								796
 							]
 						],
 						"settings":
@@ -1540,7 +981,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -1548,11 +989,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 36.0
+		"height": 47.0
 	},
 	"layout":
 	{
@@ -1585,7 +1026,7 @@
 	"project": "trolley.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1594,6 +1035,102 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gall",
+				"components/Gallery.js"
+			],
+			[
+				"fig",
+				"components/Figure.js"
+			],
+			[
+				"vide",
+				"components/HotspotVideo.js"
+			],
+			[
+				"marz",
+				"components/MarzipanoView.js"
+			],
+			[
+				"figu",
+				"components/Figure.js"
+			],
+			[
+				"imag",
+				"components/ImageData.js"
+			],
+			[
+				"figru",
+				"components/Figure.js"
+			],
+			[
+				"bran",
+				"components/MarzipanoBrand.js"
+			],
+			[
+				"ui",
+				"components/MarzipanoUI.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"view",
+				"components/MarzipanoView.js"
+			],
+			[
+				"vist",
+				"components/Vista.js"
+			],
+			[
+				"marzip",
+				"components/MarzipanoView.js"
+			],
+			[
+				"hotp",
+				"components/Hotspot.js"
+			],
+			[
+				"",
+				"components/Hotspot.js"
+			],
+			[
+				"vid",
+				"components/HotspotVideo.js"
+			],
+			[
+				"hot",
+				"components/Hotspot.js"
+			],
+			[
+				"video",
+				"components/HotspotVideo.js"
+			],
+			[
+				"showm",
+				"components/ShowMenu.js"
+			],
+			[
+				"point",
+				"components/PointsList.js"
+			],
+			[
+				"marzipano",
+				"components/MarzipanoView.js"
+			],
+			[
+				"poin",
+				"components/PointsList.js"
+			],
+			[
+				"head",
+				"components/Head.js"
+			],
+			[
+				"moda",
+				"components/Modal.js"
+			],
 			[
 				"text",
 				"components/TextWindow.js"
@@ -1607,44 +1144,12 @@
 				"components/TextWindow.js"
 			],
 			[
-				"vide",
-				"components/HotspotVideo.js"
-			],
-			[
-				"showm",
-				"components/ShowMenu.js"
-			],
-			[
-				"",
-				"components/MarzipanoUI.js"
-			],
-			[
-				"gall",
-				"components/Gallery.js"
-			],
-			[
-				"ui",
-				"components/MarzipanoUI.js"
-			],
-			[
-				"poin",
-				"components/Point.js"
-			],
-			[
 				"clos",
 				"components/CloseButton.js"
 			],
 			[
-				"point",
-				"components/PointsList.js"
-			],
-			[
 				"galle",
 				"components/Gallery.js"
-			],
-			[
-				"packa",
-				"package.json"
 			],
 			[
 				"config",
@@ -1657,10 +1162,6 @@
 			[
 				"pac",
 				"package.json"
-			],
-			[
-				"head",
-				"components/Head.js"
 			],
 			[
 				"u",
@@ -1684,10 +1185,6 @@
 			],
 			[
 				"marv",
-				"components/MarzipanoView.js"
-			],
-			[
-				"view",
 				"components/MarzipanoView.js"
 			],
 			[
@@ -1727,24 +1224,12 @@
 				"components/MarzipanoUI.js"
 			],
 			[
-				"vist",
-				"components/Vista.js"
-			],
-			[
 				"inde",
 				"pages/index.js"
 			],
 			[
 				"todo",
 				"notas.todo"
-			],
-			[
-				"hot",
-				"components/Hotspot.js"
-			],
-			[
-				"marzip",
-				"components/MarzipanoView.js"
 			],
 			[
 				"mar",
@@ -1811,10 +1296,6 @@
 				"components/MarzipanoView.js"
 			],
 			[
-				"video",
-				"components/HotspotVideo.js"
-			],
-			[
 				"dumm",
 				"data/dummy.json"
 			],
@@ -1823,16 +1304,8 @@
 				"data/dummy.json"
 			],
 			[
-				"moda",
-				"components/Modal.js"
-			],
-			[
 				"confi",
 				"config.js"
-			],
-			[
-				"vid",
-				"components/HotspotVideo.js"
 			],
 			[
 				"gal",
@@ -1845,10 +1318,6 @@
 			[
 				"packag",
 				"package.json"
-			],
-			[
-				"marzipano",
-				"components/MarzipanoUI.js"
 			],
 			[
 				"hots",
@@ -2056,15 +1525,27 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "fil",
+		"last_filter": "csd",
 		"selected_items":
 		[
 			[
-				"fil",
-				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
+				"csd",
+				"~/Documentos/code/php/csd/csd_web_mailhog/public/wp-content/themes/universe_theme/csdweb.sublime-project"
+			],
+			[
+				"cssd",
+				"~/Documentos/code/php/csd/csd_web_mailhog/public/wp-content/themes/universe_theme/csdweb.sublime-project"
 			],
 			[
 				"",
+				"~/Documentos/code/php/csd/csd_web_mailhog/public/wp-content/themes/universe_theme/csdweb.sublime-project"
+			],
+			[
+				"fils",
+				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
+			],
+			[
+				"fil",
 				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
 			],
 			[

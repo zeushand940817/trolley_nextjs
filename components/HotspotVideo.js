@@ -21,7 +21,8 @@ class HotspotVideo extends React.Component {
       curVideo: null,
       curVideoInfo: null,
       error: null,
-      items: []
+      items: [],
+      player: null
     };
     //this.modalClick = this.modalClick.bind(this);
     this.nextVid = this.nextVid.bind(this);
@@ -30,10 +31,12 @@ class HotspotVideo extends React.Component {
 
   componentDidMount() {
     this.createHotspot(this.hpDiv, this.props.position);
-      this.setState({
-        curVideo: 0,
-        curVideoInfo: this.getCurVidTitle(0)
-      });
+    this.setState({
+      curVideo: 0,
+      curVideoInfo: this.getCurVidTitle(0),
+      player: this.vidPlayer.getState()
+    });
+     this.vidPlayer.subscribeToStateChange(this.handleStateChange.bind(this));
   }
 
   findVidInfo(id) {
@@ -78,6 +81,14 @@ class HotspotVideo extends React.Component {
         curVideoInfo: this.getCurVidTitle(prevVid)
       });
     }
+  }
+
+  handleStateChange(state, prevState) {
+    // copy player state to this component's state
+    this.setState({
+      player: state,
+      currentTime: state.currentTime
+    });
   }
 
   getCurVidId() {
@@ -131,39 +142,22 @@ class HotspotVideo extends React.Component {
                 poster={this.getCurVidPoster()}
                 width={522}
                 height={370}
+                ref={vidPlayer => {
+                  this.vidPlayer = vidPlayer;
+                }}
               >
                 <LoadingSpinner />
                 <BigPlayButton position="center" />
-                <ControlBar autoHide={false} disableDefaultControls={true}>
+                <ControlBar autoHide={false} disableDefaultControls={false}>
                   <PlayToggle />
                 </ControlBar>
               </Player>
-              <h1 className="vidtitle">{this.state.curVideoInfo}</h1>
-
-              <div className="videopager">
-                <span className="prevvid nav_vids" onClick={this.prevVid}>
-                  <FontAwesomeIcon className="fa-bw" icon={faStepBackward} />
-                </span>
-                {this.props.content.videos.map((video, key) => (
-                  <span
-                  key={key}
-                    className={
-                      this.state.curVideo === key
-                        ? "indicator active"
-                        : "indicator"
-                    }
-                  >
-                    <FontAwesomeIcon className="fa-circle" icon={faCircle} />
-                  </span>
-                ))}
-                <span className="nextvid nav_vids" onClick={this.nextVid}>
-                  <FontAwesomeIcon className="fa-fw" icon={faStepForward} />
-                </span>
-              </div>
             </div>
           </div>
         </div>
-
+        {this.state.currentTime && (
+          <div className="time">TIME: {this.state.currentTime}</div>
+        )}
         <style jsx>
           {`
             .videoContainer {
@@ -186,7 +180,7 @@ class HotspotVideo extends React.Component {
               text-align: center;
               display: inline-block;
               padding: 12px 0;
-              color: #FF0307;
+              color: #ff0307;
               cursor: pointer;
               margin: 0 6px;
             }
@@ -201,7 +195,7 @@ class HotspotVideo extends React.Component {
 
             .indicator {
               font-size: 36px;
-              color: #FF0307;
+              color: #ff0307;
               display: inline-block;
               padding: 5px;
             }

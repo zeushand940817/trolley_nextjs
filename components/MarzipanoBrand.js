@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const MarzipanoBrand = () => (
+const MarzipanoBrand = (props) => (
 	<div>
-		<div className="tr_header">
+		<div className={`tr_header visible-${props.visible}`}>
 			<img
 				className="tr_logo"
 				src="./static/imgs/eltrolley.png"
@@ -14,9 +14,21 @@ const MarzipanoBrand = () => (
 				padding: 0;
 				position: fixed;
 				top: 0;
-				left: 0;
 				z-index: 1;
+				transition: all ease-in 0.5s;
 			}
+
+			.tr_header.visible-true {
+				left: 0;
+				opacity: 1;
+			}
+
+			.tr_header.visible-false {
+				left: -217px;
+				opacity: 0;
+				transition: all ease-out 0.5s;
+			}
+
 			.tr_logo {
 				float: left;
 				padding: 6px;

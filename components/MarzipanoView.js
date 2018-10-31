@@ -8,8 +8,12 @@ import HotspotTitle from "../components/HotspotTitle.js";
 class MarzipanoView extends React.Component {
   constructor(props) {
     super(props);
+    let initialfov = 2.14;
+    let activefov = 1.14;
     this.state = {
       loaded: false,
+      initialfov: initialfov,
+      activefov: activefov,
       scene: 0,
       sceneText: null,
       scenes: [],
@@ -28,7 +32,8 @@ class MarzipanoView extends React.Component {
       utiltext: null,
       goTo: {
         yaw: 0,
-        pitch: 0
+        pitch: 0,
+        fov: initialfov
       }
     };
   }
@@ -39,9 +44,8 @@ class MarzipanoView extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     //Movement updates
-    if (prevState.goTo.yaw !== this.state.goTo.yaw) {
+    if (prevState.goTo !== this.state.goTo) {
       let curscene = this.findScene(this.state.scenes, this.state.scene);
-      console.log(curscene);
       curscene.scene.lookTo(this.state.goTo);
     }
     if (prevState.isRotating !== this.state.isRotating) {
@@ -62,6 +66,13 @@ class MarzipanoView extends React.Component {
     }
     if (prevState.loaded !== this.state.loaded) {
       this.setState({ utiltext: this.props.data.utils.utiltext });
+    }
+    if (prevState.activeKey !== this.state.activeKey) {
+      if (this.state.activeKey === null) {
+        this.setState({
+          goTo: { fov: this.state.initialfov }
+        });
+      }
     }
   }
 
@@ -133,7 +144,7 @@ class MarzipanoView extends React.Component {
       (100 * Math.PI) / 180
     );
     let view = new Marzipano.RectilinearView(
-      { yaw: (4 * Math.PI) / 180, pitch: 0, fov: 1.2 },
+      { yaw: (4 * Math.PI) / 180, pitch: 0, fov: 2.14, roll: 0 },
       limiter
     );
 
@@ -257,14 +268,15 @@ class MarzipanoView extends React.Component {
       activeKey: index,
       hotspotType: type,
       isRotating: false
-    })
+    });
   }
 
   setPos(position, hotspotid, type) {
     this.setState({
       goTo: {
         yaw: position.yaw,
-        pitch: position.pitch
+        pitch: position.pitch,
+        fov: this.state.activefov
       },
       activeKey: hotspotid,
       isRotating: false,
@@ -289,10 +301,6 @@ class MarzipanoView extends React.Component {
     } else {
       return null;
     }
-  }
-
-  renderBrand() {
-   return <MarzipanoBrand />
   }
 
   renderHelpWindow() {
@@ -355,9 +363,10 @@ class MarzipanoView extends React.Component {
           {this.renderTextWindow()}
           {this.renderHelpWindow()}
 
-          {this.renderBrand()}
+          <MarzipanoBrand visible={this.state.activeKey ? false : true} />
           <MarzipanoUI
             activeKey={this.state.activeKey}
+            visible={this.state.activeKey ? false : true}
             scenes={this.state.scenes}
             curHotspots={this.state.curHotspots}
             autorotate={this.state.isRotating}

@@ -35,7 +35,7 @@ class MarzipanoUI extends React.Component {
 					onClick={this.props.showMenu}
 					active={this.props.activeMenu}
 				/>
-				<div className="sceneSwitcher">
+				<div className={`sceneSwitcher visible-${this.props.visible}`}>
 					{this.props.scenes.map(scene => (
 						<div
 							data-for="Escena"
@@ -119,6 +119,14 @@ class MarzipanoUI extends React.Component {
 						position: fixed;
 						bottom: 0;
 						left: 0;
+						opacity: 1;
+						transition: all ease-out 0.5s;
+					}
+
+					.sceneSwitcher.visible-false {
+						bottom: -120px;
+						opacity: 0;
+						transition: all ease-in 0.5s;
 					}
 
 					@media screen and (min-width: 769px) {

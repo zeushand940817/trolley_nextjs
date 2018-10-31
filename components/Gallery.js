@@ -94,7 +94,7 @@ class Gallery extends React.Component {
 			let imageData = this.state.images[this.state.curImage];
 
 			return (
-				<ImageData data={imageData} />
+				<ImageData data={imageData} image={this.buildImageUrl(this.state.curImage)} />
 			);
 		}
 	}
@@ -104,6 +104,8 @@ class Gallery extends React.Component {
 
 		if (this.state.imagesTotal - 1 !== this.state.curImage) {
 			next = this.state.curImage + 1;
+		} else {
+			next = 0;
 		}
 		this.setState({
 			curImage: next
@@ -113,7 +115,7 @@ class Gallery extends React.Component {
 	prevImage() {
 		let prev = this.state.curImage > 0 ? this.state.imagesTotal - 1 : 0;
 		if (this.state.imagesTotal !== this.state.curImage) {
-			prev = this.state.curImage === 0 ? 0 : this.state.curImage - 1;
+			prev = this.state.curImage === 0 ? this.state.imagesTotal - 1 : this.state.curImage - 1;
 		}
 		this.setState({
 			curImage: prev
@@ -140,7 +142,7 @@ class Gallery extends React.Component {
 						<div className="gallery-side gallery-front">
 							{this.curImage()}
 							<span className="flipper moreInfo" onClick={this.flipImage}>
-								<FontAwesomeIcon icon={faFolderOpen} />
+								
 							</span>
 						</div>
 						<div className="gallery-side gallery-back">
@@ -149,7 +151,7 @@ class Gallery extends React.Component {
 								className="flipper lessInfo"
 								onClick={this.unFlipImage}
 							>
-								<FontAwesomeIcon icon={faFolder} />
+								
 							</span>
 						</div>
 					</div>
@@ -190,15 +192,26 @@ class Gallery extends React.Component {
 
 					.flipper {
 						position: absolute;
-						bottom: 6px;
-						right: 6px;
-						color: #e34f35;
-						font-size: 24px;
+						bottom: 0;
+						right: 0;
+						width: 0;
+						height: 0;
+						background-color: #555;
 						cursor: pointer;
+						border-width:0 0 20px 20px;
+						border-color: #333 #555 #333 #555;
+						display:block;
+						border-style: solid;
+						box-shadow: 0 -1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+						transition: border ease-in 0.2s;
 					}
 
 					.flipper:hover {
-						color: #333;
+						border-width: 0 0 32px 32px;
+					}
+
+					.flipper.lessInfo {
+						border-color: #d3cec3 #fbf4e7 #d3cec3 #fbf4e7; 
 					}
 
 					.gallery-side {

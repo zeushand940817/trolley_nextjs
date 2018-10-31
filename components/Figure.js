@@ -1,30 +1,34 @@
+// import React, { Component } from "react";
+// import Image from "react-graceful-image";
+
 const Figure = props => (
 	<div className="figureWrapper">
 		<figure>
-			<img src={props.imageUrl} title={props.imageTitle} />
+			<img className="lazyImage" src={props.imageUrl} title={props.imageTitle} />
 			<p className="imageTitle">{props.imageTitle}</p>
 		</figure>
+		
 		<style jsx>
 			{`
 				.figureWrapper {
-					display: flex;
 					height: 100%;
-					align-content: center;
+					display: flex;
+					align-items: center;
 				}
 
 				figure {
 					text-align: center;
 					margin: auto;
-					align-self: center;
+					max-width: 100%;
+					max-height: 100%;
 				}
-				img {
+				.lazyImage {
 					max-width: 100%;
 					max-height: 70vh;
-					margin: 0 auto;
 				}
 
 				@media screen and (max-width: 768px) {
-					img {
+					.lazyImage {
 						max-height: 50vh;
 					}
 				}
@@ -33,6 +37,7 @@ const Figure = props => (
 					font-size: 18px;
 					text-transform: capitalize;
 					margin: 0;
+					padding: 12px 0;
 					font-family: "Special Elite", monospace;
 				}
 			`}

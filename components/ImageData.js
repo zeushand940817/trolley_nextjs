@@ -33,9 +33,9 @@ class ImageData extends React.Component {
 			<div>
 				<div className="imageData">
 					<h2>Ficha técnica</h2>
+					<img className="refimage" src={this.props.image} title={this.props.data['dc.title']} />
 					<ul>
 						{this.checkEmpty("dc.title", "Título")}
-						{this.checkEmpty("dc.identifier.other", "ID")}
 						{this.checkEmpty("dc.title.alternative", "Otro título")}
 						{this.checkEmpty("dc.subject", "Campo disciplinar")}
 						{this.checkEmpty(
@@ -69,13 +69,35 @@ class ImageData extends React.Component {
 						font-size: 14px;
 					}
 
+					img.refimage {
+						position: absolute;
+						right: 12px;
+						top: 38px;
+						max-width: 120px;
+						height: auto;
+					}
+
 					ul {
 							margin: 0;
-							padding: 0;
+							padding: 0 132px 0 0;
 						}
+
+					ul > li {
+						line-height: 1.4em;
+					}
 
 					h2 {
 						font-family: "Special Elite", monospace;
+					}
+
+					@media screen and (max-width: 768px) {
+						img.refimage {
+							max-width: 36px;
+						}
+
+						ul {
+							padding-right: 42px;
+						}
 					}
 				`}</style>
 			</div>
