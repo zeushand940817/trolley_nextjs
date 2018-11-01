@@ -1,84 +1,78 @@
 import Tappable from "react-tappable/lib/Tappable";
 
 const Point = props => (
-	<Tappable className={`pointzone ${props.stopped && 'stopped'}`} onTap={props.clickfunction}>
-		<svg className="Point" height="100px" width="100px">
-			
-			<path
-				className="PathText"
-				id={props.id}
-				d="M 32,0 A 32,32 0 0 1 -32,0 A 32,32 0 0 1 32,0"
-				transform="translate(50,50)"
-				stroke="black"
-				strokeWidth="25"
-			/>
+	<Tappable
+		className={`pointzone ${props.stopped && "stopped"}`}
+		onTap={props.clickfunction}
+	>	
+	<div className="pointwrap">
+		<img src={`./static/imgs/hotspots/hotspot_${props.hpid}.png`} alt={props.title}/>
+		<div className="Point">
+			<h1>{props.title}</h1>
+		</div>
+	</div>
 
-
-
-			<text className="PointText" fill="#fff" strokeWidth="0">
-				<textPath xlinkHref={`#${props.id}`} startOffset="0">
-					<tspan dy="6">{props.title}</tspan>
-				</textPath>
-			</text>
-
-			<image x={26} y={26} xlinkHref={`./static/imgs/hotspots/hotspot_${props.hpid}.png`}
-			alt=""
-			className="hpIcon"
-			width="40"
-			height="40"
-			/>
-			
-		</svg>
 		<style jsx>{`
-			image.hpIcon {
-				position: absolute;
-				max-width: 40px;
-				height: auto;
-				top: 28px;
-				left: 28px;
-				z-index: 10;
-			}
-
 			.pointzone {
-				cursor: pointer;
-				display: block;
-			}
-
-			.pointzone:hover .Point .PathText {
-				stroke:  #ff0307;
-			}
-
-			.pointzone:hover .Point {
-				fill: black;
+				position: relative;
 			}
 
 			.Point {
-				fill: white;
+				width: 120px;
+				height: 80px;
+				background-color: #000;
+				animation: clipping infinite 1.5s;
+				transition: all ease-in 0.2s;
+				transform: rotate(-30deg);
+				margin-top:-30px;
 			}
 
-			.PointText {
-				animation: rotating 30s linear infinite;
-				transform-origin: 50% 50%;
-				fill: white;
-				transition: fill ease-in 0.4s;		
+			img {
+				position: absolute;
+				top: 35px;
+				left: -34px;
+				z-index: 10;
 			}
 
-			.PointText {
-				stroke: #000;
-				text-transform: uppercase;
-				font-family: "Special Elite", sans-serif;
-				font-size: 14px;
+			.pointwrap:hover .Point {
+				background-color: #fb0408;
+				animation: none;
+				clip-path: polygon(0 20%, 100% 0, 93% 93%, 6% 69%);
 			}
 
-			.stopped .PointText {
-				transition: none !important;
-				animation: none !important;
+			.pointwrap:hover img {
+				transform: rotate(25deg);
 			}
 
-			@keyframes rotating {
-				100% {
-					transform: rotate(360deg);
+			@keyframes clipping {
+				0% {
+					clip-path: polygon(0 20%, 100% 0, 93% 93%, 6% 69%);
 				}
+				25 % {
+					clip-path: polygon(0 20%, 100% 0, 100% 94%, 0 72%);
+				}
+				50% {
+					clip-path: polygon(0 24%, 97% 6%, 100% 94%, 2% 67%);
+				}
+				75% {
+					clip-path: polygon(5% 24%, 97% 6%, 94% 92%, 10% 72%);
+				}
+				100% {
+					clip-path: polygon(0 20%, 100% 0, 93% 93%, 6% 69%);
+				}
+			}
+
+			h1 {
+				font-family: "Barrio", sans-serif;
+				font-size: 16px;
+				padding: 0;
+				margin: 0;
+				width: auto;
+				
+				position: absolute;
+				top: 14px;
+				left: 18px;
+				transform: rotate(-10deg);
 			}
 		`}</style>
 	</Tappable>

@@ -22,7 +22,8 @@ class HotspotVideo extends React.Component {
       curVideoInfo: null,
       error: null,
       items: [],
-      player: null
+      player: null,
+      currentTime: null
     };
     //this.modalClick = this.modalClick.bind(this);
     this.nextVid = this.nextVid.bind(this);
