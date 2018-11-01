@@ -6,9 +6,13 @@
 	"scripts": {
 		"dev": "node server.js",
 		"build": "next build",
-		"start": "next build && next start -p $PORT",
+		"start": "next build && next start -p 8080",
 		"export": "next export",
 		"heroku-postbuild": "npm run build"
+	},
+	"engines": {
+		"node": "8",
+		"npm": "*"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome": "^1.1.4",
