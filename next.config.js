@@ -4,11 +4,5 @@ module.exports = {
       marzipano: "Marzipano"
     };
     return config;
-  },
-  exportPathMap: function() {
-    return {
-      "/": { page: "/" },
-      "/about": { page: "/about" }
-    };
   }
 };

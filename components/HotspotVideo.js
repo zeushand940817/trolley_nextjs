@@ -34,10 +34,9 @@ class HotspotVideo extends React.Component {
     this.createHotspot(this.hpDiv, this.props.position);
     this.setState({
       curVideo: 0,
-      curVideoInfo: this.getCurVidTitle(0),
-      player: this.vidPlayer.getState()
+      curVideoInfo: this.getCurVidTitle(0)
     });
-     this.vidPlayer.subscribeToStateChange(this.handleStateChange.bind(this));
+    //this.vidPlayer.subscribeToStateChange(this.handleStateChange.bind(this));
   }
 
   findVidInfo(id) {
@@ -101,6 +100,7 @@ class HotspotVideo extends React.Component {
 
   getCurVidTitle(curVid) {
     let title = this.props.content.videos[curVid].title;
+    console.log(title);
     return title;
   }
 
@@ -134,31 +134,14 @@ class HotspotVideo extends React.Component {
               this.props.active === true ? "hpcontent active" : "hpcontent"
             }
           >
-            <div className="videoContainer">
-              <Player
-                src={this.getCurVid()}
-                playsInline
-                fluid={false}
-                preload="none"
-                poster={this.getCurVidPoster()}
-                width={522}
-                height={370}
-                ref={vidPlayer => {
-                  this.vidPlayer = vidPlayer;
-                }}
-              >
-                <LoadingSpinner />
-                <BigPlayButton position="center" />
-                <ControlBar autoHide={false} disableDefaultControls={false}>
-                  <PlayToggle />
-                </ControlBar>
-              </Player>
-            </div>
+            {this.state.curVideo !== null ? (
+              <div className="videoTitle">
+                {this.getCurVidTitle(this.state.curVideo)}
+              </div>
+            ) : null}
+            <div className="videoContainer" />
           </div>
         </div>
-        {this.state.currentTime && (
-          <div className="time">TIME: {this.state.currentTime}</div>
-        )}
         <style jsx>
           {`
             .videoContainer {
