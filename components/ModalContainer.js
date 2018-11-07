@@ -1,3 +1,5 @@
+import trackPage from "./trackPage";
+
 class ModalContainer extends React.Component {
 	constructor(props) {
 		super(props);
@@ -5,6 +7,7 @@ class ModalContainer extends React.Component {
 
 	componentDidMount() {
 		this.ModalContainerDimensions();
+		trackPage(window.location.pathname, this.props.title);
 	}
 
 	ModalContainerDimensions() {}
@@ -28,7 +31,7 @@ class ModalContainer extends React.Component {
 						.ModalContainer {
 							width: auto;
 							max-width: 600px;
-							max-height: 60%;
+							max-height: 80%;
 							padding: 0;
 							z-index: 2;
 							transform: rotate3d(0, 0, 1, -0.5deg);
@@ -41,8 +44,8 @@ class ModalContainer extends React.Component {
 						@media screen and (max-width: 720px) {
 							.ModalContainer {
 								max-width: 90%;
-								margin-top: 90px;
-								transform: rotate3d(0, 0, 1, 1deg);
+								margin-top: 36px;
+								transform: rotate3d(0, 0, 1, -0.5deg);
 							}
 						}
 					`}

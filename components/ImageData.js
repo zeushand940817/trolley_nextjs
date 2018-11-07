@@ -30,7 +30,7 @@ class ImageData extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="dataWrapper">
 				<div className="imageData">
 					<h2>Ficha técnica</h2>
 					<img className="refimage" src={this.props.image} title={this.props.data['dc.title']} />
@@ -67,6 +67,11 @@ class ImageData extends React.Component {
 						color: white;
 						font-family: "Special Elite", monospace;
 						font-size: 14px;
+					}
+
+					.dataWrapper {
+						overflow: auto;
+						max-height: 100%;
 					}
 
 					img.refimage {

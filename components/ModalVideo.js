@@ -1,6 +1,12 @@
+import trackPage from "./trackPage";
+
 class ModalVideo extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+
+	componentDidMount() {
+		trackPage(window.location.pathname, this.props.title);
 	}
 
 	render() {

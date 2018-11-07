@@ -54,7 +54,7 @@ class MarzipanoUI extends React.Component {
 						</div>
 					))}
 				</div>
-				<div className="buttons noselect">
+				<div className={`buttons noselect visible-${this.props.visible}`}>
 					<div className={showGyro()}>
 						<div
 							data-tip="Activar sensor de movimiento"
@@ -85,8 +85,8 @@ class MarzipanoUI extends React.Component {
 					>
 						<FontAwesomeIcon className="fa-fw" icon={faQuestion} />
 					</div>
-
-					<PointsList
+				</div>
+				<PointsList
 						activeKey={this.props.activeKey}
 						hotspots={this.props.curHotspots}
 						setPos={this.props.setPos}
@@ -95,7 +95,6 @@ class MarzipanoUI extends React.Component {
 						activeMenu={this.props.activeMenu}
 						scene={this.props.scenes[this.props.activeScene -1]}
 					/>
-				</div>
 				<style jsx>{`
 					.buttons {
 						position: fixed;
@@ -104,7 +103,15 @@ class MarzipanoUI extends React.Component {
 						width: 90%;
 						z-index: 100;
 						height: 35px;
+						transition: all ease-out 0.5s;
 					}
+
+					.buttons.visible-false {
+						opacity: 0;
+						top: -50px;
+						transition: all ease-in 0.5s;
+					}
+
 					@media screen and (max-width: 768px) {
 						.buttons {
 							bottom: auto;
@@ -121,6 +128,7 @@ class MarzipanoUI extends React.Component {
 						left: 0;
 						opacity: 1;
 						transition: all ease-out 0.5s;
+						z-index: 2000;
 					}
 
 					.sceneSwitcher.visible-false {

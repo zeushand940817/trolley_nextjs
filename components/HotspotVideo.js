@@ -89,6 +89,12 @@ class HotspotVideo extends React.Component {
         this.refs.player.play();
       }
     }
+
+    if(prevProps.active !== this.props.active || prevProps.scene !== this.props.scene) {
+      if(!this.props.active && this.refs.player !== undefined) {
+        this.refs.player.pause();
+      }
+    }
   }
 
   createHotspot(element, position) {
@@ -143,6 +149,7 @@ class HotspotVideo extends React.Component {
       isPlaying: true,
       isPaused: false
     });
+    this.props.activateKey(this.props.id, this.props.position);
   }
 
   stopVid() {
@@ -150,6 +157,7 @@ class HotspotVideo extends React.Component {
       isPlaying: false,
       isPaused: false
     });
+    this.props.deactivateKey();
   }
 
   pauseVid() {
@@ -191,7 +199,7 @@ class HotspotVideo extends React.Component {
   getCurVidPoster() {
     if (this.state.curVideo !== null) {
       let id = this.props.content.videos[this.state.curVideo].id;
-      return config.assetsurl + "videos/" + id + ".png";
+      return config.assetsurl + "videos/" + id + ".jpg";
     }
   }
 
@@ -247,8 +255,8 @@ class HotspotVideo extends React.Component {
                   style={{ marginLeft: this.state.curMargin }}
                 >
                   {this.props.content.videos.map((video, key) => (
-                    <Tappable onTap={this.startPlayer}>
-                      <div className="videoTile" key={key}>
+                    <Tappable onTap={this.startPlayer} key={key}>
+                      <div className="videoTile">
                         <img
                           draggable={false}
                           src={`${config.assetsurl}videos/${video.id}.png`}
@@ -268,6 +276,7 @@ class HotspotVideo extends React.Component {
                     autoPlay
                     width={522}
                     height={383}
+                    playsInline={false}
                   >
                     <BigPlayButton disabled />
                     <LoadingSpinner />

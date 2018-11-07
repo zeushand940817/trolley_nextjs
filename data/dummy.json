@@ -123,16 +123,6 @@
           }
         },
         {
-          "title": "Santiago bauhaus",
-          "id": 8,
-          "keyword": "Santiago bauhaus",
-          "type": "gallery",
-          "position": {
-            "pitch": 0.9440514977664094,
-            "yaw": 0.62521582164959}
-        },
-
-        {
           "title": "Espacios",
           "id": 4,
           "keyword": "escenografía",

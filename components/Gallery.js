@@ -1,11 +1,13 @@
 import data_trolley from "../data/data_trolley_dspace.json";
 import config from "../config.js";
-import Figure from "./Figure.js";
+//import Figure from "./Figure.js";
 import ImageData from "./ImageData.js";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faChevronRight from "@fortawesome/fontawesome-free-solid/faChevronRight";
 import faChevronLeft from "@fortawesome/fontawesome-free-solid/faChevronLeft";
-import faFolder from "@fortawesome/fontawesome-free-solid/faFolder";
+import dynamic from "next/dynamic";
+
+const FigureNoSSR = dynamic(() => import('./Figure.js'), { ssr: false});
 
 class Gallery extends React.Component {
 	constructor(props) {
@@ -65,7 +67,7 @@ class Gallery extends React.Component {
 			return (
 				"./static/material/" +
 				this.state.images[key]["dc.identifier.other"].toUpperCase() +
-				".jpg"
+				"_web.jpg"
 			);
 		}
 	}
@@ -79,7 +81,7 @@ class Gallery extends React.Component {
 	curImage() {
 		if (this.state.images.length > 0) {
 			return (
-				<Figure
+				<FigureNoSSR
 					key={this.state.curImage}
 					imageUrl={this.buildImageUrl(this.state.curImage)}
 					imageTitle={this.buildImageTitle(this.state.curImage)}
@@ -161,12 +163,12 @@ class Gallery extends React.Component {
 						<FontAwesomeIcon icon={faChevronRight} />
 					</span>
 					<span className="counter">
-						#{this.state.curImage + 1} / {this.state.imagesTotal}
+						#{this.state.curImage + 1} / {this.state.imagesTotal} : {this.buildImageTitle(this.state.curImage)}
 					</span>
 				</div>
 				<style jsx>{`
 					.Gallery {
-						margin: 48px 0 0 0;
+						margin: 12px 0 0 0;
 						padding: 6px;
 						height: 80vh;
 						perspective: 1200px;
@@ -174,7 +176,7 @@ class Gallery extends React.Component {
 
 					@media screen and (max-width: 768px) {
 						.Gallery {
-							height: 70vh;
+							height: 80vh;
 						}
 					}
 
@@ -270,17 +272,25 @@ class Gallery extends React.Component {
 					}
 
 					.counter {
-						background-color: #FF0307;
+						background-color: #000;
 						color: white;
 						display: block;
 						padding: 6px;
-						width: 80px;
+						width: 80%;
 						position: absolute;
-						top: -12px;
+						top: 6px;
 						left: -12px;
-						transform: rotate3d(0, 0, 1, 4deg);
+						transform: rotate3d(0, 0, 1, -1deg);
 						font-family: "Barrio", sans-serif;
-						text-align: center;
+						text-align: left;
+						font-size: 22px;
+					}
+
+					@media screen and (max-width: 768px) {
+						.counter {
+							font-size: 16px;
+							top: -16px;
+						}
 					}
 
 					.GalleryNavPrev:hover,

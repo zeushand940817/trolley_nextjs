@@ -1,9 +1,10 @@
 import config from "../config.js";
-import HotspotWrapper from "../components/HotspotWrapper.js";
-import MarzipanoUI from "../components/MarzipanoUI.js";
-import MarzipanoBrand from "../components/MarzipanoBrand.js";
-import TextWindow from "../components/TextWindow.js";
-import HotspotTitle from "../components/HotspotTitle.js";
+import HotspotWrapper from "../components/HotspotWrapper";
+import MarzipanoUI from "../components/MarzipanoUI";
+import MarzipanoBrand from "../components/MarzipanoBrand";
+import TextWindow from "../components/TextWindow";
+import HotspotTitle from "../components/HotspotTitle";
+import trackPage from "../components/trackPage";
 
 class MarzipanoView extends React.Component {
   constructor(props) {
@@ -36,6 +37,8 @@ class MarzipanoView extends React.Component {
         fov: initialfov
       }
     };
+    this.activateKey = this.activateKey.bind(this);
+    this.deactivateKey = this.deactivateKey.bind(this);
   }
 
   componentDidMount() {
@@ -190,6 +193,7 @@ class MarzipanoView extends React.Component {
         sceneText: sceneTo.text,
         activeKey: "scenetext-" + id
       });
+      trackPage(window.location.pathname, "Escena: " + id);
     }
   }
 
@@ -288,6 +292,26 @@ class MarzipanoView extends React.Component {
     return `scenetext-${this.state.scene}`;
   }
 
+  activateKey(key, position) {
+    this.setState({
+      activeKey: key,
+      goTo: {
+        yaw: position.yaw,
+        pitch: position.pitch,
+        fov: 0.65
+      }
+    });
+  }
+
+  deactivateKey() {
+    this.setState({
+      activeKey: null,
+      goto: {
+        fov: this.state.initialfov
+      }
+    });
+  }
+
   renderTextWindow() {
     if (this.state.activeKey === this.textWindowId()) {
       return (
@@ -358,6 +382,8 @@ class MarzipanoView extends React.Component {
               position={hotspot.position}
               height={this.props.height}
               gyro={this.state.isGyroOn}
+              activateKey={this.activateKey}
+              deactivateKey={this.deactivateKey}
             />
           ))}
           {this.renderTextWindow()}

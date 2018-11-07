@@ -2,7 +2,7 @@ import Layout from "./MyLayout.js";
 import Link from "next/link";
 import MarzipanoView from "./MarzipanoView.js";
 import Fullscreen from "react-full-screen";
-
+import trackPage from "./trackPage";
 import data from "../data/dummy.json";
 
 class Vista extends React.Component {
@@ -27,7 +27,7 @@ class Vista extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
-    //window.addEventListener("devicemotion", this.setGyro.bind(this, event));
+    trackPage(window.location.pathname, "Inicio");
   }
 
   setGyro(event) {
@@ -57,7 +57,7 @@ class Vista extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.width !== prevState.width) {
       let isMobile = this.state.width < 1025 ? true : false;
-      this.setState({ isMobile: isMobile , hasGyro: isMobile });
+      this.setState({ isMobile: isMobile, hasGyro: isMobile });
     }
   }
 

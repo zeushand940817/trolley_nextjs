@@ -1,36 +1,28 @@
-// import React, { Component } from "react";
-// import Image from "react-graceful-image";
+import Image from "react-graceful-image";
 
 const Figure = props => (
 	<div className="figureWrapper">
 		<figure>
-			<img className="lazyImage" src={props.imageUrl} title={props.imageTitle} />
-			<p className="imageTitle">{props.imageTitle}</p>
+			<Image className="lazyImage" style={{maxWidth: "100%", maxHeight: "75vh"}} src={props.imageUrl} title={props.imageTitle} />
 		</figure>
 		
 		<style jsx>
 			{`
 				.figureWrapper {
 					height: 100%;
+					width: 100%;
 					display: flex;
 					align-items: center;
+					text-align: center;
 				}
 
 				figure {
 					text-align: center;
-					margin: auto;
-					max-width: 100%;
-					max-height: 100%;
-				}
-				.lazyImage {
-					max-width: 100%;
-					max-height: 70vh;
+					margin: 0 auto;
 				}
 
 				@media screen and (max-width: 768px) {
-					.lazyImage {
-						max-height: 50vh;
-					}
+						
 				}
 
 				p {

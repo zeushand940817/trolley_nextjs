@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"ModalVideo",
+				"ModalVideoContent"
+			],
+			[
+				"get",
+				"getCurVidTitle"
+			],
+			[
+				"full",
+				"fullScreen"
+			],
+			[
+				"Modal",
+				"ModalContainer"
+			],
+			[
+				"Moda",
+				"ModalContainer"
+			],
+			[
+				"pla",
+				"playButton"
+			],
+			[
+				"getc",
+				"getCurVid"
+			],
+			[
+				"getCurVid",
+				"getCurVidTitle"
+			],
+			[
 				"active",
 				"activefov"
 			],
@@ -30,10 +62,6 @@
 			[
 				"prev",
 				"prevVid"
-			],
-			[
-				"get",
-				"getCurVidTitle"
 			],
 			[
 				"Marzip",
@@ -128,142 +156,30 @@
 	"buffers":
 	[
 		{
-			"file": "components/MarzipanoView.js",
-			"settings":
-			{
-				"buffer_size": 10535,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Vista.js",
-			"settings":
-			{
-				"buffer_size": 2343,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/HotspotWrapper.js",
-			"settings":
-			{
-				"buffer_size": 520,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Point.js",
-			"settings":
-			{
-				"buffer_size": 1589,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/donhilo/Escritorio/cuadro.svg",
-			"settings":
-			{
-				"buffer_size": 1016,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Modal.js",
-			"settings":
-			{
-				"buffer_size": 1536,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Hotspot.js",
-			"settings":
-			{
-				"buffer_size": 2554,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/HotspotVideo.js",
-			"settings":
-			{
-				"buffer_size": 5185,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "next.config.js",
-			"settings":
-			{
-				"buffer_size": 129,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "data/data_trolley.json",
-			"settings":
-			{
-				"buffer_size": 62739,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/dummy.json",
-			"settings":
-			{
-				"buffer_size": 4285,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoUI.js",
-			"settings":
-			{
-				"buffer_size": 4904,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/MarzipanoBrand.js",
-			"settings":
-			{
-				"buffer_size": 1009,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/Gallery.js",
-			"settings":
-			{
-				"buffer_size": 7062,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/ImageData.js",
-			"settings":
-			{
-				"buffer_size": 2277,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1238,
+				"buffer_size": 1262,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/Head.js",
+			"settings":
+			{
+				"buffer_size": 1841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import Layout from \"./MyLayout.js\";\nimport Link from \"next/link\";\nimport MarzipanoView from \"./MarzipanoView.js\";\nimport Fullscreen from \"react-full-screen\";\nimport ReactGA from \"react-ga\";\n\nimport data from \"../data/dummy.json\";\n\nconst analyticsID = \"UA-128935137-1\";\nif (process.env.NODE_ENV === \"production\") {\n  ReactGA.initialize(analyticsID);\n} else {\n  ReactGA.initialize(analyticsID, { debug: true, testMode: true });\n}\n\nclass Vista extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      width: \"0\",\n      height: \"0\",\n      isFull: false,\n      isMobile: false,\n      hasGyro: false\n    };\n    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);\n    this.goFull = this.goFull.bind(this);\n    //this.setGyro = this.setGyro.bind(this);\n  }\n\n  goFull() {\n    this.setState({ isFull: this.state.isFull === true ? false : true });\n  }\n\n  componentDidMount() {\n    this.updateWindowDimensions();\n    window.addEventListener(\"resize\", this.updateWindowDimensions);\n    ReactGA.set({})\n  }\n\n  setGyro(event) {\n    console.log(event.current);\n    if (event.rotationRate) {\n      if (\n        event.rotationRate.alpha ||\n        event.rotationRate.beta ||\n        event.rotationRate.gamma\n      ) {\n        this.setState({ hasGyro: true });\n      }\n    }\n  }\n\n  componentWillUnmount() {\n    window.removeEventListener(\"resize\", this.updateWindowDimensions);\n  }\n\n  updateWindowDimensions() {\n    this.setState({\n      width: window.innerWidth,\n      height: window.innerHeight\n    });\n  }\n\n  componentDidUpdate(prevProps, prevState) {\n    if (this.state.width !== prevState.width) {\n      let isMobile = this.state.width < 1025 ? true : false;\n      this.setState({ isMobile: isMobile, hasGyro: isMobile });\n    }\n  }\n\n  render() {\n    return (\n      <div>\n        <div className=\"panoWrapper\">\n          <Fullscreen\n            enabled={this.state.isFull}\n            onChange={isFull => this.setState({ isFull })}\n          >\n            <MarzipanoView\n              data={data}\n              goFull={this.goFull}\n              isMobile={this.state.isMobile}\n              height={this.state.height}\n              hasGyro={this.state.hasGyro}\n            />\n          </Fullscreen>\n        </div>\n        <style jsx>{`\n          .panoWrapper {\n            position: relative;\n            height: ${this.state.height}px;\n            margin-top: 0;\n            overflow: hidden;\n          }\n        `}</style>\n      </div>\n    );\n  }\n}\n\nexport default Vista;\n",
+			"file": "components/Vista.js",
+			"file_size": 2493,
+			"file_write_time": 131860912611301487,
+			"settings":
+			{
+				"buffer_size": 2513,
 				"line_ending": "Unix"
 			}
 		},
@@ -406,47 +322,53 @@
 	"expanded_folders":
 	[
 		"/home/donhilo/Documentos/code/js/trolley_nextjs",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages"
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/imgs",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/imgs/hotspots"
 	],
 	"file_history":
 	[
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/HotspotWrapper.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Point.js",
+		"/home/donhilo/Escritorio/cuadro.svg",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/HotspotVideo.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalVideo.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/next.config.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ImageData.js",
+		"/home/donhilo/Escritorio/clave_simple_hosting_nodejs.txt",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
+		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/videopager.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/server.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/config.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/.nvmrc",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Figure.js",
-		"/home/donhilo/Escritorio/clave_simple_hosting_nodejs.txt",
 		"/home/donhilo/Escritorio/trjmama.txt",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoBrand.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Gallery.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/PointsList.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoUI.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ShowMenu.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/ayuda.md",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/fiestas.md",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/textos/intro.md",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/ref/videopager.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Head.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/icons/site.webmanifest",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/next.config.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/dummy.json",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/static/devicecontrol.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Modal.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/TextWindow.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ImageData.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/CloseButton.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/pages/index.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Vista.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley_dspace.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/MarzipanoView.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/package.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/ModalContainer.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Hotspot.js",
 		"/home/donhilo/Documentos/code/js/trolley_nextjs/notas.todo",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/data/data_trolley.json",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/Point.js",
-		"/home/donhilo/Documentos/code/js/trolley_nextjs/components/HotspotVideo.js",
 		"/home/donhilo/Documentos/code/webassets/auraaustral.cl/static/index.html",
 		"/home/donhilo/Escritorio/Pedro's cacho.todo",
 		"/etc/hosts",
@@ -518,7 +440,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -534,6 +456,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"height",
+			"window",
+			"getcurvidtit",
+			"preload",
+			"Click",
+			"onClick",
+			"ModalContainer",
+			"ModalContainerDimensions",
+			"Container",
+			"hotspot",
+			"startplaye",
+			"isactive",
 			"videocontainer",
 			"#555",
 			"flip",
@@ -604,261 +538,53 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "components/MarzipanoView.js",
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10535,
+						"buffer_size": 1262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1137,
-								1137
+								769,
+								769
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 612.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "components/Vista.js",
+					"file": "components/Head.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2343,
+						"buffer_size": 1841,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1371,
-								1371
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 359.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "components/HotspotWrapper.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								417,
-								417
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "components/Point.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								856,
-								856
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/donhilo/Escritorio/cuadro.svg",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1016,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1001,
-								1001
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "components/Modal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								192,
-								192
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "components/Hotspot.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2554,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								592,
-								592
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 723.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "components/HotspotVideo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5185,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3085,
-								3085
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2202.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "next.config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
+								1046,
+								1046
 							]
 						],
 						"settings":
@@ -875,212 +601,37 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "data/data_trolley.json",
+					"buffer": 2,
+					"file": "components/Vista.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 62739,
+						"buffer_size": 2513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								298,
-								298
+								1039,
+								1039
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "data/dummy.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4285,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3859,
-								3859
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2040.0,
+						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "components/MarzipanoUI.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3234,
-								3234
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1683.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "components/MarzipanoBrand.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1009,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								282,
-								282
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "components/Gallery.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7062,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2961,
-								2961
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1836.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "components/ImageData.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1238,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								118,
-								118
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
+					"buffer": 3,
 					"file": "pages/index.js",
 					"semi_transient": false,
 					"settings":
@@ -1092,8 +643,8 @@
 						"selection":
 						[
 							[
-								127,
-								127
+								92,
+								92
 							]
 						],
 						"settings":
@@ -1159,7 +710,15 @@
 		"selected_items":
 		[
 			[
-				"packag",
+				"vist",
+				"components/Vista.js"
+			],
+			[
+				"head",
+				"components/Head.js"
+			],
+			[
+				"packa",
 				"package.json"
 			],
 			[
@@ -1167,12 +726,76 @@
 				"components/HotspotVideo.js"
 			],
 			[
-				"index.",
-				"pages/index.js"
+				"clave",
+				"~/Escritorio/clave_simple_hosting_nodejs.txt"
 			],
 			[
 				"pack",
 				"package.json"
+			],
+			[
+				"marzip",
+				"components/MarzipanoView.js"
+			],
+			[
+				"pon",
+				"components/Point.js"
+			],
+			[
+				"hotp",
+				"components/HotspotVideo.js"
+			],
+			[
+				"poin",
+				"components/Point.js"
+			],
+			[
+				"clos",
+				"components/CloseButton.js"
+			],
+			[
+				"modal",
+				"components/Modal.js"
+			],
+			[
+				"modalcon",
+				"components/ModalContainer.js"
+			],
+			[
+				"hots",
+				"components/Hotspot.js"
+			],
+			[
+				"wrapp",
+				"components/HotspotWrapper.js"
+			],
+			[
+				"ui",
+				"components/MarzipanoUI.js"
+			],
+			[
+				"imag",
+				"components/ImageData.js"
+			],
+			[
+				"gall",
+				"components/Gallery.js"
+			],
+			[
+				"videop",
+				"ref/videopager.js"
+			],
+			[
+				"hot",
+				"components/HotspotVideo.js"
+			],
+			[
+				"packag",
+				"package.json"
+			],
+			[
+				"index.",
+				"pages/index.js"
 			],
 			[
 				"nvm",
@@ -1187,24 +810,12 @@
 				"components/HotspotVideo.js"
 			],
 			[
-				"hot",
-				"components/Hotspot.js"
-			],
-			[
-				"poin",
-				"components/Point.js"
-			],
-			[
 				"dumm",
 				"data/dummy.json"
 			],
 			[
 				"data",
 				"data/data_trolley.json"
-			],
-			[
-				"gall",
-				"components/Gallery.js"
 			],
 			[
 				"fig",
@@ -1219,10 +830,6 @@
 				"components/Figure.js"
 			],
 			[
-				"imag",
-				"components/ImageData.js"
-			],
-			[
 				"figru",
 				"components/Figure.js"
 			],
@@ -1231,28 +838,8 @@
 				"components/MarzipanoBrand.js"
 			],
 			[
-				"ui",
-				"components/MarzipanoUI.js"
-			],
-			[
-				"packa",
-				"package.json"
-			],
-			[
 				"view",
 				"components/MarzipanoView.js"
-			],
-			[
-				"vist",
-				"components/Vista.js"
-			],
-			[
-				"marzip",
-				"components/MarzipanoView.js"
-			],
-			[
-				"hotp",
-				"components/Hotspot.js"
 			],
 			[
 				"",
@@ -1275,10 +862,6 @@
 				"components/MarzipanoView.js"
 			],
 			[
-				"head",
-				"components/Head.js"
-			],
-			[
 				"moda",
 				"components/Modal.js"
 			],
@@ -1287,16 +870,8 @@
 				"components/TextWindow.js"
 			],
 			[
-				"modal",
-				"components/Modal.js"
-			],
-			[
 				"textw",
 				"components/TextWindow.js"
-			],
-			[
-				"clos",
-				"components/CloseButton.js"
 			],
 			[
 				"galle",
@@ -1427,10 +1002,6 @@
 				"components/Figure.js"
 			],
 			[
-				"modalcon",
-				"components/ModalContainer.js"
-			],
-			[
 				"mo",
 				"components/Modal.js"
 			],
@@ -1449,10 +1020,6 @@
 			[
 				"showme",
 				"components/ShowMenu.js"
-			],
-			[
-				"hots",
-				"components/Hotspot.js"
 			],
 			[
 				"dummy",
@@ -1656,9 +1223,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "fils",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
+			],
 			[
 				"fils",
 				"~/Documentos/code/php/cchl/public/wp-content/plugins/filsa2018/filsa2018.sublime-project"
@@ -1677,10 +1248,6 @@
 			],
 			[
 				"cssd",
-				"~/Documentos/code/php/csd/csd_web_mailhog/public/wp-content/themes/universe_theme/csdweb.sublime-project"
-			],
-			[
-				"",
 				"~/Documentos/code/php/csd/csd_web_mailhog/public/wp-content/themes/universe_theme/csdweb.sublime-project"
 			],
 			[
