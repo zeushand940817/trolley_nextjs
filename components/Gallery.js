@@ -5,7 +5,6 @@ import ImageData from "./ImageData.js";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faChevronRight from "@fortawesome/fontawesome-free-solid/faChevronRight";
 import faChevronLeft from "@fortawesome/fontawesome-free-solid/faChevronLeft";
-import faFolderOpen from "@fortawesome/fontawesome-free-solid/faFolderOpen";
 import faFolder from "@fortawesome/fontawesome-free-solid/faFolder";
 
 class Gallery extends React.Component {

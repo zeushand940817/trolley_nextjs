@@ -1,3 +1,5 @@
+import Tappable from "react-tappable/lib/Tappable";
+
 class CloseButton extends React.Component {
 	constructor(props) {
 		super(props);
@@ -6,9 +8,11 @@ class CloseButton extends React.Component {
 	render() {
 		return (
 			<div>
-				<a onClick={this.props.onClick} className="CloseButton">
+				<Tappable onTap={this.props.onClick}>
+				<a className={`${this.props.type} CloseButton`}>
 					X
 				</a>
+				</Tappable>
 				<style jsx>{`
 					.CloseButton {
 						clear: both;
@@ -23,6 +27,10 @@ class CloseButton extends React.Component {
 						z-index: 10;
 						font-family: 'Special Elite', monospace;
 						cursor: pointer;
+					}
+					.CloseButton.video {
+						top:0;
+						right:0;
 					}
 				`}</style>
 			</div>
