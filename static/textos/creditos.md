@@ -1,7 +1,9 @@
-## Proyecto
+## El Proyecto UC
 
-“El Trolley Archivo Interactivo UC”, es un proyecto de rescate y visualización del archivo del extinto espacio contracultural “El Trolley” en Santiago Centro, durante el periodo 1983 - 1988. 
+“El Trolley Archivo Interactivo UC”, es un proyecto interdisciplinario de rescate y visualización del archivo del extinto espacio contracultural “El Trolley” en Santiago Centro, durante el periodo 1983 - 1988. 
+
 Este proyecto está financiado por la Vicerrectoría de Investigación de la Pontificia Universidad Católica de Chile (VRI UC).
+
 
 ## Equipo y Créditos
 
@@ -16,16 +18,19 @@ Este proyecto está financiado por la Vicerrectoría de Investigación de la Pon
 - Yanina Valeria, Bibliotecóloga Jefe de Gestión de Colecciones, Bibliotecas UC
 
 ### Diseño, arte y programación web
+
 - Ricardo Vega, Escuela de Diseño, Facultad de Arquitectura, Diseño y Estudios Urbanos
 - Pablo Selín Carrasco - A Pie
 - Jorge Loayza - A Pie
 
 ### Montaje y gráfica exposición
+
 - Trinidad Burgos
 - Joaquin Gajardo
 - Esteban Millar
 
 ### Sistema de Bibliotecas UC
+
 - Marcela Rivera, Subdirectora Recursos de Información
 - Irene Hernández, Jefa Departamento de Procesamiento y Metadatos
 - Rodrigo Castro, Coordinador Subdirección de Tecnologías y Desarrollo Digital
@@ -33,6 +38,7 @@ Este proyecto está financiado por la Vicerrectoría de Investigación de la Pon
 ### COLABORADORES
 
 #### Estudiantes Escuela de Teatro UC
+
 - Phillipe Barnett
 - Silvana Bustos
 - Gustavo Carrasco
@@ -51,9 +57,11 @@ Este proyecto está financiado por la Vicerrectoría de Investigación de la Pon
 - Christián Vilches
 
 #### Estudiante Escuela de Diseño UC
+
 - Martín Barrientos
 
 #### Estudiantes Facultad de Letras UC
+
 - Mauricio Valdés
 - Felipe Villarrubia
 
