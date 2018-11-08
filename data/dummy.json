@@ -1,5 +1,8 @@
 {
-  "utils": { "utiltext": "./static/textos/ayuda.md" },
+  "utils": {
+    "utiltext": "./static/textos/ayuda.md",
+    "creditstext": "./static/textos/creditos.md"
+  },
   "scenes": [
     {
       "title": "Fiestas",

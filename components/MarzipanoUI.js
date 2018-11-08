@@ -8,6 +8,7 @@ import faStop from "@fortawesome/fontawesome-free-solid/faStop";
 import faCompass from "@fortawesome/fontawesome-free-solid/faCompass";
 import faArrowsAlt from "@fortawesome/fontawesome-free-solid/faArrowsAlt";
 import faQuestion from "@fortawesome/fontawesome-free-solid/faQuestion";
+import faUsersCog from "@fortawesome/fontawesome-free-solid/faUsersCog";
 
 class MarzipanoUI extends React.Component {
 	constructor(props) {
@@ -84,6 +85,9 @@ class MarzipanoUI extends React.Component {
 						onClick={() => this.props.toggleHelp()}
 					>
 						<FontAwesomeIcon className="fa-fw" icon={faQuestion} />
+					</div>
+					<div className="credits button" onClick={() => this.props.toggleCredits()}>
+						<FontAwesomeIcon className="fa-fw" icon={faUsersCog} />
 					</div>
 				</div>
 				<PointsList

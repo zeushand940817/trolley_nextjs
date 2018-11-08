@@ -24,7 +24,7 @@ class MarzipanoView extends React.Component {
       hotspotType: null,
       isRotating: false,
       autorotate: null,
-      isGyroOn: false,
+      isGyroOn: true,
       viewer: null,
       view: null,
       firstRun: true,
@@ -68,7 +68,7 @@ class MarzipanoView extends React.Component {
       });
     }
     if (prevState.loaded !== this.state.loaded) {
-      this.setState({ utiltext: this.props.data.utils.utiltext });
+      this.setState({ utiltext: this.props.data.utils.utiltext, creditstext: this.props.data.utils.creditstext });
     }
     if (prevState.activeKey !== this.state.activeKey) {
       if (this.state.activeKey === null) {
@@ -200,6 +200,12 @@ class MarzipanoView extends React.Component {
   toggleHelpWindow() {
     this.setState({
       activeKey: this.state.activeKey === "infotext" ? null : "infotext"
+    });
+  }
+
+  toggleCreditsWindow() {
+    this.setState({
+      activeKey: this.state.activeKey === "credits" ? null : "credits"
     });
   }
 
@@ -340,6 +346,19 @@ class MarzipanoView extends React.Component {
     }
   }
 
+  renderCreditsWindow() {
+    if (this.state.activeKey === "credits") {
+      return (
+        <TextWindow
+          id="credits"
+          close={this.close.bind(this, "closeCredits")}
+          content={this.state.creditstext}
+          height={this.props.height}
+        />
+      );
+    }
+  }
+
   render() {
     const panoStyle = {
       position: "absolute",
@@ -388,6 +407,7 @@ class MarzipanoView extends React.Component {
           ))}
           {this.renderTextWindow()}
           {this.renderHelpWindow()}
+          {this.renderCreditsWindow()}
 
           <MarzipanoBrand visible={this.state.activeKey ? false : true} />
           <MarzipanoUI
@@ -406,6 +426,7 @@ class MarzipanoView extends React.Component {
             showMenu={this.showMenu.bind(this)}
             isMobile={this.props.isMobile}
             toggleHelp={this.toggleHelpWindow.bind(this)}
+            toggleCredits={this.toggleCreditsWindow.bind(this)}
             setPos={this.setPos.bind(this)}
             activeMenu={this.state.activeKey === "menu" ? true : false}
             hasGyro={this.props.hasGyro}
