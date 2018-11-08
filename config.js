@@ -2,9 +2,9 @@ const config = {
   project_name: "El Trolley",
   project_shortdesc: "Archivo interactivo UC",
   project_intro: "Visualización interactiva archivo Trolley",
-  dataurl: "http://localhost:3000/data/dummy.json",
-  assetsurl: "http://eltrolley.apie.cl/",
-  trolleydataurl: "http://eltrolley.apie.cl/data_trolley.json",
+  dataurl: "https://static.eltrolley.cl/data/dummy.json",
+  assetsurl: "https://static.eltrolley.cl",
+  trolleydataurl: "https://static.eltrolley.cl/data_trolley.json",
   dspaceKeywordSeparator: "||"
 }
 

@@ -65,7 +65,7 @@ class Gallery extends React.Component {
 	buildImageUrl(key) {
 		if (this.state.images[key] !== undefined) {
 			return (
-				"./static/material/" +
+				"https://static.eltrolley.cl/material/" +
 				this.state.images[key]["dc.identifier.other"].toUpperCase() +
 				"_web.jpg"
 			);

@@ -4,7 +4,7 @@
     {
       "title": "Fiestas",
       "text": "./static/textos/fiestas.md",
-      "tilesurl": "./static/tiles/scene_02/web_rtrolley_{f}.jpg",
+      "tilesurl": "./static/tiles/scene_02/rtrolley_{f}.jpg",
       "id": 1,
       "description": [
         {
@@ -21,8 +21,8 @@
           "content":
             "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
-            "pitch": 0.28021016282170663,
-            "yaw": 0.33586122947428265
+            "pitch": 0.27663653040697334,
+            "yaw": -0.1261896054294418
           }
         },
         {
@@ -60,7 +60,7 @@
     {
       "title": "Obras",
       "text": "./static/textos/intro.md",
-      "tilesurl": "./static/tiles/scene_01/web_rtrolley_{f}.jpg",
+      "tilesurl": "./static/tiles/scene_01/rtrolley_{f}.jpg",
       "id": 2,
       "hotspots": [
         {
@@ -72,17 +72,17 @@
             "videos": [
               {
                 "id": "106V",
-                "url": "https://apie.cl/trolley/106V-converted.mp4",
+                "url": "https://static.eltrolley.cl/videos/106V-converted.mp4",
                 "title": "1. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "107V",
-                "url": "https://apie.cl/trolley/107V-converted.mp4",
+                "url": "https://static.eltrolley.cl/videos/107V-converted.mp4",
                 "title": "2. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "105V",
-                "url": "https://apie.cl/trolley/105V-converted.mp4",
+                "url": "https://static.eltrolley.cl/videos/105V-converted.mp4",
                 "title": "3. Registro fragmentos 99 La morgue"
               }
             ]
@@ -98,8 +98,8 @@
           "keyword": "Teatro fin de siglo",
           "type": "gallery",
           "position": {
-            "pitch": 0.28021016282170663,
-            "yaw": 0.33586122947428265
+            "pitch": 0.05539602934240406,
+            "yaw": 0.8196040016741506
           }
         },
         {
@@ -108,8 +108,8 @@
           "keyword": "Historias de un galpón abandonado",
           "type": "gallery",
           "position": {
-            "pitch": 0.3449868928017459,
-            "yaw": -0.2521752468841285
+            "pitch": -0.023360827354895974,
+            "yaw": 1.788721626319532
           }
         },
         {
@@ -118,8 +118,8 @@
           "keyword": "Un viaje al interior de Kafka",
           "type": "gallery",
           "position": {
-            "pitch": 0.2681399231263768,
-            "yaw": -0.36566996051410605
+            "pitch": -0.4027736290531916,
+            "yaw": 2.7372862773503073
           }
         },
         {
