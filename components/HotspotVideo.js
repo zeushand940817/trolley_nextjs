@@ -259,7 +259,7 @@ class HotspotVideo extends React.Component {
                       <div className="videoTile">
                         <img
                           draggable={false}
-                          src={`${config.assetsurl}videos/${video.id}.png`}
+                          src={`${config.assetsurl}videos/${video.id}.jpg`}
                           title={video.title}
                         />
                       </div>
