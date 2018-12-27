@@ -24,7 +24,7 @@ class MarzipanoView extends React.Component {
       hotspotType: null,
       isRotating: false,
       autorotate: null,
-      isGyroOn: true,
+      isGyroOn: false,
       viewer: null,
       view: null,
       firstRun: true,
@@ -68,7 +68,10 @@ class MarzipanoView extends React.Component {
       });
     }
     if (prevState.loaded !== this.state.loaded) {
-      this.setState({ utiltext: this.props.data.utils.utiltext, creditstext: this.props.data.utils.creditstext });
+      this.setState({
+        utiltext: this.props.data.utils.utiltext,
+        creditstext: this.props.data.utils.creditstext
+      });
     }
     if (prevState.activeKey !== this.state.activeKey) {
       if (this.state.activeKey === null) {
@@ -220,6 +223,7 @@ class MarzipanoView extends React.Component {
   }
 
   toggleGyro() {
+    console.log("toggling gyro");
     let controls = this.state.viewer.controls();
 
     if (this.state.isGyroOn === true) {
