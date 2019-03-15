@@ -1,5 +1,6 @@
 import data_trolley from "../data/data_trolley_dspace.json";
 import config from "../config.js";
+import axios from "axios";
 //import Figure from "./Figure.js";
 import ImageData from "./ImageData.js";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
@@ -7,7 +8,7 @@ import faChevronRight from "@fortawesome/fontawesome-free-solid/faChevronRight";
 import faChevronLeft from "@fortawesome/fontawesome-free-solid/faChevronLeft";
 import dynamic from "next/dynamic";
 
-const FigureNoSSR = dynamic(() => import('./Figure.js'), { ssr: false});
+const FigureNoSSR = dynamic(() => import("./Figure.js"), { ssr: false });
 
 class Gallery extends React.Component {
 	constructor(props) {
@@ -17,7 +18,8 @@ class Gallery extends React.Component {
 			curImage: 0,
 			imagesTotal: 0,
 			imageData: null,
-			isFlipped: "normal"
+			isFlipped: "normal",
+			dspaceData: null
 		};
 
 		this.nextImage = this.nextImage.bind(this);
@@ -42,6 +44,17 @@ class Gallery extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log(config.dspacedataurl);
+		axios
+			.get(config.dspacedataurl)
+			.then(function(response) {
+				this.setState({
+					dspaceData: response
+				});
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 		let images = data_trolley.filter(image =>
 			this.isKeywordIn(
 				image["dc.subject.other"],
@@ -95,7 +108,10 @@ class Gallery extends React.Component {
 			let imageData = this.state.images[this.state.curImage];
 
 			return (
-				<ImageData data={imageData} image={this.buildImageUrl(this.state.curImage)} />
+				<ImageData
+					data={imageData}
+					image={this.buildImageUrl(this.state.curImage)}
+				/>
 			);
 		}
 	}
@@ -116,7 +132,10 @@ class Gallery extends React.Component {
 	prevImage() {
 		let prev = this.state.curImage > 0 ? this.state.imagesTotal - 1 : 0;
 		if (this.state.imagesTotal !== this.state.curImage) {
-			prev = this.state.curImage === 0 ? this.state.imagesTotal - 1 : this.state.curImage - 1;
+			prev =
+				this.state.curImage === 0
+					? this.state.imagesTotal - 1
+					: this.state.curImage - 1;
 		}
 		this.setState({
 			curImage: prev
@@ -142,18 +161,17 @@ class Gallery extends React.Component {
 					<div className={`gallery-wrapper ${this.state.isFlipped}`}>
 						<div className="gallery-side gallery-front">
 							{this.curImage()}
-							<span className="flipper moreInfo" onClick={this.flipImage}>
-								
-							</span>
+							<span
+								className="flipper moreInfo"
+								onClick={this.flipImage}
+							/>
 						</div>
 						<div className="gallery-side gallery-back">
 							{this.curData()}
 							<span
 								className="flipper lessInfo"
 								onClick={this.unFlipImage}
-							>
-								
-							</span>
+							/>
 						</div>
 					</div>
 					<span className="GalleryNavPrev" onClick={this.prevImage}>
@@ -163,7 +181,8 @@ class Gallery extends React.Component {
 						<FontAwesomeIcon icon={faChevronRight} />
 					</span>
 					<span className="counter">
-						#{this.state.curImage + 1} / {this.state.imagesTotal} : {this.buildImageTitle(this.state.curImage)}
+						#{this.state.curImage + 1} / {this.state.imagesTotal} :{" "}
+						{this.buildImageTitle(this.state.curImage)}
 					</span>
 				</div>
 				<style jsx>{`
@@ -199,11 +218,12 @@ class Gallery extends React.Component {
 						height: 0;
 						background-color: #555;
 						cursor: pointer;
-						border-width:0 0 20px 20px;
+						border-width: 0 0 20px 20px;
 						border-color: #333 #555 #333 #555;
-						display:block;
+						display: block;
 						border-style: solid;
-						box-shadow: 0 -1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+						box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3),
+							-1px 1px 1px rgba(0, 0, 0, 0.2);
 						transition: border ease-in 0.2s;
 					}
 
@@ -212,7 +232,7 @@ class Gallery extends React.Component {
 					}
 
 					.flipper.lessInfo {
-						border-color: #d3cec3 #fbf4e7 #d3cec3 #fbf4e7; 
+						border-color: #d3cec3 #fbf4e7 #d3cec3 #fbf4e7;
 					}
 
 					.gallery-side {
@@ -267,7 +287,8 @@ class Gallery extends React.Component {
                                   supported by Chrome and Opera */
 					}
 
-					.is-flipped .GalleryNavPrev, .is-flipped .GalleryNavNext {
+					.is-flipped .GalleryNavPrev,
+					.is-flipped .GalleryNavNext {
 						opacity: 0;
 					}
 
@@ -295,7 +316,7 @@ class Gallery extends React.Component {
 
 					.GalleryNavPrev:hover,
 					.GalleryNavNext:hover {
-						background-color: #FF0307;
+						background-color: #ff0307;
 						opacity: 0.8;
 					}
 

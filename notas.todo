@@ -45,3 +45,7 @@ Notas proyecto exposición
 3. Mejorar interfaz de videos
 4. Añadir claridad a interfaz general y textos
 5. Diferenciar íconos de cada punto
+
+Ruta para todos los items en la collection trolley:
+
+http://146.155.39.134:8080/rest/collections/51fc4f59-dd6f-4106-94ca-47f3927a63ec?expand=all
