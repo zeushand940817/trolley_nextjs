@@ -1,6 +1,6 @@
 import data_trolley from "../data/data_trolley_dspace.json";
 import config from "../config.js";
-import axios from "axios";
+//import axios from "axios";
 //import Figure from "./Figure.js";
 import ImageData from "./ImageData.js";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
@@ -44,17 +44,6 @@ class Gallery extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(config.dspacedataurl);
-		axios
-			.get(config.dspacedataurl)
-			.then(function(response) {
-				this.setState({
-					dspaceData: response
-				});
-			})
-			.catch(function(error) {
-				console.log(error);
-			});
 		let images = data_trolley.filter(image =>
 			this.isKeywordIn(
 				image["dc.subject.other"],
