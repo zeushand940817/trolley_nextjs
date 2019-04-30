@@ -21,8 +21,7 @@
           "id": 14,
           "keyword": "fiesta",
           "type": "gallery",
-          "content":
-            "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
+          "content": "Pellentesque non fermentum massa. Fusce id finibus orci. Donec fermentum arcu neque, sed semper leo vestibulum in.",
           "position": {
             "pitch": 0.27663653040697334,
             "yaw": -0.1261896054294418
@@ -76,16 +75,19 @@
               {
                 "id": "106V",
                 "url": "https://static.eltrolley.cl/videos/106V-converted.mp4",
+                "filename": "106V-converted.mp4",
                 "title": "1. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "107V",
                 "url": "https://static.eltrolley.cl/videos/107V-converted.mp4",
+                "filename": "107V-converted.mp4",
                 "title": "2. Ensayos viaje al mundo de Kafka"
               },
               {
                 "id": "105V",
                 "url": "https://static.eltrolley.cl/videos/105V-converted.mp4",
+                "filename": "105V-converted.mp4",
                 "title": "3. Registro fragmentos 99 La morgue"
               }
             ]

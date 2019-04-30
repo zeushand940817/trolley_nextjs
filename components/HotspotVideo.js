@@ -90,8 +90,11 @@ class HotspotVideo extends React.Component {
       }
     }
 
-    if(prevProps.active !== this.props.active || prevProps.scene !== this.props.scene) {
-      if(!this.props.active && this.refs.player !== undefined) {
+    if (
+      prevProps.active !== this.props.active ||
+      prevProps.scene !== this.props.scene
+    ) {
+      if (!this.props.active && this.refs.player !== undefined) {
         this.refs.player.pause();
       }
     }
@@ -192,7 +195,11 @@ class HotspotVideo extends React.Component {
   getCurVid() {
     if (this.state.curVideo !== null) {
       let id = this.props.content.videos[this.state.curVideo].id;
-      return this.props.content.videos[this.state.curVideo].url;
+      return (
+        config.assetsurl +
+        "videos/" +
+        this.props.content.videos[this.state.curVideo].filename
+      );
     }
   }
 
